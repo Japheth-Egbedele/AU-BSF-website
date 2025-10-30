@@ -56,16 +56,16 @@ hr {
     margin-top: 10px; /* nudge welcome section closer to the header */
   }
 
-  /* image inside .welcome should be fully visible */
+  /* image inside .welcome should be visible and limited in height on large viewports */
   .welcome-img{
     width: 100%;
-    height: auto;            /* preserve aspect ratio and show full image */
+    height: auto;            /* preserve aspect ratio */
     display: block;
-    object-fit: contain;
-         /* limit very tall images on large screens */
+    object-fit: cover;       /* cover keeps a nice fill for wide screens */
+    max-height: 70vh;        /* limit very tall images on large screens */
   }
 
-  /* center existing content over the image */
+  /* center existing content over the image on large screens */
   .welcome-content{
     position: absolute;
     inset: 0; /* top:0; right:0; bottom:0; left:0 */
@@ -74,12 +74,12 @@ hr {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 18px; /* small breathing room on mobile */
+    padding: 18px;
     box-sizing: border-box;
-    pointer-events: none; /* makes clicks pass through to image if needed */
   }
 
-  .welcome-content > * { pointer-events: auto; } /* allow interaction with buttons/links */
+  /* keep children interactive when overlayed */
+  .welcome-content > * { pointer-events: auto; }
 .Navpanel {
     padding: 6px 12px;       /* small padding so nav doesn't look too large */
     margin: 0;               /* removes outer margin */
@@ -96,35 +96,84 @@ hr {
   font-optical-sizing: auto;
   font-weight: 20px;
   font-style: normal;
-  color: azure;
+  color: #fff; /* restore white text for overlay by default */
 }
-@media (max-width: 768px) {
-  .welcome-message {
-    font-size: 15px;
-  }
-  .welcome_text{
-    font-size:25 ;
-  }
-}
+
+/* Make the large welcome heading prominent and white on desktop */
 .welcome_text{
-    text-align: center;
-    margin-top: -40px;
-    font-size: 50px;
-    color: azure;
+  font-size: 50px;
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.45);
+  margin: 0 0 50px 0;
 }
-  .start-btn {
-    display: block;         /* allows margin auto centering */
-    width: max-content;    /* shrink to content width */
-    margin: 12px auto;     /* center horizontally, small vertical spacing */
-    padding: 8px 18px;
-    background: rgb(217, 125, 76);
-    color: #fff;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: background 0.3s;
-    text-align: center;
+/* Base styles for the action button so it works on all viewports */
+.start-btn{
+  display: inline-block;
+  padding: 8px 18px;
+  background: rgb(217, 125, 76);
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s ease, transform 0.12s ease;
+  cursor: pointer;
+}
+.start-btn:focus{ outline: 2px solid rgba(217,125,76,0.35); outline-offset: 2px; }
+/* mobile rules for welcome are defined in a responsive block */
+@media (max-width: 768px) {
+  .welcome{
+    overflow: visible; /* allow content below image to be fully visible */
   }
+
+  .welcome-img{
+    max-height: 40vh;      /* shorter image height on small screens so content fits */
+    object-fit: cover;     /* fill the area while keeping aspect — will crop minimally */
+    display: block;
+    width: 100%;
+  }
+
+  .welcome-content{
+    position: absolute;    /* float (overlay) on mobile as requested */
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    padding: 12px;
+    background: rgba(0,0,0,0.45); /* translucent dark background for readability */
+    border-radius: 8px;
+    z-index: 5;
+    pointer-events: auto;   /* allow interactions */
+  }
+
+  .welcome_text{
+    font-size: 22px;
+    margin: 0;
+    color: #fff!important;
+  }
+
+  .welcome_message{
+    font-size: 14px;
+    margin: 0;
+    color: #fff;
+  }
+
+  /* shrink nav gaps a bit more on small screens */
+  .navbar{
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  .Logo img{ height: 40px; }
+
+  .start-btn{
+    display: inline-block;
+    margin-top: 8px;
+    padding: 8px 16px;
+  }
+}
 
   .start-btn:hover {
     background: rgb(200, 115, 66);
