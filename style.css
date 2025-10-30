@@ -49,8 +49,35 @@ hr {
     color: rgb(217, 125, 76);
   }
   .welcome{
-    background-image: url(Assets/gathering.jpg);
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: transparent;
   }
+
+  /* image inside .welcome should be fully visible */
+  .welcome-img{
+    width: 100%;
+    height: auto;            /* preserve aspect ratio and show full image */
+    display: block;
+    object-fit: contain;
+  }
+
+  /* center existing content over the image */
+  .welcome-content{
+    position: absolute;
+    inset: 0; /* top:0; right:0; bottom:0; left:0 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 18px; /* small breathing room on mobile */
+    box-sizing: border-box;
+    pointer-events: none; /* makes clicks pass through to image if needed */
+  }
+
+  .welcome-content > * { pointer-events: auto; } /* allow interaction with buttons/links */
 .Navpanel {
     padding: 6px 12px;       /* small padding so nav doesn't look too large */
     margin: 0;               /* removes outer margin */
@@ -67,10 +94,12 @@ hr {
   font-optical-sizing: auto;
   font-weight: 20px;
   font-style: normal;
+  color: azure;
 }
 .welcome_text{
     text-align: center;
     font-size: 50px;
+    color: azure;
 }
 .btosch{
   width: 100%;
