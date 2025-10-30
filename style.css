@@ -1,3 +1,15 @@
+a:hover,
+a:visited,
+a:active {
+  text-decoration: none;   /* stays clean on hover, active, and visited */
+  color: inherit;          /* prevents blue or purple color */
+}
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #999, transparent);
+  margin: 25px 0;
+}
 #centertext{
     text-align: center;
       font-family: "Chiron Sung HK", serif;
@@ -8,6 +20,8 @@
 .Menu{
   display: flex;
   align-items: center; /* keeps them vertically aligned */
+  padding: 0px; 
+  margin: 0;
   gap: 10px; /* adds space between them */
 }
 .navbar {
@@ -16,7 +30,11 @@
   justify-content: center; /* or space-between / space-around / space-evenly */
   gap: 40px; /* this adds spacing between items */
 }
-
+.Navpanel {
+    padding: 0;              /* removes outer padding */
+    margin: 0;               /* removes outer margin */
+    background-color: #fff;  /* optional, just styling */
+}
 .Logo img{
     width: 50px;
     height: 60px;
@@ -48,11 +66,4 @@
 a {
   text-decoration: none;   /* removes underline */
   color: inherit;          /* makes links take parent text color */
-}
-
-a:hover,
-a:visited,
-a:active {
-  text-decoration: none;   /* stays clean on hover, active, and visited */
-  color: inherit;          /* prevents blue or purple color */
 }
