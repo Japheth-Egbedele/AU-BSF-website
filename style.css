@@ -10,6 +10,15 @@ hr {
   background: linear-gradient(to right, transparent, #999, transparent);
   margin: 25px 0;
 }
+body {
+    margin: 0;
+}
+hr {
+    margin: 5px 0;  /* reduces spacing above & below hr */
+}
+.wrapper{
+  background-color: rgb(245, 245, 220);
+}
 #centertext{
     text-align: center;
       font-family: "Chiron Sung HK", serif;
@@ -20,24 +29,35 @@ hr {
 .Menu{
   display: flex;
   align-items: center; /* keeps them vertically aligned */
-  padding: 0px; 
+  padding: 6px 8px; 
   margin: 0;
-  gap: 10px; /* adds space between them */
+  gap: 8px; /* adds space between them */
 }
 .navbar {
   display: flex;
   font-size: 13px;
   justify-content: center; /* or space-between / space-around / space-evenly */
-  gap: 40px; /* this adds spacing between items */
+  gap: 18px; /* reduced spacing so menu is more compact */
 }
+ .navbar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  .navbar a:hover {
+    color: rgb(217, 125, 76);
+  }
+  .welcome{
+    background-image: url(Assets/gathering.jpg);
+  }
 .Navpanel {
-    padding: 0;              /* removes outer padding */
+    padding: 6px 12px;       /* small padding so nav doesn't look too large */
     margin: 0;               /* removes outer margin */
-    background-color: #fff;  /* optional, just styling */
 }
 .Logo img{
-    width: 50px;
-    height: 60px;
+  width: auto;
+  height: 48px;
     object-fit: contain;
 }
 .welcome_message{
@@ -63,7 +83,28 @@ hr {
   height: 100%;
   object-fit: cover; /* fills space, crops slightly but keeps proportions */
 }
+  .start-btn {
+    display: block;         /* allows margin auto centering */
+    width: max-content;    /* shrink to content width */
+    margin: 12px auto;     /* center horizontally, small vertical spacing */
+    padding: 8px 18px;
+    background: rgb(217, 125, 76);
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s;
+    text-align: center;
+  }
+
+  .start-btn:hover {
+    background: rgb(200, 115, 66);
+  }
 a {
   text-decoration: none;   /* removes underline */
   color: inherit;          /* makes links take parent text color */
+}
+.start{
+  text-align: center;
+  
 }
