@@ -379,3 +379,68 @@ footer .container {
 }
 
 /* footer .grid is handled earlier with flexbox rules to lay columns side-by-side */
+
+
+
+
+.testimony-section {
+  text-align: center;
+  background: white;
+  padding: 60px 20px;
+  font-family: serif;
+}
+
+.testimony-section h2 {
+  font-size: 34px;
+  margin-bottom: 40px;
+}
+
+.profiles {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 35px;
+  flex-wrap: wrap;
+}
+
+.profile {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: 0.3s;
+}
+
+.profile.active {
+  border: 4px solid rgb(217, 125, 76); /* highlight orange */
+  transform: scale(1.1);
+}
+
+.text-box h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.text-box p {
+  font-style: italic;
+  max-width: 700px;
+  margin: 0 auto 15px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.story-link {
+  display: inline-block;
+  font-size: 18px;
+  color: rgb(217, 125, 76);
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.story-link:hover {
+  text-decoration: underline;
+}
