@@ -15,16 +15,19 @@ html, body {
 
 .navbar {
   display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 0 15px;
+  justify-content: flex-end; /* align links to the right on wide screens */
+  align-items: center;
+  padding: 0 20px;
+  height: 50px;
+  gap: 28px; /* spacing between items on desktop */
 }
 
 .navbar a {
   text-decoration: none;
-  color: #333;
+  color: #E4F3FA;
   font-weight: 500;
 }
+
 
 /* First section with sheep image using viewport sizes for styling */
 .hero-image {
@@ -42,6 +45,67 @@ html, body {
     display: block;
 }
 
+/* Hamburger button (hidden on desktop) */
+.hamburger{
+  display: none;
+  border: 0;
+  background: transparent;
+  width: 42px;
+  height: 42px;
+  padding: 6px;
+  cursor: pointer;
+}
+.hamburger .bar{
+  display: block;
+  width: 26px;
+  height: 2px;
+  margin: 5px auto;
+  background: #fff;
+  transition: transform 300ms ease, opacity 200ms ease;
+}
+
+/* Mobile menu panel + backdrop */
+.menu-backdrop{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 240ms ease;
+  z-index: 95;
+}
+.menu-backdrop.open{ opacity: 1; pointer-events: auto; }
+
+.mobile-menu{
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 80%;
+  max-width: 320px;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(6px);
+  transform: translateX(110%);
+  transition: transform 360ms cubic-bezier(.2,.9,.26,1);
+  z-index: 100;
+  padding: 48px 20px;
+  display: flex;
+  align-items: flex-start;
+}
+.mobile-menu.open{ transform: translateX(0); }
+.mobile-nav{
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.mobile-nav a{ color: #111; text-decoration: none; font-weight: 600; }
+
+/* Hamburger active (turn into X) */
+.hamburger.is-active .bar-1{ transform: translateY(7px) rotate(45deg); }
+.hamburger.is-active .bar-2{ opacity: 0; transform: scaleX(0); }
+.hamburger.is-active .bar-3{ transform: translateY(-7px) rotate(-45deg); }
+
 /* Mobile / smaller devices */
 @media (max-width: 768px) {
   .hero-image {
@@ -49,9 +113,13 @@ html, body {
   }
   
   .navbar {
-    gap: 15px;
+    gap: 20px;
     font-size: 14px;
+    justify-content: center; /* center links on small screens */
   }
+  /* show hamburger and hide desktop links on small screens */
+  .hamburger{ display: block; }
+  .nav-links{ display: none; }
 }
 
 .navpanel{
