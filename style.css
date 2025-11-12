@@ -493,3 +493,10 @@ body {
     text-align: center;
   }
 }
+
+.Give-content p, h3{
+  text-align: center;
+}
+.Give-content h3{
+  font-size: 40px;
+}
