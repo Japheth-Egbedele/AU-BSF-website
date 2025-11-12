@@ -134,6 +134,20 @@ body {
   margin-top: 2rem;
 }
 
+/* Give section: center the call-to-action link */
+.Give-section .Give-content {
+  text-align: center;
+}
+.Give-section .learn-more {
+  display: inline-block;
+  margin-top: 12px;
+  text-decoration: none;
+  color: black;
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-weight: 700;
+}
+
 /* Base button styling */
 .btn {
   position: relative;
@@ -500,3 +514,74 @@ body {
 .Give-content h3{
   font-size: 40px;
 }
+
+footer {
+      background: #000;
+      padding: 50px 20px;
+      text-align: center;
+    }
+.footer-item a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 28px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.footer-item i {
+  color: #fff;
+}
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto 40px;
+      gap: 20px;
+    }
+
+    .footer-item {
+      flex: 1;
+      min-width: 200px;
+    }
+
+
+    .footer-title {
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+    }
+
+    .footer-text {
+      font-weight: 400;
+      color: #ccc;
+    }
+
+    .socials {
+      margin-bottom: 20px;
+    }
+
+    .socials span {
+      display: inline-block;
+      margin: 0 10px;
+      font-size: 24px;
+      background: #333;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      border-radius: 50%;
+    }
+
+    .copyright {
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    .socials a, i{
+        color: #fff;
+  text-decoration: none;
+  font-size: 28px;
+  display: inline-block;
+  margin-bottom: 10px;
+    }
