@@ -5,27 +5,43 @@ html, body {
   padding: 0;
 }
 
-/* Navigation bar styling */
+body {
+  font-family: "Lora", serif;
+}
+
+/* Navigation bar styling (overlay on hero image) */
 .navpanel {
-  position: relative;
-  z-index: 10;
-  background: white;
-  padding: 12px 0;
+  position: absolute;
+  top: 16px;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  display: flex;
+  justify-content: center; /* center the container */
+  pointer-events: auto;
+}
+
+.nav-container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between; /* logo left, links right */
+  align-items: center;
 }
 
 .navbar {
   display: flex;
-  justify-content: flex-end; /* align links to the right on wide screens */
-  align-items: center;
-  padding: 0 20px;
-  height: 50px;
   gap: 28px; /* spacing between items on desktop */
+  align-items: center;
+  padding: 12px 0; /* add vertical padding to increase navbar height */
 }
 
 .navbar a {
   text-decoration: none;
-  color: #E4F3FA;
-  font-weight: 500;
+  color: #fff;
+  font-weight: 600;
+  padding: 8px 10px;
 }
 
 
@@ -45,66 +61,24 @@ html, body {
     display: block;
 }
 
-/* Hamburger button (hidden on desktop) */
-.hamburger{
-  display: none;
-  border: 0;
-  background: transparent;
-  width: 42px;
-  height: 42px;
-  padding: 6px;
-  cursor: pointer;
+/* Section1 overlay placed on the hero image */
+.section1{
+  position: absolute;
+  left: 50%;
+  bottom: 18%;
+  transform: translateX(-50%);
+  color: #fff;
+  text-align: center;
+  padding: 350px 28px;
+  max-width: 880px;
+  width: calc(100% - 60px);
+  box-sizing: border-box;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.6);
 }
-.hamburger .bar{
-  display: block;
-  width: 26px;
-  height: 2px;
-  margin: 5px auto;
-  background: #fff;
-  transition: transform 300ms ease, opacity 200ms ease;
-}
+.section1 h3{ font-size:50px; margin: 0 0 6px 0; font-weight: 600; }
+.section1 h2{ font-size: 34px; margin: 0; font-weight: 700; }
 
-/* Mobile menu panel + backdrop */
-.menu-backdrop{
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.35);
-  backdrop-filter: blur(4px);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 240ms ease;
-  z-index: 95;
-}
-.menu-backdrop.open{ opacity: 1; pointer-events: auto; }
-
-.mobile-menu{
-  position: fixed;
-  right: 0;
-  top: 0;
-  height: 100vh;
-  width: 80%;
-  max-width: 320px;
-  background: rgba(255,255,255,0.85);
-  backdrop-filter: blur(6px);
-  transform: translateX(110%);
-  transition: transform 360ms cubic-bezier(.2,.9,.26,1);
-  z-index: 100;
-  padding: 48px 20px;
-  display: flex;
-  align-items: flex-start;
-}
-.mobile-menu.open{ transform: translateX(0); }
-.mobile-nav{
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-.mobile-nav a{ color: #111; text-decoration: none; font-weight: 600; }
-
-/* Hamburger active (turn into X) */
-.hamburger.is-active .bar-1{ transform: translateY(7px) rotate(45deg); }
-.hamburger.is-active .bar-2{ opacity: 0; transform: scaleX(0); }
-.hamburger.is-active .bar-3{ transform: translateY(-7px) rotate(-45deg); }
+/* (Removed mobile menu / hamburger styles - not used in this layout) */
 
 /* Mobile / smaller devices */
 @media (max-width: 768px) {
@@ -113,15 +87,45 @@ html, body {
   }
   
   .navbar {
-    gap: 20px;
+    gap: 18px;
     font-size: 14px;
-    justify-content: center; /* center links on small screens */
   }
-  /* show hamburger and hide desktop links on small screens */
-  .hamburger{ display: block; }
-  .nav-links{ display: none; }
+  /* on small screens place the section1 below the image so it doesn't crowd content */
+  .section1{
+    position: static;
+    transform: none;
+    margin: 14px 20px;
+    color: #111;
+    text-shadow: none;
+    width: auto;
+    padding: 0;
+  }
 }
 
-.navpanel{
-  background-color: black;
+.navpanel{ /* ensure no extra background when not over the hero */
+  background: transparent;
+}
+
+.logo {
+  max-width: max-content;
+  height: auto;
+  margin-right: auto; /* push logo to the left edge */
+  display: flex;
+  align-items: center;
+  gap: 12px; /* space between logo image and text */
+  flex-shrink: 0; /* prevent logo from shrinking */
+}
+
+.logo img {
+  height: 54px;
+  width: auto;
+  object-fit: contain;
+}
+
+.logo p {
+  margin: 0;
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  white-space: nowrap; /* keep text on one line */
 }
