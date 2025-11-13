@@ -46,7 +46,7 @@ body {
 }
 
 .navbar a:hover {
-  color: #A0FE04;
+  color: #a4d96c;
 }
 
 
@@ -70,7 +70,7 @@ body {
   position: absolute;
   /* move slightly left of center */
   left: 35%;
-  bottom: 18%;
+  bottom: 14%;
   transform: translateX(-50%);
   color: #fff;
   text-align: center;
@@ -82,7 +82,7 @@ body {
 }
 .section1 h3{ font-size:70px; margin: 0 0 6px 0; font-weight: 600; }
 .section1 h2{ font-size: 40px; margin: 0; font-weight: 700; }
-.section1 h4{font-size: 70px; margin: 0 0 6px 0; font-weight: 600; color: #A0FE04;}
+.section1 h4{font-size: 70px; margin: 0 0 6px 0; font-weight: 600; color: #a4d96c;}
 
 /* keep the section1 heading on a single line */
 .section1 h3{
@@ -90,7 +90,7 @@ body {
   display: inline-block;
 }
 .section1-you{
-  color: #A0FE04;
+  color: #a4d96c;
   font-weight: 700;
   margin-left: 8px;
 }
@@ -174,7 +174,7 @@ body {
   width: 300%;
   height: 100%;
 /* color on top of btn1 */
-  background: linear-gradient(90deg, transparent, #A0FE04, transparent); 
+  background: linear-gradient(90deg, transparent, #a4d96c, transparent); 
   transition: all 0.5s ease;
   z-index: -1;
 }
@@ -185,14 +185,14 @@ body {
 
 .btn-primary:hover {
   color: #111;
-  background-color: #A0FE04;
+  background-color: #a4d96c;
   transform: translateY(-2px) scale(1.05);
-  box-shadow: 0 0 25px #A0FE04;
+  box-shadow: 0 0 25px #a4d96c;
 }
 
 /* Secondary button: fun glass + wave ripple */
 .btn-secondary {
-  border: 2px solid #A0FE04;
+  border: 2px solid #a4d96c;
   backdrop-filter: blur(10px);
   background: rgba(160, 254, 4, 0.08);
   overflow: hidden;
@@ -205,7 +205,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #A0FE04;
+  background: #a4d96c;
   transition: top 0.4s ease;
   z-index: -1;
   border-radius: 50px;
@@ -297,7 +297,7 @@ body {
 }
 
 .mobile-menu a {
-  color: #A0FE04;
+  color: #a4d96c;
   text-decoration: none;
   font-size: 1.6rem;
   margin: 1rem 0;
@@ -387,14 +387,14 @@ body {
 }
 
 .visit-invite span {
-  color: #A0FE04;
+  color: #a4d96c;
   font-weight: 800;
 }
 
 .underline {
   width: 270px;
   height: 2.5px;
-  background-color: #A0FE04;
+  background-color: #a4d96c;
   margin: 0.5rem auto 1.5rem;
   border-radius: 3px;
 }
@@ -549,7 +549,7 @@ footer {
 
     .footer-title {
       font-weight: 700;
-      font-size: 0.7rem;
+      font-size: 0.rem;
       margin-bottom: 5px;
       color: white;
     }
