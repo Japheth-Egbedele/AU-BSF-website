@@ -21,6 +21,30 @@ body {
   pointer-events: auto;
 }
 
+#ollo {
+    text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 8px 10px;
+}
+
+#ollo {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 8px 10px;
+
+  /* Flex to align image and text horizontally */
+  display: flex;
+  align-items: center;
+  gap: 8px; /* space between logo and text */
+}
+
+#ollo img {
+  height: 40px; /* adjust as needed */
+  width: auto;   /* maintain aspect ratio */
+}
+
 .nav-container {
   width: 100%;
   max-width: 1200px;
