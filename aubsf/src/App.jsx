@@ -1,20 +1,25 @@
-import { useState } from 'react'
 import { Routes, Route } from "react-router-dom";
-// Pages
+import Navbar from "./components/navbar";
+import Footer from "./components/footer"
 import Home from "./pages/home";
-import About from "./pages/about";
+import NewHere from "./pages/newHere";
+import WhoWeAre from "./pages/about";
 import Gallery from "./pages/gallery";
 import Give from "./pages/give";
-import NewHere from "./pages/newhere";
-//Components
-import Navbar from "./components/footer";
-import Footer from "./components/navbar";
 
 export default function App() {
   return (
     <>
       <Navbar />
-      <Footer />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/new-here" element={<NewHere />} />
+        <Route path="/who-we-are" element={<WhoWeAre />} />
+        <Route path="/events" element={<Events />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/give" element={<Give />} />
+      </Routes>
     </>
   );
 }
