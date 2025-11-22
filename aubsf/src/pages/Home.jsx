@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import "../styles/navbar.css";
 import "../styles/home.css";
+import "../styles/global.css";
 
 // Images
 import SheepImg from "../Assets/sheep-o.jpg";
@@ -10,10 +11,11 @@ import confer from "../Assets/confer.jpg";
 export default function Home() {
   return (
     <div className="wrapper">
-
       {/* Hero Section */}
       <header>
-        <img src={SheepImg} alt="Church banner" />
+        <div className="hero-image">
+          <img src={SheepImg} alt="Church banner" />
+        </div>
         <div className="section1">
           <h3>
             Church For People Like <span className="section1-you">You</span>
@@ -106,6 +108,7 @@ export default function Home() {
           <Link to="/give" className="learn-more">Learn More</Link>
         </div>
       </section>
+      <br /><br />
 
     </div>
   );

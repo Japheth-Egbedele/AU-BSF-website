@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import "../styles/global.css";
+import "../styles/give.css";
 export default function Give() {
   return (
 <div className="wrapper">

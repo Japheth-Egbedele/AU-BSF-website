@@ -7,7 +7,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="hero-image">
+    <>
       <nav className="navpanel" aria-label="Main navigation">
         <div className="nav-container">
           <div className="logo">
@@ -28,7 +28,7 @@ export default function Navbar() {
       </nav>
 
       <button
-        className="hamburger"
+        className={`hamburger ${isOpen ? "active" : ""}`}
         aria-label="Toggle menu"
         aria-expanded={isOpen}
         onClick={() => setIsOpen(!isOpen)}
@@ -38,13 +38,13 @@ export default function Navbar() {
         <span></span>
       </button>
 
-      <div className={`mobile-menu ${isOpen ? "open" : ""}`}>
+      <div className={`mobile-menu ${isOpen ? "active" : ""}`}>
         <Link to="/new-here" onClick={() => setIsOpen(false)}>New Here?</Link>
         <Link to="/about" onClick={() => setIsOpen(false)}>Who We Are</Link>
         <Link to="/events" onClick={() => setIsOpen(false)}>Events</Link>
         <Link to="/gallery" onClick={() => setIsOpen(false)}>Gallery</Link>
         <Link to="/give" onClick={() => setIsOpen(false)}>Give</Link>
       </div>
-    </div>
+    </>
   );
 }

@@ -87,30 +87,33 @@ html, body {
     font-size: 0.9rem;
   }
 
+header {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: block;
+  line-height: 0;
+}
 
-/* First section with sheep image using viewport sizes for styling */
 .hero-image {
   width: 100%;
-  height: 100vh; /* full viewport height for desktop */
+  height: 100vh;
   position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 @media (max-width: 768px) {
   .hero-image {
-    height: 75vh; /* 3/4 of screen for mobile */
+    height: 100vh; /* full screen on mobile too */
   }
-}
-
-header {
-  position: relative;
-}
-
-/* To keep image proportional */
-.hero-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
 }
 
 /* Section1 overlay placed on the hero image */
