@@ -18,7 +18,7 @@ export default function Give() {
       <section className="ways-to-give">
         <div className="give-container">
           <h2>Ways to Give</h2>
-          <p>If you are interested in leaving a bequest to AU-BSF, please contact us at <a href="mailto:aubsf@gmail.com">aubsf@gmail.com</a> or call +234-906-85696.</p>
+          <p>If you are interested in leaving a bequest to AU-BSF, please contact us at <a href="mailto:aubsf@gmail.com">aubsf@gmail.com</a> or call <a href="tel:+2347877559080">+234 705 755 8080</a>.</p>
 
           <div className="give-method">
             <h3>Direct Deposit</h3>

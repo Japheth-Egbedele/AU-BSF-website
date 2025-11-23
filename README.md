@@ -98,5 +98,9 @@ All internal navigation uses:
 <Link to="/route">...</Link>
 Never use traditional HTML links like href="page.html".
 
+import SheepImg from "../Assets/sheep2.jpg";
+<img src={SheepImg} alt="" /> 
+<Link to="/" className="learn-more">Learn More</Link>  
+
 Status
 Active development — sections, pages, and styles are being gradually migrated from the previous HTML/CSS version into reusable React components.

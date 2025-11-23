@@ -5,6 +5,7 @@ function Footer() {
   return (
     <footer>
       <div className="footer-container">
+
         <div className="footer-item">
           <i className="bx bx-envelope"></i>
           <div className="footer-title">Email</div>
@@ -14,7 +15,9 @@ function Footer() {
         <div className="footer-item">
           <i className="bx bx-phone"></i>
           <div className="footer-title">Church Office</div>
-          <div className="footer-text">+234-906-85696</div>
+          <div className="footer-text">
+            <a href="tel:+2347057558080">+234 705 755 8080</a>
+          </div>
         </div>
 
         <div className="footer-item">
@@ -27,15 +30,29 @@ function Footer() {
         </div>
 
         <div className="footer-item">
-          <Link to="/give"><i className="bx bx-credit-card-alt"></i></Link>
+          {/* INTERNAL ROUTE → Correct usage */}
+          <Link to="/give">
+            <i className="bx bx-credit-card-alt"></i>
+          </Link>
           <div className="footer-title">Give</div>
           <div className="footer-text">Give Online</div>
         </div>
+
       </div>
 
       <div className="socials">
-        <Link to="#"><i className="bxl bx-instagram"></i></Link>
-        <Link to="#"><i className="bxl bx-youtube"></i></Link>
+        {/* EXTERNAL LINKS → Must use <a> */}
+        <a
+          href="https://www.instagram.com/achievers_university_bsf?utm_source=qr&igsh=MWNscTR2Y3dnazc1MA=="
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="bxl bx-instagram"></i>
+        </a>
+
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          <i className="bxl bx-youtube"></i>
+        </a>
       </div>
 
       <div className="copyright">

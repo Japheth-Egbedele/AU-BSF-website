@@ -53,6 +53,8 @@ export default function Home() {
               relationship with Jesus? Find out what your next steps are.
             </p>
             <Link to="/new-here" className="learn-more">Learn More</Link>
+            
+            
           </div>
           <div className="new-here-image">
             <img src={peopleHug} alt="Community gathering" />

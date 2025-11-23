@@ -3,3 +3,120 @@ a {
   color: inherit;
   cursor: pointer;
 }
+
+.learn-more {
+  text-decoration: none;
+  font-weight: 600;
+  color: #000;
+  position: relative;
+  display: inline-block;
+}
+
+.learn-more::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background-color: #a4d96c; /* 💡 Change this for underline color */
+  transition: width 0.3s ease;
+}
+
+.learn-more:hover::after {
+  width: 60%;
+}
+
+  /* Buttons */
+  .hero-buttons {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+.btn {
+  position: relative;
+   width: 100%;
+   max-width: 250px;
+  padding: 1.2rem 1.7rem;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  font-family: "Lora", serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.3s ease, transform 0.2s ease;
+  border-radius: 50px;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .hero-buttons {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.0rem; /* Slightly bigger spacing for desktop */
+  }
+
+  .hero-buttons .btn {
+    padding: 1.5rem 1.0rem; /* Make them bigger on desktop */
+    font-size: 1.2rem;
+  }
+}
+
+/* Primary button: glowing neon effect */
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 300%;
+  height: 100%;
+/* color on top of btn1 */
+  background: linear-gradient(90deg, transparent, #a4d96c, transparent); 
+  transition: all 0.5s ease;
+  z-index: -1;
+}
+
+.btn-primary:hover::before {
+  left: -50%;
+}
+
+.btn-primary:hover {
+  color: #111;
+  background-color: #a4d96c;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 0 25px #a4d96c;
+}
+
+/* Secondary button: fun glass + wave ripple */
+.btn-secondary {
+  border: 2px solid #a4d96c;
+  backdrop-filter: blur(10px);
+  background: rgba(160, 254, 4, 0.08);
+  overflow: hidden;
+}
+
+.btn-secondary::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #a4d96c;
+  transition: top 0.4s ease;
+  z-index: -1;
+  border-radius: 50px;
+}
+
+.btn-secondary:hover::before {
+  top: 0;
+}
+
+.btn-secondary:hover {
+  color: #111;
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(160, 254, 4, 0.6);
+}
