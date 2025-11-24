@@ -280,14 +280,6 @@ header {
   font-weight: 800;
 }
 
-.underline {
-  width: 270px;
-  height: 2.5px;
-  background-color: #a4d96c;
-  margin: 0.5rem auto 1.5rem;
-  border-radius: 3px;
-}
-
 
 .church-name {
   font-size: 2.5rem;

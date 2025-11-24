@@ -1,129 +1,76 @@
-/* GENERAL PAGE DESIGN */
-body {
-  margin: 0;
-  background: #000;
-  font-family: "Segoe UI", sans-serif;
-  color: #fff;
+/* --- Base Gallery Layout --- */
+.gallery-page {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f8f8f8; /* Your light background */
 }
 
-/* BACKGROUND SPARK EFFECT */
-.spark-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background:
-    radial-gradient(circle at 20% 30%, rgba(164,217,108,0.2), transparent 60%),
-    radial-gradient(circle at 80% 70%, rgba(255,140,0,0.2), transparent 70%),
-    radial-gradient(circle at 40% 90%, rgba(90,180,255,0.18), transparent 70%);
-  z-index: -1;
-  filter: blur(40px);
+/* --- Filter Bar Styling --- */
+.gallery-filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
 }
 
-/* GALLERY */
-.gallery-section {
-  padding: 80px 40px;
-  max-width: 1300px;
-  margin: auto;
+.filter-btn {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #70ad47; /* Secondary Mid-Green */
+    color: #000000;
+    transition: all 0.3s;
 }
 
-.gallery-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 30px;
-  margin-bottom: 80px;
-  flex-wrap: wrap;
+.filter-btn.active, .filter-btn:hover {
+    background-color: #38761d; /* Primary Accent Green */
+    color: #ffffff;
 }
 
-/* CATEGORY CARD */
-.category-card {
-  background: rgba(255,255,255,0.03);
-  padding: 20px;
-  border-radius: 18px;
-  backdrop-filter: blur(4px);
-  width: 48%;
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  border: 1px solid rgba(255,255,255,0.07);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* --- Image Grid (Masonry-like with CSS Grid) --- */
+.gallery-grid {
+    display: grid;
+    /* Sets up 3 flexible columns */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 15px;
+    grid-auto-rows: max-content; /* Helps simulate masonry by allowing items to take only the height they need */
 }
 
-.category-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+.gallery-item {
+    overflow: hidden;
+    position: relative;
+    border-radius: 4px; /* Soft edges */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle depth */
+    cursor: pointer;
 }
 
-/* IMAGE STACK */
-.image-stack {
-  position: relative;
-  width: 180px;
-  height: 180px;
-}
-
-.image-stack img {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 14px;
-}
-
-.img-back {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  filter: blur(3px) brightness(0.6);
-  transform: scale(0.94);
-  z-index: 1;
-}
-
-.img-main {
-  position: relative;
-  z-index: 2;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-}
-
-/* TEXT */
-.category-info h3 {
-  margin: 0;
-  font-size: 1.6rem;
-  font-weight: 700;
-}
-
-.category-info p {
-  color: #ccc;
-  line-height: 1.5;
-  margin: 10px 0 20px;
-}
-
-/* BUTTON */
-.category-btn {
-  display: inline-block;
-  padding: 10px 22px;
-  background: #a4d96c;
-  border-radius: 6px;
-  font-weight: 600;
-  color: #000;
-  text-decoration: none;
-  transition: opacity 0.3s ease, transform 0.2s ease;
-}
-
-.category-btn:hover {
-  opacity: 0.8;
-  transform: translateY(-2px);
-}
-
-/* MOBILE RESPONSIVE */
-@media(max-width: 900px) {
-  .category-card {
+.gallery-item img {
     width: 100%;
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .image-stack {
-    margin-bottom: 15px;
-  }
+    height: auto;
+    display: block;
+    transition: transform 0.4s ease;
 }
 
+/* --- Image Hover Effect --- */
+.gallery-item:hover img {
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Optional Overlay for Captions */
+.image-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white;
+    font-size: 0.9em;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover .image-overlay {
+    transform: translateY(0);
+}

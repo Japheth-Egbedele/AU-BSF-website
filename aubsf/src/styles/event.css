@@ -1,0 +1,84 @@
+.wrapper p, h2{
+color: white;
+}
+/* Container for the entire section */
+.events-schedule-section {
+    padding: 60px 20px;
+    background-color: #f8f8f8; /* Your approved light grey background */
+    color: #000000; /* Black text for high readability */
+}
+
+/* Grid layout for the events */
+.schedule-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    /* Sets up 3 columns for desktop, adjusts gracefully for smaller screens */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px 30px;
+    text-align: center;
+}
+
+/* Individual Event Card Styling */
+.event-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    /* Optional: Subtle border to separate cards, similar to the image */
+    /* border: 1px solid #eee; */ 
+}
+
+.event-icon {
+    /* Adjusts the spacing around the clock icon */
+    margin-bottom: 20px; 
+}
+
+/* Title Styling */
+.event-title {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+/* Day of the week (Prominent text) */
+.event-day {
+    font-size: 1em;
+    font-weight: bold; /* Make the day stand out */
+    margin-bottom: 15px;
+}
+
+/* Time and Location Styling (Slightly lighter/smaller) */
+.event-time {
+    font-size: 0.9em;
+    font-weight: 600;
+    margin: 0;
+}
+
+.event-location {
+    font-size: 0.85em;
+    color: #555; /* A subtle grey for secondary information */
+    margin-top: 5px;
+}
+
+/* Optional: Add a subtle green accent on hover */
+.event-card:hover .event-title {
+    color: #38761d; /* Primary Accent Green on hover */
+    transition: color 0.3s ease;
+}
+
+.Alphabet{
+   padding: 60px 20px;
+  background-color: #f8f8f8;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: #333;
+}
+.Alphabet h3{
+  font-size: 40px;
+}
+
+.verse-text{
+    color: white;
+    font-size: 40px;
+}

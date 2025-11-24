@@ -1,107 +1,48 @@
 import { Link } from "react-router-dom";
-import service from "../Assets/group-1.jpg";
+import "../styles/navbar.css";
+import "../styles/gallery.css";
+import "../styles/global.css";
+import "../styles/footer.css";
+
+import SheepImg from "../Assets/sheep-o.jpg";
+import image from "../Assets/BTS.jpg"
+
 export default function Gallery() {
-  return (
-<div className="wrapper">
-
- <div className="spark-bg"></div>
-
-  <section className="gallery-section">
-
-    {/* <!-- CATEGORY 1 --> */}
-    <div className="gallery-row">
-      <div className="category-card">
-        <div className="image-stack">
-          <img src={service} className="img-back" alt="" />
-          <img src={service} className="img-back" alt="" /> 
-        </div>
-        <div className="category-info">
-          <h3>Picnics</h3>
-          <p>Relaxing moments together as we celebrate community and togetherness.</p>
-          <Link to="/" className="category-btn">View Gallery</Link>
-        </div>
-      </div>
-
-      {/* <!-- CATEGORY 2 --> */}
-      <div className="category-card">
-        <div className="image-stack">
-          <img src={service} className="img-back" alt="" />
-          <img src={service} className="img-main" alt="" />
-        </div>
-        <div className="category-info">
-          <h3>Outreach & Evangelism</h3>
-          <p>Going out to share God’s love across campus and in our community. Moments of boldness and compassion.</p>
-          <Link to="/" className="category-btn">View Gallery</Link>
-        </div>
-      </div>
+return(
+  <div className="gallery-page">
+    {/* Filter Buttons */}
+    <div className="gallery-filters">
+        <button className="filter-btn active" data-category="all">All Events</button>
+        <button className="filter-btn" data-category="convention">Conventions</button>
+        <button className="filter-btn" data-category="worship">Worship</button>
+        <button className="filter-btn" data-category="outreach">Outreach</button>
     </div>
 
-    {/* <!-- CATEGORY 3 & 4 (duplicate this row to add more sections) --> */}
-    <div className="gallery-row">
-      <div className="category-card">
-        <div className="image-stack">
-          <img src="your-image.jpg" className="img-back" alt="" />
-          <img src="your-image.jpg" className="img-main" alt="" />
+    {/* Image Grid Container */}
+    <div className="gallery-grid">
+        
+        {/* Gallery Item 1 (Example) */}
+        <div className="gallery-item convention" data-category="convention">
+            <img src="{SheepImg}" alt="Image of the National Convention 2024"
+                loading="lazy" /* The optimization you need! */
+            />
+            <div className="image-overlay">
+                <p>2024 National Convention</p>
+            </div>
         </div>
-        <div className="category-info">
-          <h3>Sunday Services</h3>
-          <p>Weekly gatherings filled with the Word, worship, fellowship, and spiritual growth.</p>
-          <Link to="/" className="category-btn">View Gallery</Link>
+
+        {/* Gallery Item 2 (Example) */}
+        <div className="gallery-item worship">
+            <img 
+                src="path/to/thumb-worship-1.webp" 
+                alt="Sunday Service worship team"
+                loading="lazy"
+            />
         </div>
-      </div>
 
-      <div className="category-card">
-        <div className="image-stack">
-          <img src="your-image.jpg" className="img-back" alt="" />
-          <img src="your-image.jpg" className="img-main" alt="" />
-        </div>
-        <div className="category-info">
-          <h3>Choir Ministry</h3>
-          <p>A team of passionate worshipers lifting hearts to God through song and music.</p>
-          <Link to="/" className="category-btn">View Gallery</Link>
-        </div>
-      </div>
+        {/* ... more gallery items ... */}
+        
     </div>
-
-  </section>
-
-{/* <!-- <section className="event-section">
-  <div className="event-container">
-    <div className="event-text">
-      <h2>Worship Night</h2>
-      <p>
-        Join us for a night of praise, worship, and fellowship. Experience powerful
-        moments with our church family and grow in your relationship with Jesus.
-      </p>
-      <a href="#" className="learn-more">Learn More</a>
-    </div>
-    <div className="event-image">
-      <div className="image-stack">
-        <img src="./Assets/service.jpg" alt="Background Worship" className="back-image">
-        <img src="./Assets/service.jpg" alt="Background Choir" className="back-image">
-        <img src="./Assets/service.jpg" alt="Main Worship Event" className="main-image">
-      </div>
-    </div>
-  </div>
-
-  <div className="event-container">
-    <div className="event-image">
-      <div className="image-stack">
-        <img src="./Assets/service.jpg" alt="Background Worship" className="back-image">
-        <img src="./Assets/gathering.jpg" alt="Background Choir" className="back-image">
-        <img src="./Assets/service.jpg" alt="Main Worship Event" className="main-image">
-      </div>
-    </div>
-        <div className="event-text">
-      <h2>Worship Night</h2>
-      <p>
-        Join us for a night of praise, worship, and fellowship. Experience powerful
-        moments with our church family and grow in your relationship with Jesus.
-      </p>
-      <a href="#" className="learn-more">Learn More</a>
-    </div>
-  </div>
-</section> --> */}
 </div>
-  );
+);
 }

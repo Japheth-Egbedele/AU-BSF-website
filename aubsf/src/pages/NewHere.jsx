@@ -1,6 +1,9 @@
+import "../styles/global.css";
+import "../styles/give.css";
 import { Link } from "react-router-dom";
 export default function NewHere() {
   return (
+    <div className="decorative-container1">
     <div className="wrapper">
 <section className="new-here" aria-labelledby="new-here-title">
   <div className="container">
@@ -66,5 +69,6 @@ export default function NewHere() {
   </div>
 </section>
       </div>
+    </div>
   );
 }

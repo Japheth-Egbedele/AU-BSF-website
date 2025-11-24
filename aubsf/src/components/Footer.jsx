@@ -9,8 +9,12 @@ function Footer() {
         <div className="footer-item">
           <i className="bx bx-envelope"></i>
           <div className="footer-title">Email</div>
-          <div className="footer-text">aubsf@gmail.com</div>
-        </div>
+          <div className="footer-text">
+            <a href="mailto:bsfachievers@gmail.com">
+              bsfachievers@gmail.com
+            </a>
+          </div>  
+      </div>
 
         <div className="footer-item">
           <i className="bx bx-phone"></i>
@@ -23,10 +27,10 @@ function Footer() {
         <div className="footer-item">
           <i className="bx bx-location"></i>
           <div className="footer-title">
-            Law Building class IV, inside Achievers University Campus <br />
-            Owo, Ondo State, Nigeria
+            AU-BSF
           </div>
-          <div className="footer-text">AU-BSF</div>
+          <div className="footer-text"> Law Building class IV, inside Achievers University Campus 
+            Owo, Ondo State, Nigeria</div>
         </div>
 
         <div className="footer-item">
@@ -38,28 +42,6 @@ function Footer() {
           </Link>
         </div>
       </div>
-      
-      {/* Feedback Form */}
-        <div className="footer-item feedback">
-          <div className="footer-title">Send Feedback</div>
-          <form 
-            action="https://formspree.io/f/YOUR_FORM_ID" 
-            method="POST"
-          >
-            <input 
-              type="email" 
-              name="email" 
-              placeholder="Your Email" 
-              required 
-            />
-            <textarea 
-              name="message" 
-              placeholder="Your Message" 
-              required
-            ></textarea>
-            <button type="submit">Send</button>
-          </form>
-        </div>
 
       <div className="socials">
         {/* EXTERNAL LINKS → Must use <a> */}

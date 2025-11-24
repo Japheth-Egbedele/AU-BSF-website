@@ -1,7 +1,10 @@
+import "../styles/global.css";
+import "../styles/give.css";
 import { Link } from "react-router-dom";
 export default function About() {
   return (
-<div classNameName="wrapper">
+<div className="decorative-container1">
+  <div classNameName="wrapper">
 <main className="content">
 
   {/* <!-- Our Identity --> */}
@@ -95,6 +98,7 @@ export default function About() {
     <blockquote>“But grow in the grace and knowledge of our Lord and Savior Jesus Christ.” — 2 Peter 3:18</blockquote>
   </section>
 </main>
+</div>
 </div>
   );
 }

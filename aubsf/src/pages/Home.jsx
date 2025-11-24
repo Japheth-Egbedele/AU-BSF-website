@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import "../styles/navbar.css";
 import "../styles/home.css";
 import "../styles/global.css";
+import "../styles/footer.css";
 
 // Images
 import SheepImg from "../Assets/sheep-o.jpg";
@@ -34,6 +35,8 @@ export default function Home() {
           <h3 className="visit-invite">Join Us Sundays at 8am or 9am!</h3>
           <div className="underline"></div>
           <h1 className="church-name">AU-BSF</h1>
+
+
           <p className="visit-text">
             We'd love to get to know you! Join us this Sunday!
           </p>
