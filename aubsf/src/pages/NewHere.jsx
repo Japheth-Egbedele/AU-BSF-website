@@ -1,6 +1,7 @@
 import "../styles/global.css";
 import "../styles/give.css";
 import { Link } from "react-router-dom";
+import EventImg from "../Assets/sheep-o.jpg";
 export default function NewHere() {
   return (
     <div className="decorative-container1">
@@ -58,11 +59,8 @@ export default function NewHere() {
     </div>
 
     <div className="new-here-right" aria-hidden="false">
-      {/* I don't even have these images */}
       <div className="image-stack" role="img" aria-label="People gathered worshipping and fellowshipping">
-        <img src="assets/event-back-2.jpg" alt="" className="stack back back-2" />
-        <img src="assets/event-back-1.jpg" alt="" className="stack back back-1" />
-        <img src="assets/event-main.jpg" alt="Worship and fellowship at AU-BSF" className="stack main" />
+        <img src={EventImg} alt="Worship and fellowship at AU-BSF" className="stack main" />
       </div>
     </div>
 

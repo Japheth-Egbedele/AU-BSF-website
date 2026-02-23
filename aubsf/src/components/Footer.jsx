@@ -59,8 +59,7 @@ function Footer() {
       </div>
 
       <div className="copyright">
-        © 2025 AU-BSF
-        <p>JOE</p>
+        © 2025 AU-BSF Church. All rights reserved.
       </div>
     </footer>
   );

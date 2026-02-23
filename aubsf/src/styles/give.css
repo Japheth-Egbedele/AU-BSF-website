@@ -1,120 +1,142 @@
-/* GIVE PAGE */
-.give-hero {
+/* ============================================
+   GIVE PAGE STYLES
+   ============================================ */
+.decorative-container1 {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
   position: relative;
-  padding: 160px 20px 80px;
-  background-color: #7F7F7F;
-  text-align: center;
-  font-family: 'Lora', serif;
 }
 
-.give-hero h2 {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-  color: white;
-}
-
-.give-hero p {
-  font-size: 1.2rem;
-  color: white;
+.wrapper {
+  padding: var(--spacing-4xl) var(--spacing-lg);
 }
 
 .give-hero-content {
-  margin-top: 30px;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .give-hero-content h2 {
-  font-size: 2.4rem;
-  margin-bottom: 10px;
-  color: white;
+  font-family: var(--font-family-heading);
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-inverse);
+  margin-bottom: var(--spacing-lg);
+  line-height: var(--line-height-tight);
 }
 
 .give-hero-content p {
-  font-size: 1.4rem;
-  margin-bottom: 20px;
-  color: white;
+  font-size: var(--font-size-lg);
+  color: rgba(255, 255, 255, 0.9);
+  font-style: italic;
+  margin-bottom: 0;
 }
 
-.Support{
-   padding: 60px 20px;
-  background-color: #f8f8f8;
-  font-family: 'Montserrat', sans-serif;
+/* Support Section */
+.Support {
   text-align: center;
-  color: #333;
-}
-.Support h3{
-  font-size: 40px;
-}
-
-.Support p, .Support h2 {
-  color: #333 !important;  
-  /* Bad practice: correct the main issue */
-}
-.ways-to-give {
-  padding: 20px 20px;
-  background-color: #f8f8f8;
-  font-family: 'Montserrat', sans-serif;
-  text-align: center;
-  color: black !important;
-  /* Bad practice */
-}
-.ways-to-give h2{
-  color: #333;
-}
-
-/* Boxicon icon size */
-.ways-to-give i{
-  font-size: 40px;
-  color: white;
-}
-.give-container {
-  max-width: 1000px;
+  padding: var(--spacing-4xl) var(--spacing-lg);
+  background: var(--color-bg-secondary);
+  max-width: 900px;
   margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-  align-items: stretch; /* make all boxes same height */
 }
 
-.give-container h2,
-.give-container > p {
-  width: 100%;
+.Support h3 {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-3xl);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-lg);
 }
 
-.give-method {
-  width: 350px; /* Fixed desktop size */
-  background-color: #70ad47;
-  border: 1px solid #ccc;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+.Support p {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+/* Ways to Give Section */
+.ways-to-give {
+  padding: var(--spacing-4xl) var(--spacing-lg);
+  background: var(--color-bg-primary);
+}
+
+.ways-to-give h2 {
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  font-size: var(--font-size-4xl);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-3xl);
+}
+
+.give-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.give-container > p {
+  text-align: center;
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-3xl);
+}
+
+.give-container > p a {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+  transition: color var(--transition-base);
+}
+
+.give-container > p a:hover {
+  color: var(--color-primary-light);
+}
+
+/* Give Methods */
+.give-method {
+  background: linear-gradient(135deg, var(--color-bg-secondary) 0%, var(--color-bg-primary) 100%);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  border: 1px solid var(--color-border-light);
+  transition: all var(--transition-base);
+  margin-bottom: var(--spacing-xl);
+}
+
+.give-method:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-8px);
+  border-color: var(--color-primary-light);
 }
 
 .give-method h3 {
-  font-size: 1.3rem;
-  margin-bottom: 15px;
-  color: white;
+  font-size: var(--font-size-2xl);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-lg);
+  margin-top: var(--spacing-md);
+}
+
+.give-method i {
+  font-size: 48px;
+  color: var(--color-primary-light);
+  margin-bottom: var(--spacing-md);
 }
 
 .give-method p {
-  font-size: 1rem;
-  line-height: 1.5;
-  color: white;
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  margin-bottom: 0;
+  line-height: var(--line-height-relaxed);
 }
 
-/* Mobile */
+.give-method strong {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-bold);
+}
+
 @media (max-width: 768px) {
-  .give-method {
-    width: 100%;             /* FULL WIDTH ON MOBILE */
-    max-width: 100%;         /* Prevent overflow */
-    padding: 20px;           /* Slightly smaller padding */
+  .give-hero-content h2 {
+    font-size: var(--font-size-2xl);
   }
 
-  .give-container {
-    padding: 0 10px;         /* Prevents mobile overflow */
+  .ways-to-give h2 {
+    font-size: var(--font-size-3xl);
   }
 }

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function About() {
   return (
 <div className="decorative-container1">
-  <div classNameName="wrapper">
+  <div className="wrapper">
 <main className="content">
 
   {/* <!-- Our Identity --> */}
