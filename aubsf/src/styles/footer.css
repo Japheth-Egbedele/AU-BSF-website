@@ -1,8 +1,7 @@
 /* ===== FOOTER (Desktop & Mobile) ===== */
-
 footer {
-  background: #000;
-  padding: 50px 20px;
+  background: var(--color-primary);
+  padding: var(--spacing-4xl) var(--spacing-lg);
   text-align: center;
   width: 100%;
   box-sizing: border-box;
@@ -14,9 +13,9 @@ footer {
   align-items: flex-start;
   flex-wrap: wrap;
   max-width: 1200px;
-  margin: 0 auto 40px;
-  gap: 20px;
-  padding: 0 20px;
+  margin: 0 auto var(--spacing-3xl);
+  gap: var(--spacing-lg);
+  padding: 0 var(--spacing-lg);
   box-sizing: border-box;
 }
 
@@ -26,60 +25,65 @@ footer {
 }
 
 .footer-item a {
-  color: #fff;
+  color: var(--color-text-inverse);
   text-decoration: none;
-  font-size: 20px;
+  font-size: var(--font-size-lg);
   display: inline-block;
-  margin-bottom: 10px;
+  margin-bottom: var(--spacing-md);
+  transition: color var(--transition-base);
+}
+
+.footer-item a:hover {
+  color: var(--color-accent);
 }
 
 .footer-item i {
-  color: #fff;
-  font-size: 25px;
+  color: var(--color-text-inverse);
+  font-size: var(--font-size-2xl);
 }
 
 .footer-title {
-  font-weight: 700;
-  font-size: 1rem;
-  margin-bottom: 5px;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-base);
+  margin-bottom: var(--spacing-sm);
   color: white;
 }
 
 .footer-text {
-  font-weight: 400;
-  color: #ccc;
+  font-weight: var(--font-weight-regular);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .socials {
-  margin-bottom: 20px;
-}
-
-.socials span {
-  display: inline-block;
-  margin: 0 10px;
-  font-size: 24px;
-  background: #333;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  border-radius: 50%;
+  margin-bottom: var(--spacing-lg);
 }
 
 .socials a,
 .socials i {
-  color: #fff;
+  color: white;
   text-decoration: none;
-  font-size: 28px;
+  font-size: var(--font-size-2xl);
   display: inline-block;
-  margin-bottom: 10px;
+  margin: 0 var(--spacing-md);
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all var(--transition-base);
+}
+
+.socials a:hover,
+.socials i:hover {
+  background: var(--color-accent);
+  color: var(--color-primary);
 }
 
 .copyright {
-  font-size: 0.9rem;
-  color: #aaa;
-}
-.copyright p{
-  color: #333;
+  font-size: var(--font-size-sm);
+  color: rgba(255, 255, 255, 0.7);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: var(--spacing-lg);
 }
 
 

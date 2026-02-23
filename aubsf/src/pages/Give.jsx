@@ -4,7 +4,7 @@ import "../styles/give.css";
 export default function Give() {
   return (
     <div className="decorative-container1">
-      <div class= "wrapper">
+      <div className="wrapper">
         <br /><br /><br />
           <div className="give-hero-content">
           <h2>"For all things come from You, and of your own we have given you."</h2>

@@ -23,8 +23,8 @@ return(
         
         {/* Gallery Item 1 (Example) */}
         <div className="gallery-item convention" data-category="convention">
-            <img src="{SheepImg}" alt="Image of the National Convention 2024"
-                loading="lazy" /* The optimization you need! */
+            <img src={SheepImg} alt="Image of the National Convention 2024"
+                loading="lazy"
             />
             <div className="image-overlay">
                 <p>2024 National Convention</p>
@@ -34,13 +34,14 @@ return(
         {/* Gallery Item 2 (Example) */}
         <div className="gallery-item worship">
             <img 
-                src="path/to/thumb-worship-1.webp" 
+                src={image} 
                 alt="Sunday Service worship team"
                 loading="lazy"
             />
+            <div className="image-overlay">
+                <p>Worship Service</p>
+            </div>
         </div>
-
-        {/* ... more gallery items ... */}
         
     </div>
 </div>
