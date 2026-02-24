@@ -22,14 +22,28 @@
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  transition: all 0.3s ease;
-  border-radius: 50px; /* Pill shape like modern UI */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 50px;
+  
+  /* FIXED COLOR: Pure Black */
+  color: #000000; 
+  font-weight: 600;
+}
+
+/* Subtle Hover Effect */
+.filter-btn:hover {
+  border-color: #a4d96c; /* Your brand green */
+  color: #a4d96c;
 }
 
 .filter-btn.active {
-  background-color: var(--color-olive);
-  border-color: var(--color-olive);
-  color: white;
+  /* Using your brand green for the active background */
+  background-color: #a4d96c; 
+  border-color: #a4d96c;
+  
+  /* Text turns black on green for high contrast */
+  color: #000000; 
+  box-shadow: 0 4px 15px rgba(164, 217, 108, 0.3);
 }
 
 /* --- Masonry Layout --- */
