@@ -9,6 +9,7 @@ import PastorImg from "../Assets/Gallery/gallery9.jpg"; // Replace with pastor i
 import StoryImg from "../Assets/Online/sample3.jpg";
 import TeamImg from "../Assets/Gallery/gallery7.jpg";
 import GroupImg from "../Assets/Gallery/gallery10.png";
+import LogoWhite from "../Assets/Logo/logo-p.png";
 
 export default function About() {
   const [openIndex, setOpenIndex] = useState(null);
@@ -30,23 +31,23 @@ export default function About() {
       {/* 1. HERO ALTERNATIVE (Split Arch Hero) */}
       <header className="about-hero-alt">
         <div className="container hero-alt-grid">
-      <div className="hero-alt-text">
-        {/* The elegant script font from the reference */}
-        <h4 className="script-accent-hero">About Us</h4>
-        
-        {/* The bold, concise identifier */}
-        <h1 className="hero-compact-title">WHO ARE WE?</h1>
-        
-        {/* A single, punchy line of information */}
-        <p id="hero-subtext">
-          A student family passionate about Jesus and the AU campus.
-        </p>
-      </div>
-    <div className="hero-alt-image">
-      <div className="hero-arch-window" style={{ backgroundImage: `url(${StoryImg})` }}></div>
-    </div>
-  </div>
-</header>
+          <div className="hero-alt-text">
+            {/* The elegant script font from the reference */}
+            <h4 className="script-accent-hero">About Us</h4>
+
+            {/* The bold, concise identifier */}
+            <h1 className="hero-compact-title">WHO ARE WE?</h1>
+
+            {/* A single, punchy line of information */}
+            <p id="hero-subtext">
+              A student family passionate about Jesus and the AU campus.
+            </p>
+          </div>
+          <div className="hero-alt-image">
+            <div className="hero-arch-window" style={{ backgroundImage: `url(${StoryImg})` }}></div>
+          </div>
+        </div>
+      </header>
 
       {/* 2. SECTION: "You're Not Alone" (Upgraded) */}
       <section className="zig-zag-section">
@@ -106,8 +107,10 @@ export default function About() {
       {/* 5. OUR STORY (Green Background Block) */}
       <section id="story" className="section-olive">
         <div className="container centered-text">
-          <div className="icon-logo">✳</div> {/* Placeholder for a church icon */}
-          <h2>OUR STORY</h2>
+<div className="icon-logo">
+  <img src={LogoWhite} alt="AU-BSF Seal" style={{ width: '50px', opacity: '0.8' }} />
+</div>  
+         <h2>OUR STORY</h2>
           <p className="story-text">
             AU-BSF started as a group of people who loved the Lord meeting in classrooms.
             God provided a building for our budding community to meet in—then it grew beyond
@@ -116,7 +119,7 @@ export default function About() {
           </p>
         </div>
       </section>
-      
+
       {/* 4. PASTORS / LEADERSHIP */}
       <section className="zig-zag-section">
         <div className="container grid-layout">
@@ -155,7 +158,7 @@ export default function About() {
           </div>
         </div>
       </section>
-<br />
+      <br />
       {/* --- BIG LANDSCAPE BREATHER --- */}
       <section className="landscape-image-wrap">
         <div className="landscape-inner">
