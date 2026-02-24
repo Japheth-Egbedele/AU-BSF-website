@@ -7,6 +7,7 @@ import "../styles/about.css";
 import GroupPraying from "../Assets/Gallery/pastor.png"; // Replace with actual group image
 import PastorImg from "../Assets/Gallery/gallery9.jpg"; // Replace with pastor image
 import StoryImg from "../Assets/Online/sample3.jpg";
+import TeamImg from "../Assets/Gallery/gallery7.jpg";
 
 export default function About() {
   const [openIndex, setOpenIndex] = useState(null);
@@ -107,7 +108,7 @@ export default function About() {
           </div>
           <div className="image-content">
              {/* Full circle or Pill shape for pastors */}
-            <div className="arch-image pill-shape" style={{ backgroundImage: `url(${PastorImg})` }}></div>
+            <div className="arch-image pill-shape" style={{ backgroundImage: `url(${TeamImg})` }}></div>
           </div>
         </div>
       </section>
