@@ -161,11 +161,16 @@ a {
 
   .hero-buttons {
     flex-direction: column;
-    /* justify-content: center; */ /* Uncomment to center buttons on mobile */
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-left: 0;
+    width: 100%;
   }
 
   .btn-outline-light {
     width: 100%;
+    max-width: 280px;
     text-align: center;
   }
 }
