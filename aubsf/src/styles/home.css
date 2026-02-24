@@ -226,13 +226,50 @@ a {
 .give-content h3 { font-size: 2.5rem; margin-bottom: 20px; }
 .give-content p { font-family: "Inter", sans-serif; margin-bottom: 30px; font-size: 1.1rem; }
 
-/* Gallery Section */
-.gallery-section { padding: 0; background: #111; }
-.gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
-.gallery-item img { width: 100%; height: 300px; object-fit: cover; display: block; opacity: 0.8; transition: opacity 0.3s; }
-.gallery-item img:hover { opacity: 1; }
-.center-link { padding: 40px; text-align: center; background: #fff; }
+/* --- Gallery Section Fix --- */
+.gallery-section { 
+  padding: 0; 
+  background: #111; 
+}
 
+.gallery-grid { 
+  display: grid; 
+  grid-template-columns: repeat(4, 1fr); 
+}
+
+.gallery-item {
+  overflow: hidden;
+  position: relative;
+  background: #1a1a1a; /* Dark placeholder color */
+}
+
+.gallery-item img { 
+  width: 100%; 
+  height: 300px; 
+  object-fit: cover; 
+  display: block; 
+  opacity: 0.8; 
+  /* The "Nuclear" Fix: Force remove any blur */
+  filter: none !important; 
+  -webkit-filter: blur(0px) !important;
+  
+  transition: opacity 0.3s ease, transform 0.6s ease;
+}
+
+.gallery-item:hover img { 
+  opacity: 1; 
+  transform: scale(1.05);
+}
+
+/* Fix for mobile grid */
+@media (max-width: 900px) {
+  .gallery-grid { 
+    grid-template-columns: repeat(2, 1fr); 
+  }
+  .gallery-item img { 
+    height: 200px; 
+  }
+}
 /* Mobile Adjustments for Sections */
 @media (max-width: 900px) {
   .split-container { flex-direction: column; text-align: center; gap: 40px; }
