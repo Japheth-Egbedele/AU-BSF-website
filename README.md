@@ -104,3 +104,13 @@ import SheepImg from "../Assets/sheep2.jpg";
 
 Status
 Active development — sections, pages, and styles are being gradually migrated from the previous HTML/CSS version into reusable React components.
+
+🌈 Website Color Usage GuideThis guide outlines the purpose and application for the approved color palette, ensuring a consistent and branded look across the entire website.
+Color Name,Hex Code,Usage Category
+Primary Accent Green,#38761d,Action & Emphasis
+Secondary Mid-Green,#70ad47,Secondary Elements
+Light Hover Green,#a4d96c,Subtle Highlights
+Pure White,#ffffff,Primary Background
+Off-White Grey,#f8f8f8,Secondary Background
+Black,#000000,Text & Structure
+Highlight Red,#cc0000,Alerts & Errors
