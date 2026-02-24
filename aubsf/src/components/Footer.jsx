@@ -25,12 +25,11 @@ function Footer() {
         </div>
 
         <div className="footer-item">
-          <i className="bx bx-location"></i>
-          <div className="footer-title">
-            AU-BSF
-          </div>
+          <i class='bx  bx-location-alt-2'></i> 
+          <div className="footer-title">AU-BSF</div>
           <div className="footer-text"> Law Building class IV, inside Achievers University Campus 
             Owo, Ondo State, Nigeria</div>
+            
         </div>
 
         <div className="footer-item">

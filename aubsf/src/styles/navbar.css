@@ -6,14 +6,30 @@
 .navpanel {
   width: 100%;
   padding: 1rem 2rem;
-  position: fixed; /* stays on top */
+  position: fixed; 
   top: 0;
   left: 0;
   z-index: 2000;
-  background: transparent; /* transparent like original */
-  border-bottom: none; /* remove line */
+  background: transparent;
+  border-bottom: none;
   box-sizing: border-box;
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(0);
 }
+
+.navpanel.hidden {
+  transform: translateY(-100%);
+}
+
+.navpanel.visible {
+  transform: translateY(0);
+}
+
+/* * CRITICAL FIX: The element containing your background image (e.g., the 
+* hero section) must be the first element *after* the body and its content 
+* must start right at the top, underneath the transparent navbar.
+* * Assuming your Hero Section is the first section following the navbar:
+*/
 
 .nav-container {
   display: flex;
@@ -39,10 +55,11 @@
 }
 
 .logo span {
-  font-size: 1.4rem;
-  font-weight: 700;
+  font-size: 1.2rem;
+  font-weight: 900;
   color: white;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 /* Desktop nav links */
@@ -117,8 +134,9 @@
 .navbar a {
   text-decoration: none;
   color: #fff;
-  font-weight: 600;
+  font-weight: 500;
   padding: 8px 10px;
+  letter-spacing: 0.5px;
   transition: color 0.3s;
 }
 

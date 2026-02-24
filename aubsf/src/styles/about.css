@@ -1,62 +1,262 @@
-/* Base */
-body, html {
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400;700&family=Lora:wght@400;600;700&display=swap');
+
+/* --- COLOR PALETTE (Based on reference) --- */
+:root {
+  --color-cream: #f9f7f2;
+  --color-tan: #c2a886;
+  --color-olive: #8a9183;
+  --color-rust: #b56c52;
+  --color-dark: #2a2a2a;
+  --color-blue-grey: #a0b0b5;
+}
+
+/* --- TYPOGRAPHY --- */
+h1, h2, h3 { font-family: "Inter", sans-serif; font-weight: 800; text-transform: uppercase; color: var(--color-dark); margin: 0; }
+p { font-family: "Inter", sans-serif; line-height: 1.7; color: #555; margin-bottom: 20px; }
+
+.script-accent {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3.5rem;
+  font-weight: 400;
+  text-transform: none;
+  color: var(--color-dark);
+  line-height: 1;
+  margin-bottom: 0px;
+}
+
+.text-rust { color: var(--color-rust); }
+
+/* --- BUTTONS --- */
+.btn-tan {
+  background-color: var(--color-tan);
+  color: white;
+  padding: 14px 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn-tan:hover { background-color: #a88f6f; }
+
+.btn-tan-outline {
+  background-color: transparent;
+  color: var(--color-tan);
+  border: 2px solid var(--color-tan);
+  padding: 12px 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  display: inline-block;
+}
+.btn-tan-outline:hover { background-color: var(--color-tan); color: white; }
+
+
+/* --- 1. CLEAN HERO (Text Only) --- */
+.clean-hero {
+  background-color: var(--color-cream);
+  padding: 140px 20px 80px 20px; /* Top padding clears navbar */
+  text-align: center;
+}
+
+.hero-container h1 {
+  font-size: 3rem;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+
+/* --- 2. ZIG-ZAG SECTIONS & ARCHES --- */
+.zig-zag-section {
+  padding: 80px 20px;
+  background-color: white;
+}
+
+.zig-zag-section.bg-cream { background-color: var(--color-cream); }
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.text-content h2 {
+  font-family: "Lora", serif; /* Serif for these headers */
+  text-transform: none;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+/* IMAGE SHAPES */
+.arch-image {
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 10px 10px 0px rgba(0,0,0,0.05); /* Subtle offset shadow */
+}
+
+/* Top Arch (Dome) */
+.top-arch { border-radius: 300px 300px 0 0; }
+
+/* Bottom Arch (Window) */
+.bottom-arch { border-radius: 0 0 300px 300px; }
+
+/* Pill Shape */
+.pill-shape { border-radius: 300px; height: 450px; width: 80%; margin: 0 auto; }
+
+
+/* --- 3. STORY SECTION (Olive) --- */
+.section-olive {
+  background-color: var(--color-olive);
+  padding: 80px 20px;
+  color: white;
+  text-align: center;
+}
+
+.section-olive h2 { color: white; margin-bottom: 20px; font-size: 2.5rem; }
+.icon-logo { font-size: 3rem; margin-bottom: 10px; color: rgba(255,255,255,0.5); }
+
+.story-text {
+  color: rgba(255,255,255,0.9);
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+
+/* --- 4. BELIEFS (Clean Accordion) --- */
+.section-cream { background-color: var(--color-cream); padding: 80px 20px; }
+.sub-head { font-style: italic; color: #888; margin-bottom: 40px; }
+
+.accordion-clean {
+  max-width: 800px;
+  margin: 0 auto;
+  border-top: 1px solid #ddd;
+}
+
+.accordion-row { border-bottom: 1px solid #ddd; }
+
+.accordion-clean-header {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 20px 0;
+  text-align: left;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--color-dark);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+
+.accordion-clean-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.accordion-clean-body.open { max-height: 200px; margin-bottom: 20px; }
+
+
+/* --- 5. FOOTER CTA GRID --- */
+.section-footer-cta {
+  padding: 80px 20px 0 20px;
+  background-color: white;
+  text-align: center;
+}
+
+.footer-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 250px;
+  margin-top: 50px;
+}
+
+.col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.col h3 { color: white; font-size: 1.5rem; letter-spacing: 2px; }
+
+.bg-olive { background-color: var(--color-olive); }
+.bg-rust { background-color: var(--color-rust); }
+.bg-blue { background-color: var(--color-blue-grey); }
+
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+  .grid-layout { grid-template-columns: 1fr; gap: 40px; }
+  
+  /* Mobile: Image always on top for visual flow */
+  .reverse-layout { display: flex; flex-direction: column-reverse; }
+  
+  .arch-image { height: 350px; }
+  .pill-shape { width: 100%; }
+  
+  .footer-cols { grid-template-columns: 1fr; height: auto; }
+  .col { height: 150px; }
+}
+
+/* --- Cinematic Landscape Section --- */
+.landscape-image-wrap {
+  width: 100%;
+  height: 65vh; /* 65% of screen height for a 'cinematic' look */
   margin: 0;
   padding: 0;
-  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  background-color: #fafafa;
-  color: #222;
+  overflow: hidden;
+  position: relative;
+  display: block;
 }
 
-h1,h2,h3 { color: #1f2937; margin: 0 0 8px; }
-p { color: #374151; line-height: 1.6; margin: 0 0 12px; }
-
-/* Hero */
-.hero {
-  background: linear-gradient(135deg, #a4d96c, #7fbf4f);
-  color: #fff;
-  text-align: center;
-  padding: 60px 20px;
-}
-.hero h1 { font-size: 2.4rem; margin-bottom: 12px; }
-.hero p { font-size: 1.1rem; max-width: 700px; margin: 0 auto; }
-
-/* Section */
-.section { padding: 40px 20px; max-width: 1100px; margin: 0 auto; }
-.section h2 { font-size: 1.8rem; margin-bottom: 16px; }
-
-/* Beliefs */
-.beliefs .belief { margin-bottom: 24px; }
-.beliefs blockquote {
-  border-left: 3px solid #a4d96c;
-  padding-left: 12px;
-  font-style: italic;
-  color: #1f2937;
-  background: rgba(164,217,108,0.07);
-  border-radius: 6px;
-  margin-top: 6px;
+.landscape-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
-/* Activities Grid */
-.activity-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
+.landscape-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Clips the image perfectly to fill the width */
+  object-position: center 30%; /* Focuses more on the top-middle of the photo */
+  display: block;
 }
-.activity { padding: 16px; background: #fff; border-radius: 12px; box-shadow: 0 6px 16px rgba(0,0,0,0.08); }
-.activity h3 { margin-bottom: 6px; }
-.activity p { margin-bottom: 0; }
 
-/* Get Started */
-.get-started ul { margin: 12px 0 0 20px; }
-.get-started li { margin-bottom: 8px; }
-
-/* Footer */
-.footer { text-align: center; padding: 20px; color: #6b7280; font-size: 0.9rem; background: #f3f4f6; }
-
-/* Responsive */
-@media(min-width: 768px){
-  .activity-grid { grid-template-columns: repeat(2,1fr); }
+/* Adds a very subtle linen texture and slight darkening 
+   to match the rest of your AU-BSF site */
+.landscape-overlay-subtle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+  background-color: rgba(0, 0, 0, 0.15); /* Very light tint */
+  pointer-events: none;
 }
-@media(min-width: 1100px){
-  .activity-grid { grid-template-columns: repeat(3,1fr); }
+
+/* Mobile: shrink height slightly so it doesn't take up the whole screen */
+@media (max-width: 768px) {
+  .landscape-image-wrap {
+    height: 40vh;
+  }
 }

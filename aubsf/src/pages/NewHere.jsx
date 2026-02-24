@@ -3,8 +3,23 @@ import "../styles/give.css";
 import { Link } from "react-router-dom";
 export default function NewHere() {
   return (
-    <div className="decorative-container1">
+    
+    <div className="page">
     <div className="wrapper">
+      <header>
+      <div className="hero-image">
+        <img src={SheepImg} alt="Church banner" />
+      </div>
+      <div className="section1">
+        <h3>
+          Church For People Like <span className="section1-you">You</span>
+        </h3>
+        <div className="hero-buttons">
+          <Link to="/new-here" className="btn btn-primary">Plan Your Visit</Link>
+          <Link to="/about" className="btn btn-secondary">About Us</Link>
+        </div>
+      </div>
+    </header>
 <section className="new-here" aria-labelledby="new-here-title">
   <div className="container">
 

@@ -1,14 +1,36 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../styles/navbar.css";
-import Logo from "../Assets/logo-t.png";
+import Logo from "../Assets/Logo/logo-p.png";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    let lastScrollYValue = 0;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      // Show navbar when scrolling up
+      if (currentScrollY < lastScrollYValue) {
+        setIsVisible(true);
+      } else if (currentScrollY > 100) {
+        // Hide navbar when scrolling down (but not at the very top)
+        setIsVisible(false);
+      }
+
+      lastScrollYValue = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <>
-      <nav className="navpanel" aria-label="Main navigation">
+      <nav className={`navpanel ${isVisible ? "visible" : "hidden"}`} aria-label="Main navigation">
         <div className="nav-container">
           <div className="logo">
             <Link to="/" id="ollo">

@@ -1,544 +1,237 @@
-/* Make sure body and html take full height */
+/* --- Global Reset & Fonts --- */
 html, body {
-  height: 100%;
+  min-height: 100%;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-family: "Lora", serif; /* The Base Serif Font */
+  color: #1a1a1a;
+  -webkit-font-smoothing: antialiased;
 }
 
-body {
-  font-family: "Lora", serif;
-}
-
-/* Page wrapper to ensure full-width and prevent unexpected gutters */
+/* Page wrapper */
 .wrapper {
   width: 100%;
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
-/* Prevent accidental horizontal scroll on mobile */
-html, body {
-  overflow-x: hidden;
-}
-
-/* Make sure full-bleed images actually fill the viewport */
-.hero-image img {
-  width: 100vw;
-  max-width: 100%;
-  display: block;
-}
-
-  /* Section1 Overlay */
-  .section1 {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    margin: 0;
-    color: #fff;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.6);
-    width: calc(100% - 20px);
-    padding: 10px 5px;
-    left: 50%;
-    top: 50%;
-    z-index: 10;
-  }
-
-  .section1 h3 {
-    font-size: 11px;
-    white-space: normal;
-    display: block;
-    margin: 0 0 4px 0;
-    line-height: 1.15;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-  }
-
-  .section1-you {
-    display: inline;
-  }
-
-  /* Replica Section */
-  .replica-section {
-    height: 50vh;
-  }
-
-  .hero-replica h2 {
-    font-size: 1.5rem;
-  }
-
-  .replica-content h3 {
-    font-size: 1.3rem;
-  }
-
-  .replica-content p {
-    font-size: 0.9rem;
-  }
-
-header {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  display: block;
-  line-height: 0;
-}
-
-.hero-image {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  margin: 0;
-  padding: 0;
-}
-
-.hero-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-@media (max-width: 768px) {
-  .hero-image {
-    height: 100vh; /* full screen on mobile too */
-  }
-}
-
-/* Section1 overlay placed on the hero image */
-.section1{
-  position: absolute;
-  /* move slightly left of center */
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-  text-align: center;
-  padding: 180px 28px;
-  max-width: 880px;
-  width: calc(100% - 60px);
-  box-sizing: border-box;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.6);
-  z-index: 10;
-}
-.section1 h3{ font-size:70px; margin: 0 0 6px 0; font-weight: 600; }
-.section1 h2{ font-size: 40px; margin: 0; font-weight: 700; }
-.section1 h4{font-size: 70px; margin: 0 0 6px 0; font-weight: 600; color: #a4d96c;}
-
-/* keep the section1 heading on a single line on desktop only */
-@media (min-width: 769px) {
-  .section1 h3{
-    white-space: nowrap;
-    display: inline-block;
-  }
-}
-.section1-you{
-  color: #a4d96c;
-  font-weight: 700;
-  margin-left: 8px;
-}
-
-/* Replica Section - overlay on hero image */
-.replica-section {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 5;
-}
-
-.hero-replica {
-  position: relative;
-  text-align: center;
-  color: #fff;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.6);
-  padding: 20px;
-  max-width: 800px;
-}
-
-.hero-replica h2 {
-  font-size: 2.5rem;
-  font-family: "Lora", serif;
-  margin-bottom: 10px;
-  font-weight: 700;
-}
-
-.hero-replica p {
-  font-size: 1.1rem;
-  margin-bottom: 30px;
-}
-
-.replica-content {
-  margin-top: 40px;
-}
-
-.replica-content h3 {
-  font-size: 2rem;
-  margin-bottom: 15px;
-}
-
-.replica-content p {
-  font-size: 1rem;
-  margin-bottom: 25px;
-}
-
-.give-button {
-  display: inline-block;
-  padding: 0.9rem 2rem;
-  border: 2px solid #a4d96c;
-  background: transparent;
-  color: #a4d96c;
+a {
   text-decoration: none;
-  font-weight: 700;
-  border-radius: 50px;
+  color: inherit;
   transition: all 0.3s ease;
-  font-size: 1rem;
 }
 
-.give-button:hover {
-  background: #a4d96c;
-  color: #111;
+/* --- THE HERO CONTAINER --- */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: block; /* No flex on parent, we use absolute for children */
+  overflow: hidden;
 }
 
-/* (Removed mobile menu / hamburger styles - not used in this layout) */
-
-.navpanel{ /* ensure no extra background when not over the hero */
-  background: transparent;
+.hero-background {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  z-index: 1;
 }
 
-.logo {
-  max-width: max-content;
-  height: auto;
-  margin-right: auto; /* push logo to the left edge */
+.hero-background img {
+  width: 100%; height: 100%; object-fit: cover;
+}
+
+/* --- THE OVERLAY --- */
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(
+    to bottom, 
+    rgba(0,0,0,0) 0%,      
+    rgba(0,0,0,0.2) 50%,   
+    rgba(0,0,0,0.9) 100%   
+  );
+  z-index: 2;
+}
+
+/* --- THE CONTENT BLOCK --- */
+.hero-content {
+  position: absolute;
+  /* Pushed further down (5% from bottom edge) */
+  bottom: 4%; 
+  /* Pushed from the left edge */
+  left: 4%;     
+  
+  width: 90%;
+  max-width: 800px;
+  z-index: 3;
+  
+  /* CRITICAL FLEX SETTINGS FOR ALIGNMENT */
   display: flex;
-  align-items: center;
-  gap: 12px; /* space between logo image and text */
-  flex-shrink: 0; /* prevent logo from shrinking */
+  flex-direction: column;
+  /* This forces the Text AND The Button Container to the Left */
+  align-items: flex-start; 
+  text-align: left;
 }
 
-.logo img {
-  height: 54px;
-  width: auto;
-  object-fit: contain;
+/* --- THE TYPOGRAPHY (Reduced Size) --- */
+.hero-content h1 {
+  font-family: "Lora", serif;
+  /* Reduced size: 20% smaller than before */
+  font-size: clamp(2.5rem, 5vw, 4.2rem); 
+  font-weight: 400;    
+  line-height: 1.1;   
+  margin-bottom: 1rem;
+  color: white;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  text-align: left;
+  margin-left: 0; /* Safety reset */
 }
 
-.logo p {
-  margin: 0;
-  color: #fff;
-  font-weight: 600;
-  font-size: 18px;
-  white-space: nowrap; /* keep text on one line */
+.highlight-text {
+  font-family: "Lora", serif; 
+  font-style: italic;
+  font-weight: 400; 
 }
 
-/* Container to align the buttons nicely */
+.hero-subtext {
+  font-family: "Inter", sans-serif;
+  font-size: 1.1rem; /* Reduced size */
+  max-width: 500px;    
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 300;
+  text-align: left;
+  margin-left: 0; /* Safety reset */
+}
+
+/* --- BUTTONS (Strict Left Align) --- */
 .hero-buttons {
   display: flex;
-  gap: 1rem;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2rem;
+  flex-direction: row;
+  /* Force items to start from left */
+  justify-content: flex-start; 
+  gap: 20px;
+  width: 100%; /* Occupy full width to allow left alignment */
+  margin-left: -200px;
+  padding: 0;
 }
 
-/* Give section: center the call-to-action link */
-.Give-section .Give-content {
-  text-align: center;
+.btn-outline-light {
+  padding: 14px 32px;
+  border: 1px solid rgba(255,255,255,0.7);
+  border-radius: 50px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+  background: transparent;
+  color: white;
+  transition: all 0.3s ease;
+  font-family: "Inter", sans-serif;
+  
+  /* Remove any auto margins that center it */
+  margin: 0; 
 }
-.Give-section .learn-more {
-  display: inline-block;
-  margin-top: 12px;
-  text-decoration: none;
-  color: black;
-  padding: 10px 18px;
-  border-radius: 30px;
-  font-weight: 700;
+
+.btn-outline-light:hover {
+  background: white;
+  color: #1a1a1a;
+  border-color: white;
 }
+
+/* --- MOBILE ADJUSTMENTS --- */
+@media (max-width: 768px) {
+  .hero-section {
+     height: 100vh; /* Keep full height */
+  }
+
+  .hero-content {
+    bottom: 100px; /* Lift slightly for mobile browser bars */
+    left: 20px;
+    width: calc(100% - 40px);
+    /* Optional: Center on mobile? Remove if you want left alignment on mobile too */
+    /* align-items: center; text-align: center; */
+  }
+  
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    /* justify-content: center; */ /* Uncomment to center buttons on mobile */
+  }
+
+  .btn-outline-light {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* --- SECTIONS (Visit, Split, Give, Gallery) --- */
 
 /* Visit Section */
 .visit-section {
-  background-color: white;
-  color: #000;
+  padding: 6rem 20px;
   text-align: center;
-  padding: 5rem 2rem;
-  font-family: "Montserrat", sans-serif;
+  background: white;
 }
+.church-name { font-size: 3rem; margin: 10px 0; color: #1a1a1a; }
+.underline { width: 80px; height: 3px; background: #a4d96c; margin: 20px auto; }
+.visit-text { font-size: 1.1rem; color: #444; margin-bottom: 1rem; }
+.visit-location { color: #666; font-size: 0.95rem; }
 
-.visit-content {
-  max-width: 700px;
-  margin: 0 auto;
-}
+/* Split Sections */
+.split-section { padding: 80px 5%; background: #fff; }
+.split-section.bg-light { background: #f9f9f9; }
 
-.visit-invite {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.visit-invite span {
-  color: #a4d96c;
-  font-weight: 800;
-}
-
-
-.church-name {
-  font-size: 2.5rem;
-  font-weight: 800;
-  margin-bottom: 1rem;
-}
-
-.visit-text {
-  font-size: 1rem;
-  color: #333;
-  margin-bottom: 1rem;
-}
-
-.visit-location {
-  font-size: 0.95rem;
-  color: #555;
-  line-height: 1.6;
-}
-
-/* Responsive tweaks */
-@media (max-width: 600px) {
-  .church-name {
-    font-size: 2rem;
-  }
-  .visit-invite {
-    font-size: 1.3rem;
-  }
-}
-
-/* ===== Are You New Section ===== */
-.new-here-section {
-  background-color: #f8f8f8; /* 💡 Change this color for the background */
-  padding: 80px 10%;
-}
-
-.new-here-container {
+.split-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 50px;
-  flex-wrap: wrap;
-}
-
-.new-here-text {
-  flex: 1;
-  min-width: 300px;
-}
-
-.new-here-text h2 {
-  font-family: "Lora", serif;
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 15px;
-}
-
-.new-here-text p {
-  color: #333;
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 25px;
-}
-
-
-
-.new-here-image {
-  flex: 1;
-  text-align: right;
-  min-width: 300px;
-}
-
-.new-here-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  object-fit: cover;
-}
-
-/* ===== Responsive for smaller screens ===== */
-@media (max-width: 768px) {
-  .new-here-container {
-    flex-direction: column;
-    text-align: center;
-  }
-  .new-here-image {
-    text-align: center;
-  }
-}
-
-.Give-content p, h3{
-  text-align: center;
-}
-.Give-content h3{
-  font-size: 40px;
-}
-
-/* Gallery items */
-.three-image-section {
-  padding: 40px;
-  background-color: #f9f9f9;
-}
-
-@media (max-width: 768px) {
-  .three-image-section {
-    padding: 20px;
-  }
-}
-
-.images-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-@media (max-width: 768px) {
-  .images-row {
-    flex-direction: column;
-    gap: 15px;
-  }
-}
-
-.image-container {
-  flex: 1;
-  min-width: 200px;
-  height: 300px;        /* Height for images */
-  text-align: center;
-  overflow: hidden;     /* Prevent image overflow */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-@media (max-width: 768px) {
-  .image-container {
-    height: 220px;
-    min-width: 100%;
-  }
-}
-
-.image-container img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover;    /* Ensures image fills container nicely */
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-}
-
-.image-container:hover img {
-  transform: scale(1.05);
-}
-
-.image-container p {
-  margin-top: 10px;
-  font-weight: bold;
-  color: #333;
-}
-
-
-.center-link {
-  margin-top: 30px;
-  text-align: center;
-}
-
-/* Mobile overrides (placed after desktop rules so they win in cascade) */
-@media (max-width: 768px) {
-  /* Make mobile hero ~3.5/4 of viewport (87.5vh) */
-  .hero-image {
-    height: 87.5vh;
-    overflow: hidden;
-  }
-
-  /* Move overlay down and stop vertical centering so `top` is respected */
-  .section1 {
-    top: 65%; /* push overlay lower so it sits below navbar */
-    transform: translate(-50%, 0); /* don't shift up by 50% of its own height */
-    padding: 8px 6px;
-    width: calc(100% - 20px);
-  }
-
-  .section1 h3 {
-    font-size:60px;
-    line-height: 1.2;
-    margin-bottom: 8px;
-  }
-}
-
-/* Final mobile safety overrides to prevent layout shift */
-@media (max-width: 768px) {
-  .section1 {
-    position: absolute !important;
-    left: 50% !important;
-    top: 43% !important;
-    transform: translate(-50%, 0) !important;
-    z-index: 20 !important;
-  }
-
-  .section1 h3 {
-    font-size:46px !important;
-    line-height: 1.2 !important;
-  }
-}
-
-/* Feedback section */
-.feedback-section {
-  background-color: #f4f6f8;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.feedback-container {
-  max-width: 500px;
+  max-width: 1200px;
   margin: 0 auto;
+  gap: 60px;
 }
 
-.feedback-container h3 {
-  margin-bottom: 10px;
-  font-size: 1.5rem;
-  color: #111;
-}
+.split-text { flex: 1; }
+.split-text h2 { font-size: 2.5rem; margin-bottom: 20px; }
+.split-text p { font-family: "Inter", sans-serif; font-size: 1.05rem; color: #444; line-height: 1.7; margin-bottom: 25px; }
 
-.feedback-container p {
-  margin-bottom: 20px;
-  font-size: 1rem;
-  color: #333;
-}
+.split-image { flex: 1; }
+.split-image img { width: 100%; border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
 
-.feedback-container form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.learn-more {
+  display: inline-block;
+  font-weight: 700;
+  color: #1a1a1a;
+  border-bottom: 1px solid #aaa;
+  padding-bottom: 2px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
+.learn-more:hover { border-color: #a4d96c; color: #a4d96c; }
 
-.feedback-container input,
-.feedback-container textarea {
-  padding: 10px;
-  font-size: 0.95rem;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  width: 100%;
-  box-sizing: border-box;
-}
+/* Give Section */
+.give-section { padding: 100px 20px; text-align: center; background-color: #f4f4f4; }
+.give-content { max-width: 600px; margin: 0 auto; }
+.give-content h3 { font-size: 2.5rem; margin-bottom: 20px; }
+.give-content p { font-family: "Inter", sans-serif; margin-bottom: 30px; font-size: 1.1rem; }
 
-.feedback-container textarea {
-  min-height: 80px;
-  resize: vertical;
-}
+/* Gallery Section */
+.gallery-section { padding: 0; background: #111; }
+.gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+.gallery-item img { width: 100%; height: 300px; object-fit: cover; display: block; opacity: 0.8; transition: opacity 0.3s; }
+.gallery-item img:hover { opacity: 1; }
+.center-link { padding: 40px; text-align: center; background: #fff; }
 
-.feedback-container button {
-  padding: 10px;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 5px;
-  background-color: #a4d96c;
-  border: none;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.feedback-container button:hover {
-  background-color: #91c85a;
+/* Mobile Adjustments for Sections */
+@media (max-width: 900px) {
+  .split-container { flex-direction: column; text-align: center; gap: 40px; }
+  .reverse-mobile { flex-direction: column-reverse; }
+  .gallery-grid { grid-template-columns: 1fr 1fr; }
+  .gallery-item img { height: 200px; }
 }

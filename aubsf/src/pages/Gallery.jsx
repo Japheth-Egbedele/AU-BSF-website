@@ -4,8 +4,7 @@ import "../styles/gallery.css";
 import "../styles/global.css";
 import "../styles/footer.css";
 
-import SheepImg from "../Assets/sheep-o.jpg";
-import image from "../Assets/BTS.jpg"
+import SheepImg from "../Assets/Online/sheep-o.jpg";
 
 export default function Gallery() {
 return(
