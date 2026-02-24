@@ -23,6 +23,29 @@ import gallery10 from "../Assets/Gallery/gallery10.png";
 // import gallery14 from "../Assets/Gallery/gallery14.jpg";
 // import gallery15 from "../Assets/Gallery/gallery15.jpg";
 
+/**
+ * Helper Component: Handles the individual image loading state
+ */
+function GalleryImage({ item }) {
+  const [loaded, setLoaded] = useState(false);
+
+  return (
+    <div className={`gallery-item ${item.category} ${loaded ? "is-loaded" : ""}`}>
+      <img 
+        src={item.img} 
+        alt={item.title} 
+        loading="lazy" 
+        decoding="async"
+        onLoad={() => setLoaded(true)}
+        className={loaded ? "fade-in" : "hide-img"}
+      />
+      <div className="image-overlay">
+        <p>{item.title}</p>
+      </div>
+    </div>
+  );
+}
+
 export default function Gallery() {
   const [filter, setFilter] = useState("all");
 
@@ -80,14 +103,9 @@ const galleryData = [
         </div>
 
         {/* 3. DYNAMIC GRID */}
-        <div className="gallery-grid">
+<div className="gallery-grid">
           {filteredItems.map((item) => (
-            <div key={item.id} className={`gallery-item ${item.category}`}>
-              <img src={item.img} alt={item.title} loading="lazy" />
-              <div className="image-overlay">
-                <p>{item.title}</p>
-              </div>
-            </div>
+            <GalleryImage key={item.id} item={item} />
           ))}
         </div>
       </div>

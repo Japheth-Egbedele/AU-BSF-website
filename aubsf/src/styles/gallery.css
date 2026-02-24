@@ -92,3 +92,19 @@
     columns: 1; /* Single column on mobile */
   }
 }
+
+.gallery-item {
+  background-color: #eee; /* Light grey placeholder */
+  min-height: 200px; /* Prevents layout shift */
+  transition: transform 0.4s ease;
+}
+
+/* Give it a subtle blur until it's ready */
+.gallery-item img {
+  filter: blur(10px);
+  transition: opacity 0.8s ease-in-out, filter 0.6s ease-in-out, transform 0.6s ease;
+}
+
+.gallery-item.is-loaded img {
+  filter: blur(0);
+}
