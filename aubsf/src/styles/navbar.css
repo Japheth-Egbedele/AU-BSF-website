@@ -85,7 +85,7 @@
 /* --- THE SMOOTH X TRANSITION --- */
 /* Forces visibility against the white mobile background */
 .is-active .line {
-  background-color: #000000 !important; 
+  background-color: white; 
 }
 
 .is-active .line:nth-child(1) {
