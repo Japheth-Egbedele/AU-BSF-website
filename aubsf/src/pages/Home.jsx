@@ -48,7 +48,7 @@ export default function Home() {
             We'd love to get to know you! Join us this Sunday!
           </p>
           <p className="visit-location">
-            Law Building class IV, inside Achievers University Campus<br />
+            New Nursing building (Smart Class) 300l lecture hall, inside Achievers University Campus<br />
             Owo, Ondo State, Nigeria
           </p>
         </div>
