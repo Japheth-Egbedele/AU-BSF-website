@@ -1,89 +1,100 @@
-import "../styles/global.css";
-import "../styles/give.css";
 import { Link } from "react-router-dom";
+import "../styles/global.css";
+import "../styles/newhere.css"; // Make sure to name your CSS file this
+import SheepImg from "../Assets/Online/sample3.jpg"; 
+
 export default function NewHere() {
   return (
-    
-    <div className="page">
-    <div className="wrapper">
-      <header>
-      <div className="hero-image">
-        <img src={SheepImg} alt="Church banner" />
-      </div>
-      <div className="section1">
-        <h3>
-          Church For People Like <span className="section1-you">You</span>
-        </h3>
-        <div className="hero-buttons">
-          <Link to="/new-here" className="btn btn-primary">Plan Your Visit</Link>
-          <Link to="/about" className="btn btn-secondary">About Us</Link>
+    <div className="page-wrapper">
+      
+      {/* 1. PREMIUM HERO (Matching your new minimalist style) */}
+      <header className="about-hero-alt">
+        <div className="container hero-alt-grid">
+          <div className="hero-alt-text">
+            <h4 className="script-accent-hero">Welcome Home</h4>
+            <h1 className="hero-compact-title">WE'RE GLAD YOU'RE HERE</h1>
+            <p id="hero-subtext">
+              Whether you're exploring faith or looking for a spiritual family at AU.
+            </p>
+          </div>
+          <div className="hero-alt-image">
+            <div className="hero-arch-window" style={{ backgroundImage: `url(${SheepImg})` }}></div>
+          </div>
         </div>
-      </div>
-    </header>
-<section className="new-here" aria-labelledby="new-here-title">
-  <div className="container">
+      </header>
 
-    <div className="new-here-left">
-      <h2 id="new-here-title">Welcome — We're Glad You're Here</h2>
-      <p className="lead">
-        Whether you're exploring faith, returning to church, or looking for a spiritual
-        family — you're welcome here. At AU-BSF we gather to worship, learn God's Word,
-        and walk life together.
-      </p>
+      {/* 2. WHAT TO EXPECT (3-Column Icon Layout) */}
+      <section className="section-cream what-to-expect">
+        <div className="container centered-text">
+          <h2 className="section-title">WHAT TO EXPECT</h2>
+          <p className="sub-head">You don't need to have it all figured out—just come as you are.</p>
+          
+          <div className="expect-grid">
+            {/* Icon Box 1 */}
+            <div className="expect-box">
+              <div className="expect-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <h3>Real Community</h3>
+              <p>Meet other AU students who are navigating the same classes, pressures, and life questions as you.</p>
+            </div>
 
-      <div className="beliefs">
-        <h3>What We Believe</h3>
-        <ul>
-          <li><strong>God's Love:</strong> God loves you deeply and unconditionally.</li>
-          <li><strong>Jesus:</strong> Jesus Christ is Lord and Savior—He restores and frees.</li>
-          <li><strong>Scripture:</strong> The Bible guides our life and faith.</li>
-        </ul>
-      </div>
+            {/* Icon Box 2 */}
+            <div className="expect-box">
+              <div className="expect-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                </svg>
+              </div>
+              <h3>Scripture & Worship</h3>
+              <p>Engage in passionate worship and hear practical, truth-filled teachings from the Bible.</p>
+            </div>
 
-      <div className="encouragement">
-        <h3>You Are Welcome Here</h3>
-        <p>
-          You don't need to have it all figured out—bring your questions, doubts, and hopes.
-          We want to help you take next steps in faith, community, and service.
-        </p>
-        <blockquote>
-          <cite>“Come to me, all who are weary and burdened, and I will give you rest.”</cite>
-          <span className="verse">— Matthew 11:28</span>
-        </blockquote>
-      </div>
-
-      <div className="get-started">
-        <h3>Get Started</h3>
-
-        <ol>
-          <li><strong>Start with Scripture</strong><br />
-              Try a Gospel (Matthew, Mark, Luke, or John). <span className="verse-inline">— Psalm 119:105</span>
-          </li>
-          <li><strong>Join a Group</strong><br />
-              Fellowship groups help you grow through friendship and study.</li>
-          <li><strong>Pray & Explore</strong><br />
-              Talk to God honestly — He hears you.</li>
-        </ol>
-
-        <div className="cta-row">
-          <a className="btn primary" href="#plan-visit">Plan Your Visit</a>
-          <a className="btn ghost" href="#join-group">Join a Group</a>
+            {/* Icon Box 3 */}
+            <div className="expect-box">
+              <div className="expect-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <h3>About 90 Minutes</h3>
+              <p>Our gatherings are designed to fit into your student schedule while giving you the spiritual rest you need.</p>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      </section>
 
-    <div className="new-here-right" aria-hidden="false">
-      {/* I don't even have these images */}
-      <div className="image-stack" role="img" aria-label="People gathered worshipping and fellowshipping">
-        <img src="assets/event-back-2.jpg" alt="" className="stack back back-2" />
-        <img src="assets/event-back-1.jpg" alt="" className="stack back back-1" />
-        <img src="assets/event-main.jpg" alt="Worship and fellowship at AU-BSF" className="stack main" />
-      </div>
-    </div>
+      {/* 3. PLAN YOUR VISIT / LOCATION BLOCK */}
+      <section className="zig-zag-section">
+        <div className="container grid-layout">
+          
+          <div className="text-content">
+            <span className="eyebrow-text">Join Us This Week</span>
+            <h2>Plan Your Visit</h2>
+            <p className="text-body">
+              Walking into a new place can be intimidating. Let us know you're coming, and we'll have a student leader meet you at the door, show you around, and save you a seat.
+            </p>
+            
+            <div className="location-card">
+              <h4>AU-BSF Gathering</h4>
+              <p><strong>Where:</strong> Law Building Class 3C, Inside Achievers University Campus, Owo, Ondo State</p>
+              <p><strong>When:</strong> Sundays at 9:00 AM</p>
+            </div>
 
-  </div>
-</section>
-      </div>
+            <div className="hero-buttons" style={{ justifyContent: 'flex-start', marginTop: '20px' }}>
+              <a href="#visit-form" className="btn btn-tan">I'm Coming This Sunday</a>
+            </div>
+          </div>
+
+          <div className="image-content">
+             <div className="arch-image bottom-arch" style={{ backgroundImage: `url(${SheepImg})` }}></div>
+          </div>
+
+        </div>
+      </section>
+      
     </div>
   );
 }

@@ -107,9 +107,9 @@ export default function About() {
       {/* 5. OUR STORY (Green Background Block) */}
       <section id="story" className="section-olive">
         <div className="container centered-text">
-<div className="icon-logo">
-  <img src={LogoWhite} alt="AU-BSF Seal" style={{ width: '50px', opacity: '0.8' }} />
-</div>  
+          <div className="icon-logo">
+            <img src={LogoWhite} alt="AU-BSF Seal" style={{ width: '50px', opacity: '0.8' }} />
+          </div>  
          <h2>OUR STORY</h2>
           <p className="story-text">
             AU-BSF started as a group of people who loved the Lord meeting in classrooms.

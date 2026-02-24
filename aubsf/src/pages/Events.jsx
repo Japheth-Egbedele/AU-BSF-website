@@ -1,53 +1,50 @@
-import EventsSchedule from '../components/EventSchedule';
+import { Link } from "react-router-dom";
+import EventSchedule from '../components/EventSchedule';
 import "../styles/event.css";
 import "../styles/global.css";
-import "../styles/footer.css";
-import "../styles/navbar.css";
-
 import heroimage from "../Assets/Online/sheep-o.jpg";
+
 export default function EventsPage() {
   return (
-<div className='wrapper'>
-  <div className='page'>
-<div className="decorative-container1">
-          <header>
-        <div className="hero-image">
-          <img src={heroimage} alt="Church banner" />
-        </div>
-        <div className="section1">
-          <h3>
-            Church For People Like <span className="section1-you">You</span>
-          </h3>
-          <div className="hero-buttons">
-            <Link to="/new-here" className="btn btn-primary">Plan Your Visit</Link>
-            <Link to="/about" className="btn btn-secondary">About Us</Link>
+    <div className='page-wrapper'>
+      {/* Consistent Minimalist Hero */}
+      <header className="about-hero-alt">
+        <div className="container hero-alt-grid">
+          <div className="hero-alt-text">
+            <h4 className="script-accent-hero">Gatherings</h4>
+            <h1 className="hero-compact-title">EVENTS & SCHEDULE</h1>
+            <div className="hero-buttons" style={{ justifyContent: 'flex-start' }}>
+               <Link to="/new-here" className="btn-tan">Plan Your Visit</Link>
+            </div>
+          </div>
+          <div className="hero-alt-image">
+            <div className="hero-arch-window" style={{ backgroundImage: `url(${heroimage})` }}></div>
           </div>
         </div>
       </header>
-    <div className='wrapper'>
-      <div>
-        <blockquote>
-            <p>
-                "And let us consider how to stir up one another to love and good works, 
-                not neglecting to meet together, as is the habit of some, but encouraging 
-                one another, and all the more as you see the Day drawing near."
-            </p>
-            <p>
-                — Hebrews 10:24-25 (ESV)
-            </p>
-        </blockquote>
-    </div>
-        <h2>
-            Come and Experience the Joy of Fellowship and the Power of the Word.
-        </h2>
-    </div>
-<br /><br />
-      
-      <EventsSchedule />
- 
-    </div>
-  </div>
 
-</div>
+      {/* Scripture & Intro Section */}
+      <section className="section-olive centered-text" style={{ padding: '60px 20px' }}>
+        <div className="container">
+          <blockquote className="scripture-quote">
+            <p>
+              "And let us consider how to stir up one another to love and good works, 
+              not neglecting to meet together..."
+            </p>
+            <cite>— Hebrews 10:24-25</cite>
+          </blockquote>
+        </div>
+      </section>
+
+      {/* The Actual Schedule Component */}
+      <section className="section-cream" style={{ padding: '80px 20px' }}>
+        <div className="container">
+          <h2 className="section-title" style={{ textAlign: 'center', marginBottom: '40px' }}>
+             UPCOMING AT AU-BSF
+          </h2>
+          <EventSchedule />
+        </div>
+      </section>
+    </div>
   );
 }
