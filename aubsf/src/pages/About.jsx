@@ -131,16 +131,16 @@ export default function About() {
               Led by the Holy Spirit, our leadership team is dedicated to serving the students
               and staff of Achievers University with passion and integrity.
             </p>
-<a href="#leadership-team" className="learn-more">Meet The Team</a>          </div>
-<div className="image-content">
-  <div className="arch-image-container">
-    <img 
-      src={GroupImg} 
-      alt="Leadership Group" 
-      style={{ width: '100%', height: 'auto', display: 'block', borderRadius: '20px' }} 
-    />
-  </div>
-</div>
+            <a href="#leadership-team" className="learn-more">Meet The Team</a>          </div>
+            <div className="image-content">
+              <div className="arch-image-container">
+                <img 
+                  src={GroupImg} 
+                  alt="Leadership Group" 
+                  style={{ width: '100%', height: 'auto', display: 'block', borderRadius: '20px' }} 
+                />
+              </div>
+            </div>
         </div>
       </section>
 
@@ -176,9 +176,9 @@ export default function About() {
       </div>
       
       {/* Add more cards as needed */}
-    </div>
-  </div>
-</section>
+        </div>
+      </div>
+    </section>
       {/* 7. FOOTER CTA */}
       <section className="section-footer-cta">
         <div className="container">
@@ -222,14 +222,6 @@ export default function About() {
     </div>
   </div>
 </section>
-      <br />
-      {/* --- BIG LANDSCAPE BREATHER --- */}
-      <section className="landscape-image-wrap">
-        <div className="landscape-inner">
-          {/* You can change 'StoryImg' to any other imported landscape image */}
-          <img src={GroupImg} alt="AU-BSF Community" />
-        </div>
-      </section>
 
       {/* 6. BELIEFS (Clean List Style) */}
       <section className="section-cream">

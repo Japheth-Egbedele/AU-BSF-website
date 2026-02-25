@@ -194,8 +194,16 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 3px;
-  color: #1a1a1a;
+  color: #a4d96c;
   margin-bottom: 15px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  letter-spacing: 4px;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+  margin-top: 0;
 }
 
 .accent-line {
@@ -246,7 +254,16 @@
 
 /* --- 4. BELIEFS (Clean Accordion) --- */
 .section-cream { background-color: var(--color-cream); padding: 80px 20px; }
-.sub-head { font-style: italic; color: #1a1a1a; margin-bottom: 40px; }
+.sub-head { 
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #666;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
 #belief-h2, .belief-h2 { color: #1a1a1a !important; }
 
 .accordion-clean {
@@ -561,6 +578,21 @@
 #leadership-team {
   padding: 100px 20px;
   background-color: #ffffff;
+}
+
+.section-white {
+  background-color: #ffffff;
+  padding: 80px 20px;
+}
+
+.section-white .centered-text {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.centered-text {
+  text-align: center;
+  max-width: 100%;
 }
 
 .exco-slider {
