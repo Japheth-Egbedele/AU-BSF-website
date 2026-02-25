@@ -13,15 +13,14 @@ import LogoWhite from "../Assets/Logo/logo-p.png";
 // Excos
 import exco1 from "../Assets/Gallery/gallery7.jpg"; // Olaniyi Abiodun
 import exco2 from "../Assets/Gallery/gallery9.jpg"; // Longe Adebimpe
-import exco3 from "../Assets/Gallery/gallery9.jpg"; // Sarah Aderoju
-import exco4 from "../Assets/Gallery/gallery7.jpg"; // Oyediran Susan
-import exco5 from "../Assets/Gallery/gallery9.jpg"; // Obaleye Fadekemi
-import exco6 from "../Assets/Gallery/gallery7.jpg"; // Oke Oluwamayokun
+import exco3 from "../Assets/Excos/exco3.jpeg"; // Sarah Aderoju
+import exco4 from "../Assets/Excos/exco4.jpeg"; // Oyediran Susan
+import exco5 from "../Assets/Excos/exco5.jpeg"; // Obaleye Fadekemi
+import exco6 from "../Assets/Excos/exco6.jpeg"; // Oke Oluwamayokun
 import exco7 from "../Assets/Gallery/gallery12.jpeg"; // Ajeniyi Grace Aderonke
 import exco8 from "../Assets/Gallery/gallery11.jpeg"; // Ojo Kanyinsola Caroline
 import exco9 from "../Assets/Gallery/gallery9.jpg"; // Olakunle Goodluck
-import exco10 from "../Assets/Gallery/gallery7.jpg"; // Ajisamola Ifeoluwa
-import exco11 from "../Assets/Gallery/gallery9.jpg"; // Duyilemi Praise
+import exco11 from "../Assets/Excos/exco11.jpeg"; // Duyilemi Praise
 import exco12 from "../Assets/Gallery/gallery16.jpeg"; // Alao Faith
 
 export default function About() {
@@ -91,12 +90,6 @@ const leaders = [
     role: "CHOIR COORDINATOR", 
     dept: "Department, Level", 
     img: exco9 
-  },
-  { 
-    name: "AJISAMOLA IFEOLUWA", 
-    role: "EVANGELISM & VISITATION COORDINATOR", 
-    dept: "Department, Level", 
-    img: exco10 
   },
   { 
     name: "DUYILEMI PRAISE", 
