@@ -3,14 +3,14 @@ import React from 'react';
 
 // We'll use a placeholder for the clock icon (you can replace this with an SVG or an icon library)
 const ClockIcon = () => (
-    <svg 
-        width="40" 
-        height="40" 
-        viewBox="0 0 24 24" 
-        fill="none" 
+    <svg
+        width="40"
+        height="40"
+        viewBox="0 0 24 24"
+        fill="none"
         stroke="#000000" // Black icon stroke
-        strokeWidth="1.5" 
-        strokeLinecap="round" 
+        strokeWidth="1.5"
+        strokeLinecap="round"
         strokeLinejoin="round"
     >
         <circle cx="12" cy="12" r="10"></circle>
@@ -28,7 +28,7 @@ const EventCard = ({ title, day, time, location }) => (
         <p className="event-time">{time}</p>
         <p className="event-location">{location}</p>
     </div>
-    
+
 );
 
 const EventsSchedule = () => {
@@ -44,21 +44,33 @@ const EventsSchedule = () => {
 
     return (
         <section className="events-schedule-section">
-          <h1 className="section-title disney-font" style={{ textAlign: 'center', marginBottom: '40px' }}>
-            {"OUR WEEKLY SCHEDULE".split("").map((letter, index) => (
-              <span 
-                key={index} 
-                className="jumpy-letter" 
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                {letter === " " ? "\u00A0" : letter}
-              </span>
-            ))}
-          </h1>  
+            <h1 className="section-title disney-font" style={{ textAlign: 'center', marginBottom: '40px' }}>
+                <>
+                    {"OUR WEEKLY".split("").map((letter, index) => (
+                        <span
+                            key={index}
+                            className="jumpy-letter"
+                            style={{ animationDelay: `${index * 0.1}s` }}
+                        >
+                            {letter === " " ? "\u00A0" : letter}
+                        </span>
+                    ))}
+                    <br />
+                    {"SCHEDULE".split("").map((letter, index) => (
+                        <span
+                            key={`schedule-${index}`}
+                            className="jumpy-letter"
+                            style={{ animationDelay: `${(index + 11) * 0.1}s` }}
+                        >
+                            {letter === " " ? "\u00A0" : letter}
+                        </span>
+                    ))}
+                </>
+            </h1>
             <div className="schedule-container">
                 {events.map((event, index) => (
-                    <EventCard 
-                        key={index} 
+                    <EventCard
+                        key={index}
                         title={event.title}
                         day={event.day}
                         time={event.time}
@@ -66,7 +78,7 @@ const EventsSchedule = () => {
                     />
                 ))}
             </div>
-                  <h2 className='Alphabet'>Join us for one of our regular events!  <div className='underline'></div></h2>
+            <h2 className='Alphabet'>Join us for one of our regular events!  <div className='underline'></div></h2>
         </section>
     );
 }

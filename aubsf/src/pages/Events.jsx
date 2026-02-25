@@ -80,17 +80,30 @@ export default function EventsPage() {
       <section className="section-white" style={{ padding: '80px 20px' }}>
         <div className="container">
           <div className="section-header centered-text">
-            <h1 className="section-title disney-font" style={{ textAlign: 'center', marginBottom: '40px' }}>
-              {"UPCOMING AT AU-BSF".split("").map((letter, index) => (
-                <span
-                  key={index}
-                  className="jumpy-letter"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  {letter === " " ? "\u00A0" : letter}
-                </span>
-              ))}
-            </h1>            <h2 style={{ fontSize: '2.5rem', marginBottom: '40px' }}>SPECIAL EVENTS</h2>
+                        <h1 className="section-title disney-font" style={{ textAlign: 'center', marginBottom: '40px' }}>
+                <>
+                    {"UPCOMING AT".split("").map((letter, index) => (
+                        <span
+                            key={index}
+                            className="jumpy-letter"
+                            style={{ animationDelay: `${index * 0.1}s` }}
+                        >
+                            {letter === " " ? "\u00A0" : letter}
+                        </span>
+                    ))}
+                    <br />
+                    {"AU-BSF".split("").map((letter, index) => (
+                        <span
+                            key={`schedule-${index}`}
+                            className="jumpy-letter"
+                            style={{ animationDelay: `${(index + 11) * 0.1}s` }}
+                        >
+                            {letter === " " ? "\u00A0" : letter}
+                        </span>
+                    ))}
+                </>
+            </h1>
+           <h2 style={{ fontSize: '2.5rem', marginBottom: '40px' }}>SPECIAL EVENTS</h2>
           </div>
 
           <div className="featured-grid">
