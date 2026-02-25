@@ -17,12 +17,12 @@ import exco3 from "../Assets/Gallery/gallery9.jpg"; // Sarah Aderoju
 import exco4 from "../Assets/Gallery/gallery7.jpg"; // Oyediran Susan
 import exco5 from "../Assets/Gallery/gallery9.jpg"; // Obaleye Fadekemi
 import exco6 from "../Assets/Gallery/gallery7.jpg"; // Oke Oluwamayokun
-import exco7 from "../Assets/Gallery/gallery9.jpg"; // Ajeniyi Grace Aderonke
-import exco8 from "../Assets/Gallery/gallery7.jpg"; // Ojo Kanyinsola Caroline
+import exco7 from "../Assets/Gallery/gallery12.jpeg"; // Ajeniyi Grace Aderonke
+import exco8 from "../Assets/Gallery/gallery11.jpeg"; // Ojo Kanyinsola Caroline
 import exco9 from "../Assets/Gallery/gallery9.jpg"; // Olakunle Goodluck
 import exco10 from "../Assets/Gallery/gallery7.jpg"; // Ajisamola Ifeoluwa
 import exco11 from "../Assets/Gallery/gallery9.jpg"; // Duyilemi Praise
-import exco12 from "../Assets/Gallery/gallery7.jpg"; // Alao Faith
+import exco12 from "../Assets/Gallery/gallery16.jpeg"; // Alao Faith
 
 export default function About() {
   const [openIndex, setOpenIndex] = useState(null);
