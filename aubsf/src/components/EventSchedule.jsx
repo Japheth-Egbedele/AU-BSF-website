@@ -44,7 +44,17 @@ const EventsSchedule = () => {
 
     return (
         <section className="events-schedule-section">
-            <h1>Our Weekly Schedule</h1>
+          <h1 className="section-title disney-font" style={{ textAlign: 'center', marginBottom: '40px' }}>
+            {"OUR WEEKLY SCHEDULE".split("").map((letter, index) => (
+              <span 
+                key={index} 
+                className="jumpy-letter" 
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                {letter === " " ? "\u00A0" : letter}
+              </span>
+            ))}
+          </h1>  
             <div className="schedule-container">
                 {events.map((event, index) => (
                     <EventCard 
