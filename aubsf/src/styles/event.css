@@ -5,9 +5,11 @@ color: white;
 }
 /* Container for the entire section */
 .events-schedule-section {
-    padding: 60px 20px;
+    padding: 0;
     background-color: #f8f8f8; /* Your approved light grey background */
     color: #000000; /* Black text for high readability */
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 /* Grid layout for the events */
@@ -17,8 +19,9 @@ color: white;
     display: grid;
     /* Sets up 3 columns for desktop, adjusts gracefully for smaller screens */
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 40px 30px;
+    gap: 20px 10px;
     text-align: center;
+    padding: 20px 10px;
 }
 
 /* Individual Event Card Styling */
@@ -26,14 +29,14 @@ color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 10px 5px;
     /* Optional: Subtle border to separate cards, similar to the image */
     /* border: 1px solid #eee; */ 
 }
 
 .event-icon {
     /* Adjusts the spacing around the clock icon */
-    margin-bottom: 20px; 
+    margin-bottom: 8px; 
 }
 
 /* Title Styling */
@@ -70,13 +73,15 @@ color: white;
 }
 
 .Alphabet{
-   padding: 60px 20px;
+   padding: 20px 20px 1px 10px;
   background-color: #f8f8f8;
   text-align: center;
   color: #333;
+  margin: 0;
 }
 .Alphabet h3{
   font-size: 40px;
+  margin: 0;
 }
 
 .verse-text{
