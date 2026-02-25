@@ -8,7 +8,7 @@ import GroupPraying from "../Assets/Gallery/pastor.png"; // Replace with actual 
 import PastorImg from "../Assets/Gallery/gallery9.jpg"; // Replace with pastor image
 import StoryImg from "../Assets/Online/sample3.jpg";
 import TeamImg from "../Assets/Gallery/gallery7.jpg";
-import GroupImg from "../Assets/Gallery/gallery10.png";
+import GroupImg from "../Assets/Gallery/executives.png";
 import LogoWhite from "../Assets/Logo/logo-p.png";
 
 export default function About() {
@@ -104,7 +104,7 @@ export default function About() {
       <section className="zig-zag-section bg-cream">
         <div className="container grid-layout reverse-layout">
           <div className="image-content">
-            <div className="arch-image bottom-arch" style={{ backgroundImage: `url(${PastorImg})` }}></div>
+            <div className="arch-image pill-shape" style={{ backgroundImage: `url(${PastorImg})` }}></div>
           </div>
 
           <div className="text-content">
@@ -131,15 +131,54 @@ export default function About() {
               Led by the Holy Spirit, our leadership team is dedicated to serving the students
               and staff of Achievers University with passion and integrity.
             </p>
-            <Link to="/leadership" className="learn-more">Meet The Team</Link>
-          </div>
-          <div className="image-content">
-            {/* Full circle or Pill shape for pastors */}
-            <div className="arch-image pill-shape" style={{ backgroundImage: `url(${TeamImg})` }}></div>
-          </div>
+<a href="#leadership-team" className="learn-more">Meet The Team</a>          </div>
+<div className="image-content">
+  <div className="arch-image-container">
+    <img 
+      src={GroupImg} 
+      alt="Leadership Group" 
+      style={{ width: '100%', height: 'auto', display: 'block', borderRadius: '20px' }} 
+    />
+  </div>
+</div>
         </div>
       </section>
 
+<section id="leadership-team" className="section-white">
+  <div className="container centered-text">
+    <span className="eyebrow-text">The Family Leads</span>
+    <h2 className="section-title">MEET OUR EXCOS</h2>
+    <p className="sub-head">A community led by students, for students.</p>
+
+    <div className="exco-slider">
+      {/* Exco Card 1 */}
+      <div className="exco-card">
+        <div className="exco-image-wrapper">
+           <img src={TeamImg} alt="President" className="exco-img" />
+        </div>
+        <div className="exco-info">
+          <h3>Name of Exco</h3>
+          <span className="exco-role">President</span>
+          <p className="exco-dept">Nursing, 400L</p>
+        </div>
+      </div>
+
+      {/* Exco Card 2 */}
+      <div className="exco-card">
+        <div className="exco-image-wrapper">
+           <img src={PastorImg} alt="Vice President" className="exco-img" />
+        </div>
+        <div className="exco-info">
+          <h3>Name of Exco</h3>
+          <span className="exco-role">Vice President</span>
+          <p className="exco-dept">MLS, 300L</p>
+        </div>
+      </div>
+      
+      {/* Add more cards as needed */}
+    </div>
+  </div>
+</section>
       {/* 7. FOOTER CTA */}
       <section className="section-footer-cta">
         <div className="container">

@@ -556,3 +556,71 @@
     font-size: 1.1rem;
   }
 }
+
+/* --- EXCO SECTION --- */
+#leadership-team {
+  padding: 100px 20px;
+  background-color: #ffffff;
+}
+
+.exco-slider {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  padding: 40px 10px;
+  scrollbar-width: none; /* Hides scrollbar on Firefox */
+}
+
+.exco-slider::-webkit-scrollbar {
+  display: none; /* Hides scrollbar on Chrome/Safari */
+}
+
+.exco-card {
+  min-width: 280px;
+  background: #fdfbf7; /* Cream background */
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+}
+
+.exco-card:hover {
+  transform: translateY(-10px);
+}
+
+.exco-image-wrapper {
+  height: 320px;
+  overflow: hidden;
+}
+
+.exco-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.exco-info {
+  padding: 25px;
+}
+
+.exco-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #1a1a1a;
+}
+
+.exco-role {
+  display: block;
+  color: #a4d96c; /* Leaf Green */
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.exco-dept {
+  font-size: 0.9rem;
+  color: #777;
+}

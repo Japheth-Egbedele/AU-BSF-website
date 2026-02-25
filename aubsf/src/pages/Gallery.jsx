@@ -15,13 +15,17 @@ import gallery7 from "../Assets/Gallery/gallery7.jpg";
 import gallery8 from "../Assets/Gallery/gallery8.jpg";
 import gallery9 from "../Assets/Gallery/gallery9.jpg";
 import gallery10 from "../Assets/Gallery/gallery10.png";
-// Future Imports
-// import gallery11 from "../Assets/Gallery/gallery11.jpg";
-// import gallery12 from "../Assets/Gallery/gallery12.jpg";
-// import gallery13 from "../Assets/Gallery/gallery13.jpg";
-// import gallery14 from "../Assets/Gallery/gallery14.jpg";
-// import gallery15 from "../Assets/Gallery/gallery15.jpg";
-
+import gallery11 from "../Assets/Gallery/gallery11.jpeg";
+import gallery12 from "../Assets/Gallery/gallery12.jpeg";
+import gallery13 from "../Assets/Gallery/gallery13.jpeg";
+import gallery14 from "../Assets/Gallery/gallery14.jpeg";
+import gallery15 from "../Assets/Gallery/gallery15.jpeg";
+import gallery16 from "../Assets/Gallery/gallery17.jpeg";
+import gallery17 from "../Assets/Gallery/gallery17.jpeg";
+import gallery18 from "../Assets/Gallery/gallery18.jpeg";
+import gallery19 from "../Assets/Gallery/gallery19.jpeg";
+import gallery20 from "../Assets/Gallery/gallery20.jpeg";
+import gallery21 from "../Assets/Gallery/gallery21.jpeg";
 
 /**
  * Helper Component: Handles the individual image loading state
@@ -58,29 +62,34 @@ export default function Gallery() {
     "all", 
     "Worship service", 
     "Bible study", 
-    "Retreats", 
-    "Evangelisms", 
-    "Outreaches"
+    // "Retreats", 
+    // "Evangelisms", 
+    // "Outreaches",
+   'FELLOWSHIP & FAMILY'
   ];
 
   const galleryData = [
-    { id: 1, category: "Worship service", img: gallery1, title: "Worship Service" },
-    { id: 2, category: "Bible study", img: gallery2, title: "Bible Study Session" },
-    { id: 3, category: "Retreats", img: gallery3, title: "Annual Retreat" },
-    { id: 4, category: "Evangelisms", img: gallery4, title: "Campus Evangelism" },
-    { id: 5, category: "Outreaches", img: gallery5, title: "Community Outreach" },
-    { id: 6, category: "Worship service", img: gallery6, title: "Worship Moment" },
-    { id: 7, category: "Bible study", img: gallery7, title: "Word Study" },
-    { id: 8, category: "Retreats", img: gallery8, title: "Prayer Retreat" },
-    { id: 9, category: "Evangelisms", img: gallery9, title: "Street Evangelism" },
-    { id: 10, category: "Outreaches", img: gallery10, title: "Welfare Outreach" },
-    //   Future
-    //   { id: 11, category: "Sunday Gatherings", img: gallery11, title: "Sunday Worship Moment" },
-    //   { id: 12, category: "Sunday Gatherings", img: gallery12, title: "Sunday Worship Moment" },
-    //   { id: 13, category: "Sunday Gatherings", img: gallery13, title: "Sunday Worship Moment" },
-    //   { id: 14, category: "Sunday Gatherings", img: gallery14, title: "Sunday Worship Moment" },
-    //   { id: 15, category: "Sunday Gatherings", img: gallery15, title: "Sunday Worship Moment" },
-  ];
+    { id: 1, category: "Sunday Gatherings", img: gallery1, title: "Worship Service" },
+    { id: 2, category: "Sunday Gatherings", img: gallery2, title: "Bible Study Session" },
+    { id: 3, category: "Sunday Gatherings", img: gallery3, title: "Annual Retreat" },
+    { id: 4, category: "Sunday Gatherings", img: gallery4, title: "Campus Evangelism" },
+    { id: 5, category: "Sunday Gatherings", img: gallery5, title: "Community Outreach" },
+    { id: 6, category: "Sunday Gatherings", img: gallery6, title: "Worship Moment" },
+    { id: 7, category: "Sunday Gatherings", img: gallery7, title: "Word Study" },
+    { id: 8, category: "Sunday Gatherings", img: gallery8, title: "Prayer Retreat" },
+    { id: 9, category: "Sunday Gatherings", img: gallery9, title: "Street Evangelism" },
+    { id: 10, category: 'FELLOWSHIP & FAMILY', img: gallery10, title: "Welfare Outreach" },
+    { id: 11, category: "Sunday Gatherings", img: gallery11, title: "Sunday Worship Moment" },
+    { id: 12, category: "Sunday Gatherings", img: gallery12, title: "Opening Prayer" },
+    { id: 13, category: "Sunday Gatherings", img: gallery13, title: "Word and Revelation" },
+    { id: 14, category: "Sunday Gatherings", img: gallery14, title: "Praise Session" },
+    { id: 15, category: "Sunday Gatherings", img: gallery15, title: "Community Worship" },
+    { id: 16, category: "Sunday Gatherings", img: gallery16, title: "Heart of Worship" },
+    { id: 17, category: "Sunday Gatherings", img: gallery17, title: "Sunday Fellowship" },
+    { id: 18, category: "Bible study", img: gallery18, title: "Student Testimony" },
+    { id: 19, category: "Sunday Gatherings", img: gallery19, title: "Altar Moments" },
+    { id: 20, category: "Sunday Gatherings", img: gallery20, title: "Grace and Truth" },
+    { id: 21, category: "Sunday Gatherings", img: gallery21, title: "Family Benediction" },  ];
 
   const filteredItems = filter === "all" 
     ? galleryData 
