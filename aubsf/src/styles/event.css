@@ -308,3 +308,57 @@ color: white;
     grid-template-columns: 1fr;
   }
 }
+
+/* Clean Timeline Style */
+.timeline-list {
+  margin-top: 60px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.list-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #a4d96c; /* BSF Green */
+  margin-bottom: 20px;
+}
+
+.timeline-row {
+  display: grid;
+  grid-template-columns: 120px 1fr 2fr;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+  align-items: center;
+}
+
+.timeline-date {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+}
+
+.timeline-content h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.timeline-time {
+  font-size: 0.75rem;
+  color: #777;
+  font-weight: 600;
+}
+
+.timeline-desc {
+  font-size: 0.9rem;
+  color: #555;
+  font-style: italic;
+}
+
+/* Mobile Fix */
+@media (max-width: 768px) {
+  .timeline-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}

@@ -8,37 +8,96 @@ import heroimage from "../Assets/Online/gathering.jpg";
 // Reusing gallery images for placeholders - swap these for specific event banners later
 import BibleImg from "../Assets/Gallery/gallery3.jpg";
 import ThanksgivingImg from "../Assets/Gallery/gallery2.jpg";
-import EvangelismImg from "../Assets/Gallery/gallery4.png";
+import EvangelismImg from "../Assets/Gallery/gallery10.png";
+import PastorImg from "../Assets/Gallery/gallery3.jpg";
+import TeamImg from "../Assets/Online/health.png";
+
 
 export default function EventsPage() {
 
   // Data for the Featured Events
-  const featuredEvents = [
-    {
-      id: 1,
-      title: "Bible Study Sunday",
-      date: "MAR 02",
-      time: "4:00 PM",
-      image: BibleImg,
-      desc: "Dive deep into the Word with us as we explore the book of Romans. Bring your Bible and a notebook!"
-    },
-    {
-      id: 2,
-      title: "Evangelism Sunday",
-      date: "MAR 15",
-      time: "9:00 AM",
-      image: EvangelismImg,
-      desc: "Taking the light of Christ to the campus. We will gather for prayer before heading out to share the Gospel."
-    },
-    {
-      id: 3,
-      title: "Thanksgiving Sunday",
-      date: "MAR 29",
-      time: "8:00 AM",
-      image: ThanksgivingImg,
-      desc: "A special service dedicated to testimonies, praise, and gratitude for all God has done this semester."
-    }
-  ];
+const featuredEvents = [
+  {
+    id: 1,
+    title: "Hostel Visitation",
+    date: "MAR 21",
+    time: "Evening",
+    image: EvangelismImg, // Using your Team placeholder
+    desc: "Hostel publicity and visitation for second semester resumption."
+  },
+  {
+    id: 2,
+    title: "Excos’ Retreat",
+    date: "MAR 27-28",
+    time: "8:00 PM",
+    image: PastorImg,
+    desc: "A weekend of prayer and planning for the leadership team."
+  },
+  {
+    id: 3,
+    title: "Health Sunday",
+    date: "APR 12",
+    time: "9:00 AM - 11:30 AM",
+    image: TeamImg,
+    desc: "Prioritizing our physical and spiritual well-being."
+  },
+  {
+    id: 4,
+    title: "Workers’ Retreat",
+    date: "APR 17-18",
+    time: "Fri: 9PM | Sat: 9AM",
+    image: PastorImg,
+    desc: "Equipping all workers for the semester's ministry tasks."
+  },
+  {
+    id: 5,
+    title: "Cultural Sunday",
+    date: "APR 26",
+    time: "9:00 AM - 11:30 AM",
+    image: BibleImg,
+    desc: "Celebrating our diverse heritage. Dress Code: Native Attire."
+  },
+  {
+    id: 6,
+    title: "Bible Study Sunday",
+    date: "MAY 03",
+    time: "9:00 AM - 11:30 AM",
+    image: BibleImg,
+    desc: "Deep study into the Word as a fellowship family."
+  },
+  {
+    id: 7,
+    title: "Welfare Sunday",
+    date: "MAY 17",
+    time: "9:00 AM - 11:30 AM",
+    image: TeamImg,
+    desc: "A day of sharing and community support. Dress Code: Casual."
+  },
+  {
+    id: 8,
+    title: "Brothers & Sisters Week",
+    date: "MAY 25-31",
+    time: "See Schedule",
+    image: EvangelismImg,
+    desc: "A full week of bonding and special activities for all members."
+  },
+  {
+    id: 9,
+    title: "Handing Over & FYB Sunday",
+    date: "JUN 07",
+    time: "9:00 AM - 11:30 AM",
+    image: ThanksgivingImg,
+    desc: "Celebrating our Final Year Brethren and the transition of leadership."
+  },
+  {
+    id: 10,
+    title: "Evangelism Sunday",
+    date: "JUN 14", // Added tentative date following the sequence
+    time: "9:00 AM - 11:30 AM",
+    image: EvangelismImg,
+    desc: "Spreading the Gospel across the university campus."
+  }
+];
 
   return (
     <div className='page-wrapper'>
@@ -75,12 +134,12 @@ export default function EventsPage() {
       <section className="section-cream" style={{ padding: '80px 20px' }}>
         <EventSchedule />
       </section>
-
-      {/* --- NEW: FEATURED EVENTS SECTION --- */}
-      <section className="section-white" style={{ padding: '80px 20px' }}>
-        <div className="container">
-          <div className="section-header centered-text">
-                        <h1 className="section-title disney-font" style={{ textAlign: 'center', marginBottom: '40px' }}>
+{/* --- FEATURED EVENTS SECTION --- */}
+<section className="section-white" style={{ padding: '80px 20px' }}>
+  <div className="container">
+    <div className="section-header centered-text">
+       {/* Your Jumpy Header stays here */}
+<h1 className="section-title disney-font" style={{ textAlign: 'center', marginBottom: '40px' }}>
                 <>
                     {"UPCOMING AT".split("").map((letter, index) => (
                         <span
@@ -102,31 +161,46 @@ export default function EventsPage() {
                         </span>
                     ))}
                 </>
-            </h1>
-           <h2 style={{ fontSize: '2.5rem', marginBottom: '40px' }}>SPECIAL EVENTS</h2>
-          </div>
+            </h1>       <h2 style={{ fontSize: '2rem', marginBottom: '40px', opacity: 0.7 }}>PROPOSED PROGRAMMES 2026</h2>
+    </div>
 
-          <div className="featured-grid">
-            {featuredEvents.map((event) => (
-              <div key={event.id} className="event-card">
-                <div className="card-image-wrap">
-                  <img src={event.image} alt={event.title} />
-                  <div className="date-badge">
-                    <span className="date-month">{event.date.split(' ')[0]}</span>
-                    <span className="date-day">{event.date.split(' ')[1]}</span>
-                  </div>
-                </div>
-                <div className="card-details">
-                  <span className="event-time-badge">{event.time}</span>
-                  <h3>{event.title}</h3>
-                  <p>{event.desc}</p>
-                </div>
-              </div>
-            ))}
+    {/* --- PART A: THE BIG 3 (Visual Cards) --- */}
+    <div className="featured-grid">
+      {featuredEvents.slice(0, 3).map((event) => (
+        <div key={event.id} className="event-card featured">
+          <div className="card-image-wrap">
+            <img src={event.image} alt={event.title} />
+            <div className="date-badge">
+              <span className="date-month">{event.date.split(' ')[0]}</span>
+              <span className="date-day">{event.date.split(' ')[1]}</span>
+            </div>
+          </div>
+          <div className="card-details">
+            <h3>{event.title}</h3>
+            <p>{event.desc}</p>
           </div>
         </div>
-      </section>
+      ))}
+    </div>
 
+    {/* --- PART B: THE FULL SCHEDULE (Minimalist List) --- */}
+    <div className="timeline-list">
+      <h3 className="list-label">Full Semester Itinerary</h3>
+      {featuredEvents.slice(3).map((event) => (
+        <div key={event.id} className="timeline-row">
+          <div className="timeline-date">
+            <strong>{event.date}</strong>
+          </div>
+          <div className="timeline-content">
+            <h4>{event.title}</h4>
+            <span className="timeline-time">{event.time}</span>
+          </div>
+          <div className="timeline-desc">{event.desc}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
     </div>
   );
 }
