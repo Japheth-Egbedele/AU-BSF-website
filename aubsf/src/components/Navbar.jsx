@@ -38,17 +38,18 @@ export default function Navbar() {
 
           {/* Desktop Links & Socials */}
           <div className="nav-links-desktop">
+            <Link to="/">Home</Link>
             <Link to="/new-here">New Here?</Link>
             <Link to="/about">Who We Are</Link>
             <Link to="/events">Events</Link>
             <Link to="/gallery">Gallery</Link>
             <Link to="/give">Give</Link>
 
-            
+
             {/* Desktop Socials
             <div className="desktop-socials">
               <a href="https://www.instagram.com/achievers_university_bsf?utm_source=qr&igsh=MWNscTR2Y3dnazc1MA==" target="_blank" rel="noopener noreferrer">
-                <i className="bxl bx-instagram"></i>
+                <i className="bxl bxl-instagram"></i>
               </a>
               <a href="#" target="_blank" rel="noopener noreferrer">
                 <i className="bxl bx-youtube"></i>
@@ -58,8 +59,8 @@ export default function Navbar() {
           </div>
 
           {/* Hamburger (Turns into X) - Inside nav-container for correct stacking */}
-          <button 
-            className={`nav-hamburger ${isOpen ? "is-active" : ""}`} 
+          <button
+            className={`nav-hamburger ${isOpen ? "is-active" : ""}`}
             onClick={toggleMenu}
             aria-label="Toggle Menu"
           >
@@ -76,6 +77,7 @@ export default function Navbar() {
       <div className={`nav-mobile-overlay ${isOpen ? "overlay-active" : ""}`} onClick={closeMenu}>
         <div className="nav-mobile-content" onClick={(e) => e.stopPropagation()}>
           <div className="nav-mobile-links">
+            <Link to="/" onClick={closeMenu}>Home</Link>
             <Link to="/new-here" onClick={closeMenu}>New Here?</Link>
             <Link to="/about" onClick={closeMenu}>Who We Are</Link>
             <Link to="/events" onClick={closeMenu}>Events</Link>
@@ -84,17 +86,19 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Socials */}
-<div className="mobile-socials">
-  <a href="https://www.instagram.com/..." target="_blank" rel="noopener noreferrer" className="social-bubble-mobile">
-    <i className="bxl bx-instagram"></i>
-  </a>
-  <a href="#" target="_blank" rel="noopener noreferrer" className="social-bubble-mobile">
-    <i className="bxl bx-youtube"></i>
-  </a>
-    <a href="#" target="_blank" rel="noopener noreferrer" className="social-bubble-mobile">
-    <i className="bxl bx-youtube"></i>
-  </a>
-</div>
+          <div className="mobile-socials">
+            <a
+              href="https://wa.me/2347057558080?text=Hello%20AU-BSF!%20I%20have%20a%20question."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-bubble-mobile"
+            >
+              <i className="bx bxl-whatsapp"></i>
+            </a>
+            <a href="https://www.instagram.com/achievers_university_bsf" target="_blank" rel="noopener noreferrer" className="social-bubble-mobile">
+              <i className="bx bxl-instagram"></i>
+            </a>
+          </div>
         </div>
       </div>
     </>

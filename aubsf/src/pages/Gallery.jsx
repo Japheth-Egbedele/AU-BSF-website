@@ -4,7 +4,7 @@ import "../styles/gallery.css";
 import "../styles/global.css";
 
 // IMPORT YOUR IMAGES
-import SheepImg from "../Assets/Online/sheep-o.jpg";
+import SheepImg from "../Assets/Online/sample5.jpg";
 import gallery1 from "../Assets/Gallery/gallery1.png";
 import gallery2 from "../Assets/Gallery/gallery2.jpg";
 import gallery3 from "../Assets/Gallery/gallery3.jpg";
@@ -35,15 +35,15 @@ function GalleryImage({ item }) {
 
   return (
     <div className={`gallery-item ${loaded ? "is-loaded" : ""}`}>
-      <img 
-        src={item.img} 
-        alt={item.title} 
-        loading="lazy" 
+      <img
+        src={item.img}
+        alt={item.title}
+        loading="lazy"
         onLoad={() => setLoaded(true)}
         /* Inline style as a backup to ensure blur is removed when loaded */
-        style={{ 
+        style={{
           filter: loaded ? "none" : "blur(10px)",
-          opacity: loaded ? 1 : 0 
+          opacity: loaded ? 1 : 0
         }}
         className="gallery-img-tag"
       />
@@ -59,40 +59,40 @@ export default function Gallery() {
 
   // Updated categories list
   const categories = [
-    "all", 
-    "Worship service", 
-    "Bible study", 
+    "all",
+    "Worship service",
+    "Bible study",
     // "Retreats", 
     // "Evangelisms", 
     // "Outreaches",
-   'FELLOWSHIP & FAMILY'
+    'FELLOWSHIP & FAMILY'
   ];
-
+// Add image description to title to display on image *wink*
   const galleryData = [
-    { id: 1, category: "Sunday Gatherings", img: gallery1, title: "Worship Service" },
-    { id: 2, category: "Sunday Gatherings", img: gallery2, title: "Bible Study Session" },
-    { id: 3, category: "Sunday Gatherings", img: gallery3, title: "Annual Retreat" },
-    { id: 4, category: "Sunday Gatherings", img: gallery4, title: "Campus Evangelism" },
-    { id: 5, category: "Sunday Gatherings", img: gallery5, title: "Community Outreach" },
-    { id: 6, category: "Sunday Gatherings", img: gallery6, title: "Worship Moment" },
-    { id: 7, category: "Sunday Gatherings", img: gallery7, title: "Word Study" },
-    { id: 8, category: "Sunday Gatherings", img: gallery8, title: "Prayer Retreat" },
-    { id: 9, category: "Sunday Gatherings", img: gallery9, title: "Street Evangelism" },
-    { id: 10, category: 'FELLOWSHIP & FAMILY', img: gallery10, title: "Welfare Outreach" },
-    { id: 11, category: "Sunday Gatherings", img: gallery11, title: "Sunday Worship Moment" },
-    { id: 12, category: "Sunday Gatherings", img: gallery12, title: "Opening Prayer" },
-    { id: 13, category: "Sunday Gatherings", img: gallery13, title: "Word and Revelation" },
-    { id: 14, category: "Sunday Gatherings", img: gallery14, title: "Praise Session" },
-    { id: 15, category: "Sunday Gatherings", img: gallery15, title: "Community Worship" },
-    { id: 16, category: "Sunday Gatherings", img: gallery16, title: "Heart of Worship" },
-    { id: 17, category: "Sunday Gatherings", img: gallery17, title: "Sunday Fellowship" },
-    { id: 18, category: "Bible study", img: gallery18, title: "Student Testimony" },
-    { id: 19, category: "Sunday Gatherings", img: gallery19, title: "Altar Moments" },
-    { id: 20, category: "Sunday Gatherings", img: gallery20, title: "Grace and Truth" },
-    { id: 21, category: "Sunday Gatherings", img: gallery21, title: "Family Benediction" },  ];
-
-  const filteredItems = filter === "all" 
-    ? galleryData 
+    { id: 1, category: "Worship service", img: gallery1, title: "" },
+    { id: 2, category: "Worship service", img: gallery2, title: "" },
+    { id: 3, category: "Worship service", img: gallery3, title: "" },
+    { id: 4, category: "Worship service", img: gallery4, title: "" },
+    { id: 5, category: "Worship service", img: gallery5, title: "" },
+    { id: 6, category: "Worship service", img: gallery6, title: "" },
+    { id: 7, category: "Worship service", img: gallery7, title: "" },
+    { id: 8, category: "Worship service", img: gallery8, title: "" },
+    { id: 9, category: "Worship service", img: gallery9, title: "" },
+    { id: 10, category: 'FELLOWSHIP & FAMILY', img: gallery10, title: "" },
+    { id: 11, category: "Worship service", img: gallery11, title: "" },
+    { id: 12, category: "Worship service", img: gallery12, title: "" },
+    { id: 13, category: "Worship service", img: gallery13, title: "" },
+    { id: 14, category: "Worship service", img: gallery14, title: "" },
+    { id: 15, category: "Worship service", img: gallery15, title: "" },
+    { id: 16, category: "Worship service", img: gallery16, title: "" },
+    { id: 17, category: "Worship service", img: gallery17, title: "" },
+    { id: 18, category: "Bible study", img: gallery18, title: "" },
+    { id: 19, category: "Worship service", img: gallery19, title: "" },
+    { id: 20, category: "Worship service", img: gallery20, title: "" },
+    { id: 21, category: "Worship service", img: gallery21, title: "" },
+  ];
+  const filteredItems = filter === "all"
+    ? galleryData
     : galleryData.filter(item => item.category === filter);
 
   return (
@@ -114,7 +114,7 @@ export default function Gallery() {
         {/* REFINED FILTERS WITH NEW CATEGORIES */}
         <div className="gallery-filters">
           {categories.map((cat) => (
-            <button 
+            <button
               key={cat}
               className={`filter-btn ${filter === cat ? "active" : ""}`}
               onClick={() => setFilter(cat)}

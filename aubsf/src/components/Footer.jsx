@@ -54,10 +54,14 @@ function Footer() {
       <div className="footer-social-wrap">
         <div className="socials">
           <a href="https://www.instagram.com/achievers_university_bsf" target="_blank" rel="noopener noreferrer">
-            <i className="bxl bx-instagram"></i>
+            <i className="bx bxl-instagram"></i>
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer">
-            <i className="bxl bx-youtube"></i>
+          <a
+            href="https://wa.me/2347057558080?text=Hello%20AU-BSF!%20I%20have%20a%20question."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="bx bxl-whatsapp"></i>
           </a>
         </div>
       </div>
@@ -66,7 +70,7 @@ function Footer() {
         <div className="copyright">
           <p>&copy; {new Date().getFullYear()} AU-BSF. All rights reserved.</p>
         </div>
-        <a href="https://yourportfolio.com" target="_blank" rel="noreferrer" className="dev-signature">
+        <a href="https://japheth-egbedele.vercel.app/" target="_blank" rel="noreferrer" className="dev-signature">
           Design & Dev by Joe
         </a>
       </div>

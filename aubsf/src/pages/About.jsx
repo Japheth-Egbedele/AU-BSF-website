@@ -10,6 +10,19 @@ import StoryImg from "../Assets/Online/sample3.jpg";
 import TeamImg from "../Assets/Gallery/gallery7.jpg";
 import GroupImg from "../Assets/Gallery/executives.png";
 import LogoWhite from "../Assets/Logo/logo-p.png";
+// Excos
+import exco1 from "../Assets/Gallery/gallery7.jpg"; // Olaniyi Abiodun
+import exco2 from "../Assets/Gallery/gallery9.jpg"; // Longe Adebimpe
+import exco3 from "../Assets/Gallery/gallery9.jpg"; // Sarah Aderoju
+import exco4 from "../Assets/Gallery/gallery7.jpg"; // Oyediran Susan
+import exco5 from "../Assets/Gallery/gallery9.jpg"; // Obaleye Fadekemi
+import exco6 from "../Assets/Gallery/gallery7.jpg"; // Oke Oluwamayokun
+import exco7 from "../Assets/Gallery/gallery9.jpg"; // Ajeniyi Grace Aderonke
+import exco8 from "../Assets/Gallery/gallery7.jpg"; // Ojo Kanyinsola Caroline
+import exco9 from "../Assets/Gallery/gallery9.jpg"; // Olakunle Goodluck
+import exco10 from "../Assets/Gallery/gallery7.jpg"; // Ajisamola Ifeoluwa
+import exco11 from "../Assets/Gallery/gallery9.jpg"; // Duyilemi Praise
+import exco12 from "../Assets/Gallery/gallery7.jpg"; // Alao Faith
 
 export default function About() {
   const [openIndex, setOpenIndex] = useState(null);
@@ -24,7 +37,80 @@ export default function About() {
     { title: "THE TRINITY", content: "We believe in one God existing in three persons: Father, Son, and Holy Spirit." },
     { title: "THE CHURCH", content: "We believe the church is the body of Christ, sent to shine His light." }
   ];
-
+const leaders = [
+  { 
+    name: "OLANIYI ABIODUN", 
+    role: "PRESIDENT", 
+    dept: "Nursing, 400L", 
+    img: exco1 
+  },
+  { 
+    name: "LONGE ADEBIMPE", 
+    role: "VICE PRESIDENT", 
+    dept: "MLS, 300L", 
+    img: exco2 
+  },
+  { 
+    name: "SARAH ADEROJU", 
+    role: "SECRETARY", 
+    dept: "Department, Level", 
+    img: exco3 
+  },
+  { 
+    name: "OYEDIRAN SUSAN", 
+    role: "TREASURER", 
+    dept: "Department, Level", 
+    img: exco4 
+  },
+  { 
+    name: "OBALEYE FADEKEMI", 
+    role: "WELFARE / SISTER COORDINATOR", 
+    dept: "Department, Level", 
+    img: exco5 
+  },
+  { 
+    name: "OKE OLUWAMAYOKUN", 
+    role: "BROTHERS & ACADEMIC COORDINATOR", 
+    dept: "Department, Level", 
+    img: exco6 
+  },
+  { 
+    name: "AJENIYI GRACE ADERONKE", 
+    role: "PRAYER COORDINATOR", 
+    dept: "Department, Level", 
+    img: exco7 
+  },
+  { 
+    name: "OJO KANYINSOLA CAROLINE", 
+    role: "BIBLE STUDY COORDINATOR", 
+    dept: "Department, Level", 
+    img: exco8 
+  },
+  { 
+    name: "OLAKUNLE GOODLUCK", 
+    role: "CHOIR COORDINATOR", 
+    dept: "Department, Level", 
+    img: exco9 
+  },
+  { 
+    name: "AJISAMOLA IFEOLUWA", 
+    role: "EVANGELISM & VISITATION COORDINATOR", 
+    dept: "Department, Level", 
+    img: exco10 
+  },
+  { 
+    name: "DUYILEMI PRAISE", 
+    role: "EVANGELISM & VISITATION COORDINATOR", 
+    dept: "Department, Level", 
+    img: exco11 
+  },
+  { 
+    name: "ALAO FAITH", 
+    role: "SUNDAY SCHOOL SUPERINTENDENT", 
+    dept: "Department, Level", 
+    img: exco12 
+  }
+];
   return (
     <div className="page-wrapper">
 
@@ -145,40 +231,27 @@ export default function About() {
       </section>
 
 <section id="leadership-team" className="section-white">
-  <div className="container centered-text">
-    <span className="eyebrow-text">The Family Leads</span>
-    <h2 className="section-title">MEET OUR EXCOS</h2>
-    <p className="sub-head">A community led by students, for students.</p>
-
-    <div className="exco-slider">
-      {/* Exco Card 1 */}
-      <div className="exco-card">
-        <div className="exco-image-wrapper">
-           <img src={TeamImg} alt="President" className="exco-img" />
-        </div>
-        <div className="exco-info">
-          <h3>Name of Exco</h3>
-          <span className="exco-role">President</span>
-          <p className="exco-dept">Nursing, 400L</p>
-        </div>
-      </div>
-
-      {/* Exco Card 2 */}
-      <div className="exco-card">
-        <div className="exco-image-wrapper">
-           <img src={PastorImg} alt="Vice President" className="exco-img" />
-        </div>
-        <div className="exco-info">
-          <h3>Name of Exco</h3>
-          <span className="exco-role">Vice President</span>
-          <p className="exco-dept">MLS, 300L</p>
-        </div>
-      </div>
-      
-      {/* Add more cards as needed */}
+      <div className="container centered-text">
+        <span className="eyebrow-text">The Family Leads</span>
+        <h2 className="section-title">MEET OUR EXCOS</h2>
+        
+        <div className="exco-slider">
+          {leaders.map((leader, index) => (
+            <div className="exco-card" key={index}>
+              <div className="exco-image-wrapper">
+                <img src={leader.img} alt={leader.name} className="exco-img" />
+              </div>
+              <div className="exco-info">
+                <h3>{leader.name}</h3>
+                <span className="exco-role">{leader.role}</span>
+                <p className="exco-dept">{leader.dept}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
+
       {/* 7. FOOTER CTA */}
       <section className="section-footer-cta">
         <div className="container">

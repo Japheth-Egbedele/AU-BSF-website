@@ -108,7 +108,7 @@
 
 /* --- 2. ZIG-ZAG SECTIONS & ARCHES (DESKTOP FIRST) --- */
 .zig-zag-section {
-  padding: 80px 20px;
+  padding: 40px 20px;
   background-color: white;
 }
 
@@ -298,7 +298,7 @@
 
 /* --- 5. FOOTER CTA GRID --- */
 .section-footer-cta {
-  padding: 80px 20px 0 20px;
+  padding: 40px 20px 0 20px;
   background-color: white;
   text-align: center;
 }
@@ -576,7 +576,7 @@
 
 /* --- EXCO SECTION --- */
 #leadership-team {
-  padding: 100px 20px;
+  padding: 0px 0px;
   background-color: #ffffff;
 }
 
@@ -587,7 +587,7 @@
 
 .section-white .centered-text {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 0px;
 }
 
 .centered-text {

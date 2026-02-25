@@ -81,15 +81,16 @@ export default function NewHere() {
               <p>Engage in passionate worship and hear practical, truth-filled teachings from the Bible.</p>
             </div>
 
-            <div className="expect-box">
-              <div className="expect-icon">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
-                </svg>
-              </div>
-              <h3>About 90 Minutes</h3>
-              <p>Our gatherings fit into your student schedule while giving you the spiritual rest you need.</p>
-            </div>
+<div className="expect-box">
+  <div className="expect-icon">
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <circle cx="12" cy="12" r="10"></circle>
+      <polyline points="12 6 12 12 16 14"></polyline>
+    </svg>
+  </div>
+  <h3>Purposeful Mornings</h3>
+  <p>From Sunday School at 8:00 AM to our main service, we provide a complete spiritual experience that wraps up by 11:30 AM.</p>
+</div>
           </div>
         </div>
       </section>
