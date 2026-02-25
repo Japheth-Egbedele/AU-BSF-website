@@ -568,3 +568,67 @@ h1, h2, h3 {
   margin: 0 auto 20px;
 }
 
+/* --- UNIVERSAL HERO SECTION STYLING (All Pages) --- */
+/* This ensures consistent h1 and p tag styling across all hero sections */
+
+/* Override hero h1 tags to match Home page hero styling */
+.hero-section h1,
+.about-hero-alt h1,
+.hero-alt-text h1,
+.hero-compact-title {
+  font-family: "Lora", serif !important;
+  font-size: clamp(2.5rem, 5vw, 4.2rem) !important;
+  font-weight: 400 !important;
+  line-height: 1.1 !important;
+  color: white !important;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.5) !important;
+  margin-bottom: 1rem !important;
+  text-align: left !important;
+  letter-spacing: -1px !important;
+}
+
+/* Override hero p and subtext tags to match Home page hero styling */
+.hero-section p,
+.hero-content p,
+.about-hero-alt p,
+.hero-alt-text p,
+#hero-subtext,
+.hero-subtext {
+  font-family: "Inter", sans-serif !important;
+  font-size: 1.1rem !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  line-height: 1.6 !important;
+  max-width: 500px !important;
+  font-weight: 300 !important;
+  text-align: left !important;
+  margin-bottom: 2rem !important;
+  margin-left: 0 !important;
+}
+
+/* Ensure highlight text is styled consistently */
+.highlight-text {
+  font-family: "Lora", serif !important;
+  font-style: italic !important;
+  font-weight: 400 !important;
+  opacity: 0.9 !important;
+}
+
+/* Mobile adjustments for all hero sections */
+@media (max-width: 768px) {
+  .hero-section h1,
+  .about-hero-alt h1,
+  .hero-alt-text h1,
+  .hero-compact-title {
+    font-size: 2.8rem !important;
+  }
+
+  .hero-section p,
+  .hero-content p,
+  .about-hero-alt p,
+  .hero-alt-text p,
+  #hero-subtext,
+  .hero-subtext {
+    font-size: 1rem !important;
+  }
+}
+
