@@ -1,123 +1,134 @@
-/* ===== FOOTER (Desktop & Mobile) ===== */
-
-footer {
-  background: #000;
-  padding: 50px 20px;
+/* ===== REFINED COMPACT FOOTER ===== */
+footer.main-footer {
+  background: #000000;
+  padding: 25px 10px 30px; 
   text-align: center;
   width: 100%;
-  box-sizing: border-box;
+  color: #ffffff;
 }
 
 .footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
+  gap: 20px; 
+  max-width: 1100px;
+  margin: 0 auto 20px;
+}
+
+/* Icon Circles - Scaled but distinct */
+.footer-icon-circle {
+  width: 36px; 
+  height: 36px; 
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto 40px;
-  gap: 20px;
-  padding: 0 20px;
-  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px; 
+  transition: all 0.3s ease;
 }
 
-.footer-item {
-  flex: 1;
-  min-width: 200px;
+.footer-icon-circle i {
+  color: #a4d96c;
+  font-size: 16px; 
 }
 
-.footer-item a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 20px;
-  display: inline-block;
-  margin-bottom: 10px;
-}
-
-.footer-item i {
-  color: #fff;
-  font-size: 25px;
-}
-
+/* Typography - Restored for readability */
 .footer-title {
-  font-weight: 700;
-  font-size: 1rem;
-  margin-bottom: 5px;
-  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem; /* Readable small caps */
+  text-transform: uppercase;
+  letter-spacing: 1.5px; 
+  margin-bottom: 8px; 
+  color: #ffffff;
 }
 
 .footer-text {
-  font-weight: 400;
-  color: #ccc;
+  font-size: 0.85rem; /* Standard readable size */
+  line-height: 1.5;
+  color: #bbb; /* Lighter grey for better contrast */
 }
 
-.socials {
-  margin-bottom: 20px;
-}
-
-.socials span {
-  display: inline-block;
-  margin: 0 10px;
-  font-size: 24px;
-  background: #333;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  border-radius: 50%;
-}
-
-.socials a,
-.socials i {
-  color: #fff;
+.footer-text a {
+  color: #bbb;
   text-decoration: none;
-  font-size: 28px;
+  transition: color 0.3s ease;
+}
+
+/* Hover States */
+.footer-item:hover .footer-icon-circle {
+  background: #a4d96c;
+}
+
+.footer-item:hover .footer-icon-circle i {
+  color: #000;
+}
+
+.footer-text a:hover {
+  color: #a4d96c;
+}
+
+/* Socials Section */
+.footer-social-wrap {
+  margin-bottom: 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 25px;
+}
+
+.socials a {
+  color: #ffffff;
+  font-size: 20px; 
+  margin: 0 12px; 
+  transition: all 0.3s ease;
   display: inline-block;
-  margin-bottom: 10px;
 }
 
-.copyright {
-  font-size: 0.9rem;
-  color: #aaa;
-}
-.copyright p{
-  color: #333;
+/* Social Hover Restored */
+.socials a:hover {
+  color: #a4d96c;
+  transform: translateY(-3px);
 }
 
+/* Bottom Bar */
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; 
+}
 
-/* ===== RESPONSIVE - Mobile (max-width: 768px) ===== */
+.copyright p {
+  font-size: 0.75rem; 
+  color: #888 !important; /* Visible light grey */
+  margin: 0;
+}
 
+.dev-signature {
+  font-size: 0.55rem; 
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.3);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+.dev-signature:hover {
+  color: #a4d96c;
+}
+
+/* Mobile Adjustments */
 @media (max-width: 768px) {
-  /* Navbar */
-  .navbar {
-    display: none;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-
-  /* Footer */
   .footer-container {
-    flex-direction: column;
-    align-items: center;
-    padding: 0 20px;
+    grid-template-columns: 1fr;
+    gap: 25px; 
   }
-
-  .footer-item {
-    min-width: 100%;
-    text-align: center;
-  }
-
-  .footer-title {
-    font-size: 0.9rem;
-  }
-
+  
   .footer-text {
-    font-size: 0.9rem;
+    font-size: 0.8rem; /* Slightly smaller but still clear on mobile */
+    padding: 0 15px;
   }
-
-  .socials a,
-  .socials i {
-    font-size: 24px;
+  
+  footer.main-footer {
+    padding: 20px 10px;
   }
 }
-

@@ -1,3 +1,5 @@
+@import './font.css';
+
 /* --- Global Reset & Fonts --- */
 html, body {
   min-height: 100%;
@@ -5,7 +7,6 @@ html, body {
   padding: 0;
   overflow-x: hidden;
   overflow-y: auto;
-  font-family: "Lora", serif; /* The Base Serif Font */
   color: #1a1a1a;
   -webkit-font-smoothing: antialiased;
 }
@@ -76,7 +77,6 @@ a {
 
 /* --- THE TYPOGRAPHY (Reduced Size) --- */
 .hero-content h1 {
-  font-family: "Lora", serif;
   /* Reduced size: 20% smaller than before */
   font-size: clamp(2.5rem, 5vw, 4.2rem); 
   font-weight: 400;    
@@ -89,13 +89,11 @@ a {
 }
 
 .highlight-text {
-  font-family: "Lora", serif; 
   font-style: italic;
   font-weight: 400; 
 }
 
 .hero-subtext {
-  font-family: "Inter", sans-serif;
   font-size: 1.1rem; /* Reduced size */
   max-width: 500px;    
   line-height: 1.6;
@@ -129,7 +127,6 @@ a {
   background: transparent;
   color: white;
   transition: all 0.3s ease;
-  font-family: "Inter", sans-serif;
   
   /* Remove any auto margins that center it */
   margin: 0; 
@@ -203,7 +200,7 @@ a {
 
 .split-text { flex: 1; }
 .split-text h2 { font-size: 2.5rem; margin-bottom: 20px; }
-.split-text p { font-family: "Inter", sans-serif; font-size: 1.05rem; color: #444; line-height: 1.7; margin-bottom: 25px; }
+.split-text p { font-size: 1.05rem; color: #444; line-height: 1.7; margin-bottom: 25px; }
 
 .split-image { flex: 1; }
 .split-image img { width: 100%; border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
@@ -224,7 +221,7 @@ a {
 .give-section { padding: 100px 20px; text-align: center; background-color: #f4f4f4; }
 .give-content { max-width: 600px; margin: 0 auto; }
 .give-content h3 { font-size: 2.5rem; margin-bottom: 20px; }
-.give-content p { font-family: "Inter", sans-serif; margin-bottom: 30px; font-size: 1.1rem; }
+.give-content p { margin-bottom: 30px; font-size: 1.1rem; }
 
 /* --- Gallery Section Fix --- */
 .gallery-section { 
@@ -276,4 +273,34 @@ a {
   .reverse-mobile { flex-direction: column-reverse; }
   .gallery-grid { grid-template-columns: 1fr 1fr; }
   .gallery-item img { height: 200px; }
+}
+
+.wa-pill-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Space between icon and text */
+  padding: 12px 28px;
+  background-color:var(--color-olive); /* Clean WhatsApp Green */
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 50px; /* Perfect pill shape */
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2);
+  margin-top: 15px;
+}
+
+.wa-pill-button i {
+  font-size: 1.3rem; /* Slightly larger icon */
+}
+
+.wa-pill-button:hover {
+  background-color: #1ebe57; /* Slightly darker on hover */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+  color: #fff;
 }

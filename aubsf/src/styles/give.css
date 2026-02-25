@@ -1,120 +1,298 @@
-/* GIVE PAGE */
+@import './font.css';
+
+/* --- GIVE HERO --- */
 .give-hero {
   position: relative;
-  padding: 160px 20px 80px;
-  background-color: #7F7F7F;
+  height: 60vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  font-family: 'Lora', serif;
+  color: white;
+  background: url('../Assets/Online/hero.webp') no-repeat center center/cover;
 }
 
-.give-hero h2 {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-  color: white;
-}
-
-.give-hero p {
-  font-size: 1.2rem;
-  color: white;
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
 }
 
 .give-hero-content {
-  margin-top: 30px;
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 20px;
 }
 
-.give-hero-content h2 {
-  font-size: 2.4rem;
+.script-accent {
+  font-style: italic;
+  color: #a4d96c;
+  font-size: 1.5rem;
   margin-bottom: 10px;
-  color: white;
 }
 
-.give-hero-content p {
-  font-size: 1.4rem;
+.give-hero h2 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  line-height: 1.3;
+  margin-bottom: 15px;
+}
+
+.reference {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* --- SUPPORT SECTION --- */
+.support-mission {
+  padding: 80px 20px;
+  text-align: center;
+  background: white;
+}
+
+.support-mission h3 {
+  font-size: 2rem;
+  color: #1a1a1a;
   margin-bottom: 20px;
-  color: white;
 }
 
-.Support{
-   padding: 60px 20px;
-  background-color: #f8f8f8;
-  font-family: 'Montserrat', sans-serif;
-  text-align: center;
-  color: #333;
-}
-.Support h3{
-  font-size: 40px;
+.brand-underline {
+  width: 60px;
+  height: 3px;
+  background: #a4d96c;
+  margin: 0 auto 30px;
 }
 
-.Support p, .Support h2 {
-  color: #333 !important;  
-  /* Bad practice: correct the main issue */
+.support-mission p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #555;
 }
+
+/* --- GIVE CARDS --- */
 .ways-to-give {
-  padding: 20px 20px;
-  background-color: #f8f8f8;
-  font-family: 'Montserrat', sans-serif;
-  text-align: center;
-  color: black !important;
-  /* Bad practice */
-}
-.ways-to-give h2{
-  color: #333;
+  padding: 80px 20px;
+  background: #fcfcfc;
 }
 
-/* Boxicon icon size */
-.ways-to-give i{
-  font-size: 40px;
-  color: white;
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 2.2rem;
 }
-.give-container {
+
+.give-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
   max-width: 1000px;
   margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-  align-items: stretch; /* make all boxes same height */
 }
 
-.give-container h2,
-.give-container > p {
-  width: 100%;
-}
-
-.give-method {
-  width: 350px; /* Fixed desktop size */
-  background-color: #70ad47;
-  border: 1px solid #ccc;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+.give-card {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  border: 1px solid #eee;
+  transition: transform 0.3s ease;
 }
 
-.give-method h3 {
-  font-size: 1.3rem;
+.give-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-icon i {
+  font-size: 3rem;
+  color: #a4d96c;
+  margin-bottom: 20px;
+}
+
+.give-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+}
+
+.account-details {
+  background: #f8f8f8;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.account-number {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #1a1a1a;
+  margin: 5px 0;
+}
+
+.bank-name {
+  color: #a4d96c;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.copy-hint, .location-hint {
+  font-size: 0.85rem;
+  color: #888;
+  font-style: italic;
+}
+
+/* --- REFINED INQUIRY BRIDGE --- */
+.give-inquiry {
+  margin-top: 80px;
+  padding-top: 40px;
+  text-align: center;
+  border-top: 1px solid #e0e0e0; /* Subtle line to separate from cards */
+}
+
+.inquiry-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.inquiry-content h3 {
+  font-size: 1.8rem;
+  color: #1a1a1a;
   margin-bottom: 15px;
-  color: white;
 }
 
-.give-method p {
-  font-size: 1rem;
-  line-height: 1.5;
-  color: white;
+.inquiry-content p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 0; /* Keep it tight against the footer */
 }
 
-/* Mobile */
-@media (max-width: 768px) {
-  .give-method {
-    width: 100%;             /* FULL WIDTH ON MOBILE */
-    max-width: 100%;         /* Prevent overflow */
-    padding: 20px;           /* Slightly smaller padding */
+.inquiry-divider {
+  width: 40px;
+  height: 2px;
+  background: #a4d96c; /* Your brand green */
+  margin: 25px auto 0;
+  opacity: 0.6;
+}
+
+/* Ensure the Ways to Give section doesn't have too much bottom padding now */
+.ways-to-give {
+  padding: 80px 20px 60px; /* Reduced bottom padding */
+  background: #ffffff;
+}
+
+/* --- WHY WE GIVE SECTION --- */
+.why-give-section {
+  padding: 100px 20px;
+  background-color: #ffffff;
+}
+
+.why-give-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.why-give-text {
+  flex: 1;
+  text-align: left;
+}
+
+.why-give-text h2 {
+  font-size: 3.5rem; /* Large impact heading */
+  margin-bottom: 30px;
+  color: #1a1a1a;
+}
+
+.why-give-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 25px;
+}
+
+/* Reference button style */
+.btn-stories {
+  display: inline-block;
+  padding: 14px 35px;
+  background-color: #a4d96c; /* Muted tan/gold like the reference */
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2);
+
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.btn-stories:hover {
+  background-color: #a4d96c; /* Brand Green on hover */
+  transform: translateY(-2px);
+  color: black;
+}
+
+/* --- ARCH WINDOW IMAGE --- */
+.why-give-image {
+  flex: 1;
+}
+
+.arch-window-frame {
+  width: 100%;
+  aspect-ratio: 4/5;
+  overflow: hidden;
+  /* Top-only rounding to create the arch */
+  border-top-left-radius: 500px;
+  border-top-right-radius: 500px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.arch-window-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.why-give-image:hover img {
+  transform: scale(1.05);
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 992px) {
+  .why-give-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 50px;
+  }
+  
+  .why-give-text {
+    text-align: center;
+    order: 2; /* Text moves below image on mobile */
   }
 
-  .give-container {
-    padding: 0 10px;         /* Prevents mobile overflow */
+  .why-give-text h2 {
+    font-size: 2.5rem;
+  }
+
+  .why-give-image {
+    width: 100%;
+    max-width: 450px;
+    order: 1;
   }
 }

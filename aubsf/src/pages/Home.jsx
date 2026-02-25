@@ -33,7 +33,7 @@ export default function Home() {
           
           <div className="hero-buttons">
             <Link to="/new-here" className="btn btn-outline-light">Plan A Visit</Link>
-            <Link to="/live" className="btn btn-outline-light">About Us</Link>
+            <Link to="/about" className="btn btn-outline-light">About Us</Link>
           </div>
         </div>
       </header>
@@ -63,7 +63,7 @@ export default function Home() {
               Considering AU-BSF as your church home? Wondering how you can grow in your
               relationship with Jesus? Find out what your next steps are.
             </p>
-            <Link to="/new-here" className="learn-more">Learn More</Link>
+            <Link to="/about" className="learn-more">Learn More</Link>
           </div>
           <div className="split-image">
             <img src={image2} alt="Community gathering" />
@@ -84,7 +84,16 @@ export default function Home() {
               having conflict in a relationship, or for whatever other reason—our pastoral
               team is here for you.
             </p>
-            <Link to="/new-here" className="learn-more">Get in touch</Link>
+            {/* Moving the icon inside the button for a cleaner look */}
+            <a 
+              href="https://wa.me/2347057558080?text=Hello%20AU-BSF..." 
+              className="wa-pill-button"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className='bx bxl-whatsapp'></i>
+              Chat with us
+            </a>
           </div>
         </div>
       </section>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400;700&family=Lora:wght@400;600;700&display=swap');
+@import './font.css';
 
 /* --- COLOR PALETTE (Based on reference) --- */
 :root {
@@ -11,11 +11,7 @@
 }
 
 /* --- TYPOGRAPHY --- */
-h1, h2, h3 { font-family: "Inter", sans-serif; font-weight: 800; text-transform: uppercase; color: #1a1a1a; margin: 0; }
-p { font-family: "Inter", sans-serif; line-height: 1.7; color: #1a1a1a; margin-bottom: 20px; }
-
 .script-accent {
-  font-family: 'Great Vibes', cursive;
   font-size: 3.5rem;
   font-weight: 400;
   text-transform: none;
@@ -26,7 +22,7 @@ p { font-family: "Inter", sans-serif; line-height: 1.7; color: #1a1a1a; margin-b
 
 .text-rust { color: #1a1a1a; }
 
-/* --- BUTTONS: Match Home Page Style (Black text with green underline) --- */
+/* --- BUTTONS --- */
 .learn-more {
   display: inline-block;
   font-weight: 700;
@@ -51,20 +47,16 @@ p { font-family: "Inter", sans-serif; line-height: 1.7; color: #1a1a1a; margin-b
   border-bottom-color: #a4d96c;
 }
 
-
 /* --- 1. REFINED HERO (Meeting in the Middle) --- */
 .clean-hero {
   position: relative;
-  /* Use a deep gradient mixed with the tan/cream colors */
   background: radial-gradient(circle at center, #2e4a42 0%, #1a3c34 100%);
-  /* Optional: Add a subtle noise texture URL if you have one, or keep it clean gradient */
   padding: 160px 20px 100px 20px;
   text-align: center;
-  color: white; /* Switch text to white to match Home Page vibe */
+  color: white;
   overflow: hidden;
 }
 
-/* Add a subtle pattern overlay (CSS only) */
 .clean-hero::before {
   content: "";
   position: absolute;
@@ -82,16 +74,14 @@ p { font-family: "Inter", sans-serif; line-height: 1.7; color: #1a1a1a; margin-b
 }
 
 .script-accent {
-  font-family: 'Great Vibes', cursive; /* Keep the script */
   font-size: 4rem;
-  color: black; /* Use your Brand Green instead of Rust */
+  color: black; 
   margin-bottom: -10px;
   display: block;
   text-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
 
 .clean-hero h1 {
-  font-family: "Lora", serif; /* Match Home Page Font */
   font-size: 3.5rem;
   color: white;
   margin-bottom: 2rem;
@@ -105,19 +95,18 @@ p { font-family: "Inter", sans-serif; line-height: 1.7; color: #1a1a1a; margin-b
 }
 
 .hero-subtext {
-  font-family: "Inter", sans-serif;
-  font-size: 1.1rem; /* Reduced size */
+  font-size: 1.1rem;
   max-width: 500px;    
   line-height: 1.6;
   margin-bottom: 2rem;
   color: rgba(255, 255, 255, 0.9);
   font-weight: 300;
   text-align: left;
-  margin-left: 0; /* Safety reset */
+  margin-left: 0; 
 }
 
 
-/* --- 2. ZIG-ZAG SECTIONS & ARCHES --- */
+/* --- 2. ZIG-ZAG SECTIONS & ARCHES (DESKTOP FIRST) --- */
 .zig-zag-section {
   padding: 80px 20px;
   background-color: white;
@@ -125,40 +114,96 @@ p { font-family: "Inter", sans-serif; line-height: 1.7; color: #1a1a1a; margin-b
 
 .zig-zag-section.bg-cream { background-color: var(--color-cream); }
 
+/* THIS IS THE FIX: Base Grid for Desktop */
 .grid-layout {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
   gap: 60px;
   align-items: center;
-  max-width: 1100px;
+  max-width: 1200px; 
   margin: 0 auto;
 }
 
+.image-content {
+  width: 100%;
+  display: block; 
+}
+
 .text-content h2 {
-  font-family: "Lora", serif; /* Serif for these headers */
-  text-transform: none;
-  font-size: 2.2rem;
-  margin-bottom: 20px;
-  line-height: 1.2;
+  font-size: 3.5rem; 
+  font-weight: 500;
+  color: #1a1a1a;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  letter-spacing: -1px;
+}
+
+.text-body p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #1a1a1a;
+  margin-bottom: 1.5rem;
 }
 
 /* IMAGE SHAPES */
 .arch-image {
-  width: 100%;
-  height: 500px;
+  position: relative;
+  z-index: 2;
+  width: calc(100% - 20px);
+  height: 550px;
   background-size: cover;
   background-position: center;
-  box-shadow: 10px 10px 0px rgba(0,0,0,0.05); /* Subtle offset shadow */
+  transform: translate(20px, -20px); 
 }
 
-/* Top Arch (Dome) */
 .top-arch { border-radius: 300px 300px 0 0; }
-
-/* Bottom Arch (Window) */
 .bottom-arch { border-radius: 0 0 300px 300px; }
-
-/* Pill Shape */
 .pill-shape { border-radius: 300px; height: 450px; width: 80%; margin: 0 auto; }
+
+.arch-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
+
+.arch-backdrop {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  background-color: #f0f4ec; 
+  border-radius: 300px 300px 0 0;
+  z-index: 1;
+}
+
+/* Typography Accents */
+.strong-statement {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  border-left: 4px solid #a4d96c; 
+  padding-left: 15px;
+  margin-top: 2rem;
+}
+
+.eyebrow-text {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+
+.accent-line {
+  width: 40px;
+  height: 3px;
+  background-color: #a4d96c;
+  margin-bottom: 20px;
+}
 
 
 /* --- 3. STORY SECTION (Olive) --- */
@@ -170,6 +215,7 @@ p { font-family: "Inter", sans-serif; line-height: 1.7; color: #1a1a1a; margin-b
 }
 
 .section-olive h2 { color: white; margin-bottom: 20px; font-size: 2.5rem; }
+
 .icon-logo {
   display: flex;
   align-items: center;
@@ -177,8 +223,8 @@ p { font-family: "Inter", sans-serif; line-height: 1.7; color: #1a1a1a; margin-b
   width: 60px;
   height: 60px;
   margin: 0 auto 20px;
-  border: 1px solid rgba(255, 255, 255, 0.3); /* Thin, elegant border */
-  border-radius: 50%; /* Perfect circle */
+  border: 1px solid rgba(255, 255, 255, 0.3); 
+  border-radius: 50%; 
   color: white;
   font-size: 1.2rem;
   transition: all 0.4s ease;
@@ -186,9 +232,10 @@ p { font-family: "Inter", sans-serif; line-height: 1.7; color: #1a1a1a; margin-b
 
 .icon-logo:hover {
   background: white;
-  color: var(--color-olive); /* Flips colors on hover */
+  color: var(--color-olive); 
   transform: scale(1.1);
 }
+
 .story-text {
   color: rgba(255,255,255,0.9);
   max-width: 800px;
@@ -200,8 +247,7 @@ p { font-family: "Inter", sans-serif; line-height: 1.7; color: #1a1a1a; margin-b
 /* --- 4. BELIEFS (Clean Accordion) --- */
 .section-cream { background-color: var(--color-cream); padding: 80px 20px; }
 .sub-head { font-style: italic; color: #1a1a1a; margin-bottom: 40px; }
-
-#belief-h2 { color: #1a1a1a; }
+#belief-h2, .belief-h2 { color: #1a1a1a !important; }
 
 .accordion-clean {
   max-width: 800px;
@@ -217,7 +263,6 @@ p { font-family: "Inter", sans-serif; line-height: 1.7; color: #1a1a1a; margin-b
   border: none;
   padding: 20px 0;
   text-align: left;
-  font-family: "Inter", sans-serif;
   font-weight: 700;
   font-size: 1.2rem;
   color: #1a1a1a;
@@ -231,7 +276,6 @@ p { font-family: "Inter", sans-serif; line-height: 1.7; color: #1a1a1a; margin-b
   overflow: hidden;
   transition: 0.3s ease;
 }
-
 .accordion-clean-body.open { max-height: 200px; margin-bottom: 20px; }
 
 
@@ -256,123 +300,19 @@ p { font-family: "Inter", sans-serif; line-height: 1.7; color: #1a1a1a; margin-b
   color: white;
 }
 .col h3 { color: white; font-size: 1.5rem; letter-spacing: 2px; }
-
 .bg-olive { background-color: var(--color-olive); }
 .bg-rust { background-color: var(--color-rust); }
 .bg-blue { background-color: var(--color-blue-grey); }
 
 
-/* --- RESPONSIVE --- */
-@media (max-width: 900px) {
-  .footer-cols {
-    display: flex;
-    flex-direction: column; /* Stacks the boxes vertically */
-    height: auto;           /* Removes the fixed height so it can grow */
-    gap: 15px;              /* Adds some breathing room between the boxes */
-  }
-
-  .col {
-    width: 100%;
-    height: 180px;         /* Gives each box a comfortable height on mobile */
-    border-radius: 8px;    /* Optional: adds a slight curve for a modern feel */
-  }
-
-  .section-footer-cta h3 {
-    font-size: 1.8rem;    /* Adjusts the header size for smaller screens */
-  }
-}
-  /* 1. Ensure the grid behaves like a flexible column */
-  .grid-layout { 
-    display: flex; /* Changed from grid to flex for better control */
-    flex-direction: column; 
-    gap: 40px; 
-  }
-
-  /* 2. Fix the "Invisible Image" issue */
-  .image-content {
-    width: 100%;
-    display: block; /* Ensure the container is visible */
-  }
-
-  .arch-image {
-    width: 100% !important; /* Force full width on mobile */
-    height: 400px; /* Give it a fixed height so the background-image shows */
-    background-size: cover;
-    background-position: center;
-    transform: none !important; /* Remove the offset 'backdrop' effect on mobile for cleaner look */
-  }
-
-  /* 3. Handle Section 3 (The Invitation) specifically */
-  .reverse-layout { 
-    flex-direction: column-reverse !important; /* Text on top, Image on bottom */
-  }
-
-
-/* =========================================
-   MEETING IN THE MIDDLE: TYPOGRAPHY
-   ========================================= */
-/* Re-introducing the elegant Serif from the home page for headings */
-.text-content h2 {
-  font-family: "Lora", serif;
-  font-size: 3.5rem; /* Much larger and more elegant */
-  font-weight: 500;
-  color: #1a1a1a;
-  line-height: 1.1;
-  margin-bottom: 1.5rem;
-  letter-spacing: -1px;
-}
-
-.text-body p {
-  font-family: "Inter", sans-serif;
-  font-size: 1.15rem;
-  line-height: 1.8;
-  color: #1a1a1a;
-  margin-bottom: 1.5rem;
-}
-
-.strong-statement {
-  font-family: "Lora", serif;
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: #1a1a1a;
-  border-left: 4px solid #a4d96c; /* Accent line */
-  padding-left: 15px;
-  margin-top: 2rem;
-}
-
-/* Eyebrow Text (Small caps above headings) */
-.eyebrow-text {
-  display: block;
-  font-family: "Inter", sans-serif;
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  color: #1a1a1a;
-  margin-bottom: 15px;
-}
-
-.text-green { color: #1a1a1a; }
-
-/* Small accent line above text blocks */
-.accent-line {
-  width: 40px;
-  height: 3px;
-  background-color: #a4d96c;
-  margin-bottom: 20px;
-}
-
-
-/* =========================================
-   THE NEW ALTERNATIVE HERO
-   ========================================= */
+/* --- THE NEW ALTERNATIVE HERO --- */
 .about-hero-alt {
   width: 100%;
   min-height: 90vh;
-  background-color: #1a1a1a; /* Dark background matches homepage mood */
+  background-color: #1a1a1a; 
   display: flex;
   align-items: center;
-  padding-top: 15px; /* Clear navbar */
+  padding-top: 15px; 
   overflow: hidden;
 }
 
@@ -384,7 +324,6 @@ p { font-family: "Inter", sans-serif; line-height: 1.7; color: #1a1a1a; margin-b
 }
 
 .hero-alt-text h1 {
-  font-family: "Lora", serif;
   font-size: clamp(3rem, 5vw, 4.5rem);
   font-weight: 400;
   color: white;
@@ -392,12 +331,8 @@ p { font-family: "Inter", sans-serif; line-height: 1.7; color: #1a1a1a; margin-b
   margin-bottom: 20px;
 }
 
-.hero-alt-text .eyebrow-text {
-  color: rgba(255, 255, 255, 0.9);
-}
-
+.hero-alt-text .eyebrow-text { color: rgba(255, 255, 255, 0.9); }
 .hero-alt-text p {
-  font-family: "Inter", sans-serif;
   font-size: 1.2rem;
   color: rgba(255,255,255,0.8);
   max-width: 450px;
@@ -409,79 +344,92 @@ p { font-family: "Inter", sans-serif; line-height: 1.7; color: #1a1a1a; margin-b
   height: 70vh;
   background-size: cover;
   background-position: center;
-  border-radius: 300px 300px 0 0; /* Huge Arch */
+  border-radius: 300px 300px 0 0; 
   box-shadow: 0 20px 50px rgba(0,0,0,0.5);
 }
 
-
-/* =========================================
-   GIVING THE ARCH IMAGE "MORE LOVE" (Depth)
-   ========================================= */
-.arch-wrapper {
-  position: relative;
+/* --- Cinematic Landscape Section --- */
+.landscape-image-wrap {
   width: 100%;
-  padding-bottom: 20px;
-  padding-left: 20px;
-}
-
-/* Creates a solid color block slightly offset behind the image */
-.arch-backdrop {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: calc(100% - 20px);
-  height: calc(100% - 20px);
-  background-color: #f0f4ec; /* Very light subtle green/cream */
-  border-radius: 300px 300px 0 0;
-  z-index: 1;
-}
-
-.arch-image {
+  height: 65vh; 
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
   position: relative;
-  z-index: 2;
-  width: calc(100% - 20px);
-  height: 550px;
-  background-size: cover;
-  background-position: center;
-  /* Push image up and right to reveal backdrop */
-  transform: translate(20px, -20px); 
+  display: block;
 }
 
-.top-arch { border-radius: 300px 300px 0 0; }
+.landscape-inner { width: 100%; height: 100%; position: relative; }
+.landscape-inner img {
+  width: 100%; height: 100%;
+  object-fit: cover; 
+  object-position: center 30%; 
+  display: block;
+}
+
+.landscape-overlay-subtle {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+  background-color: rgba(0, 0, 0, 0.15); 
+  pointer-events: none;
+}
 
 
 /* =========================================
-   RESPONSIVE ADJUSTMENTS
+   RESPONSIVE ADJUSTMENTS (ALL MOBILE STUFF HERE)
    ========================================= */
 @media (max-width: 900px) {
+  
+  /* Stack the Zig-Zag Grid */
+  .grid-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center; 
+  }
+
+  /* Control ordering for mobile stacking */
+  .reverse-layout .text-content { order: 2; }
+  .reverse-layout .image-content { order: 1; }
+
+  /* Stack Footer Columns */
+  .footer-cols {
+    display: flex;
+    flex-direction: column; 
+    height: auto;           
+    gap: 15px;              
+  }
+
+  .col {
+    width: 100%;
+    height: 180px;         
+    border-radius: 8px;    
+  }
+
+  .section-footer-cta h3 { font-size: 1.8rem; }
+
+  /* Stack Hero */
   .hero-alt-grid {
     grid-template-columns: 1fr;
     text-align: center;
   }
   
-  .hero-alt-text {
-    padding: 0 20px;
-  }
-  
-  .hero-alt-text h1 {
-    font-size: 2.8rem;
-  }
-  
-  .hero-alt-text p {
-    margin: 0 auto;
-  }
+  .hero-alt-text { padding: 0 20px; }
+  .hero-alt-text h1 { font-size: 2.8rem; }
+  .hero-alt-text p { margin: 0 auto; }
 
   .hero-arch-window {
     height: 50vh;
     border-radius: 200px 200px 0 0;
   }
 
-  .text-content h2 {
-    font-size: 2.5rem;
-  }
+  .text-content h2 { font-size: 2.5rem; }
 
+  /* Fix the image shapes on mobile */
   .arch-image {
-    height: 400px;
+    width: 100% !important; 
+    height: 400px; 
+    transform: none !important; /* Removes the desktop offset effect */
   }
 
   .hero-buttons {
@@ -499,51 +447,112 @@ p { font-family: "Inter", sans-serif; line-height: 1.7; color: #1a1a1a; margin-b
   }
 }
 
-/* --- Cinematic Landscape Section --- */
-.landscape-image-wrap {
-  width: 100%;
-  height: 65vh; /* 65% of screen height for a 'cinematic' look */
-  margin: 0;
-  padding: 0;
+@media (max-width: 768px) {
+  .landscape-image-wrap { height: 40vh; }
+}
+
+/* --- CORE PHILOSOPHY SECTION --- */
+.bsf-core-philosophy {
+  padding: 100px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.philosophy-header {
+  margin-bottom: 50px;
+}
+
+/* Sub-heading/Eyebrow styling */
+.eyebrow-text {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #a4d96c; /* BSF Light Leaf Green */
+  margin-bottom: 15px;
+}
+
+.bsf-core-philosophy h2 {
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  color: #1a1a1a;
+  line-height: 1.2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.philosophy-content {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.philosophy-content p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 40px;
+}
+
+/* --- THE MOTTO BOX (John 13:35) --- */
+.motto-box {
+  background-color: #f8faf6; /* Extremely subtle green tint */
+  padding: 40px;
+  border-radius: 12px;
+  border: 1px solid #eef2e9;
+  position: relative;
   overflow: hidden;
-  position: relative;
-  display: block;
 }
 
-.landscape-inner {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.landscape-inner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Clips the image perfectly to fill the width */
-  object-position: center 30%; /* Focuses more on the top-middle of the photo */
-  display: block;
-}
-
-/* Adds a very subtle linen texture and slight darkening 
-   to match the rest of your AU-BSF site */
-.landscape-overlay-subtle {
+/* Accent line representing growth */
+.motto-box::before {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
-  background-color: rgba(0, 0, 0, 0.15); /* Very light tint */
-  pointer-events: none;
+  height: 4px;
+  background-color: #a4d96c; /* Leaf Green Growth line */
 }
 
-/* Mobile: shrink height slightly so it doesn't take up the whole screen */
+.motto-text {
+  font-family: "Inter", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  font-style: italic;
+  color: #1a1a1a;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.motto-ref {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #888;
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
 @media (max-width: 768px) {
-  .landscape-image-wrap {
-    height: 40vh;
+  .bsf-core-philosophy {
+    padding: 60px 20px;
   }
-}
 
-.belief-h2{
-  color: #1a1a1a !important;
+  .bsf-core-philosophy h2 {
+    font-size: 1.8rem;
+  }
+
+  .philosophy-content p {
+    font-size: 1.05rem;
+    text-align: left; /* Better readability on small screens */
+  }
+
+  .motto-box {
+    padding: 30px 20px;
+  }
+
+  .motto-text {
+    font-size: 1.1rem;
+  }
 }

@@ -6,7 +6,6 @@
   color: #333;           /* Matches .visit-text */
   line-height: 1.6;      /* Standard readability */
   margin-bottom: 25px;   /* Spacing before button */
-  font-family: "Inter", sans-serif; /* Optional: Clean sans-serif for body text */
 }
 
 /* 2. Ensure the 'Give' paragraph matches */
@@ -23,7 +22,6 @@
 /* 3. Ensure Headings in these sections are consistent too */
 .split-text h2,
 .give-content h3 {
-  font-family: "Lora", serif;
   color: #1a1a1a;
   font-size: 2.5rem;
   font-weight: 700;
@@ -42,7 +40,6 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Lora", serif;
   color: #1a1a1a;
   overflow-x: hidden;
 }
@@ -175,7 +172,6 @@ h1, h2, h3 {
   text-decoration: none;
   font-size: 0.9rem;
   display: inline-block;
-  font-family: 'Inter', sans-serif;
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -486,7 +482,6 @@ h1, h2, h3 {
   text-align: center;
   max-width: 600px;
   margin: 0 auto;
-  font-family: 'Segoe UI', sans-serif;
 }
 
 .meta-text h2 {

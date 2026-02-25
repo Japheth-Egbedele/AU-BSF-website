@@ -1,0 +1,191 @@
+/* --- FONT IMPORTS --- */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* --- GLOBAL FONT DEFINITIONS --- */
+:root {
+  --font-serif: "Lora", serif;
+  --font-sans: "Inter", sans-serif;
+  
+  /* Font Sizes */
+  --fs-h1: clamp(2.5rem, 5vw, 4.2rem);
+  --fs-h2: 2.5rem;
+  --fs-h3: 2rem;
+  --fs-base: 1rem;
+  --fs-lg: 1.1rem;
+  --fs-sm: 0.95rem;
+  --fs-xs: 0.85rem;
+  
+  /* Font Weights */
+  --fw-light: 300;
+  --fw-normal: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+}
+
+/* --- BASE TEXT STYLES --- */
+html, body {
+  font-family: var(--font-serif);
+  color: #1a1a1a;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: var(--fw-bold);
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: var(--fs-h1);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: var(--fs-h2);
+}
+
+h3 {
+  font-size: var(--fs-h3);
+}
+
+/* Paragraph and Body Text */
+p {
+  font-family: var(--font-sans);
+  font-size: var(--fs-base);
+  line-height: 1.6;
+}
+
+p.large {
+  font-size: var(--fs-lg);
+}
+
+p.small {
+  font-size: var(--fs-sm);
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+/* --- HERO TEXT STYLES --- */
+.hero-content h1 {
+  font-family: var(--font-serif);
+  font-size: var(--fs-h1);
+  font-weight: 400;
+  line-height: 1.1;
+  color: white;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.highlight-text {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.hero-subtext {
+  font-family: var(--font-sans);
+  font-size: var(--fs-lg);
+  line-height: 1.6;
+  font-weight: var(--fw-light);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* --- BUTTON TEXT STYLES --- */
+.btn-outline-light {
+  font-family: var(--font-sans);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* --- SECTION TEXT STYLES --- */
+.church-name {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  color: #1a1a1a;
+}
+
+.visit-text {
+  font-family: var(--font-sans);
+  font-size: var(--fs-lg);
+  color: #444;
+}
+
+.visit-location {
+  font-family: var(--font-sans);
+  color: #666;
+  font-size: var(--fs-sm);
+}
+
+.split-text h2 {
+  font-family: var(--font-serif);
+  font-size: var(--fs-h2);
+  color: #1a1a1a;
+  font-weight: var(--fw-bold);
+}
+
+.split-text p {
+  font-family: var(--font-sans);
+  font-size: var(--fs-lg);
+  color: #444;
+  line-height: 1.7;
+}
+
+.give-content h3 {
+  font-family: var(--font-serif);
+  font-size: var(--fs-h2);
+  color: #1a1a1a;
+  font-weight: var(--fw-bold);
+}
+
+.give-content p {
+  font-family: var(--font-sans);
+  font-size: var(--fs-lg);
+  color: #333;
+  line-height: 1.6;
+}
+
+.learn-more {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-sm);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* --- PILL BUTTON STYLES --- */
+.wa-pill-button {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-sm);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* --- RESPONSIVE FONT SIZING --- */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.8rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  p {
+    font-size: var(--fs-base);
+  }
+  
+  .split-text p,
+  .give-content p {
+    font-size: var(--fs-base);
+  }
+}

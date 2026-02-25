@@ -83,6 +83,23 @@ export default function About() {
 
         </div>
       </section>
+
+            {/* 5. OUR STORY (Green Background Block) */}
+      <section id="story" className="section-olive">
+        <div className="container centered-text">
+          <div className="icon-logo">
+            <img src={LogoWhite} alt="AU-BSF Seal" style={{ width: '50px', opacity: '0.8' }} />
+          </div>  
+         <h2>OUR STORY</h2>
+          <p className="story-text">
+            AU-BSF started as a group of people who loved the Lord meeting in classrooms.
+            God provided a building for our budding community to meet in—then it grew beyond
+            what we imagined. Today, we see a campus filled with the Holy Spirit and hungry for
+            the Word.
+          </p>
+        </div>
+      </section>
+
       {/* 3. SECTION: "Invitation" (Image Left, Text Right - Arch) */}
       <section className="zig-zag-section bg-cream">
         <div className="container grid-layout reverse-layout">
@@ -104,27 +121,11 @@ export default function About() {
         </div>
       </section>
 
-      {/* 5. OUR STORY (Green Background Block) */}
-      <section id="story" className="section-olive">
-        <div className="container centered-text">
-          <div className="icon-logo">
-            <img src={LogoWhite} alt="AU-BSF Seal" style={{ width: '50px', opacity: '0.8' }} />
-          </div>  
-         <h2>OUR STORY</h2>
-          <p className="story-text">
-            AU-BSF started as a group of people who loved the Lord meeting in classrooms.
-            God provided a building for our budding community to meet in—then it grew beyond
-            what we imagined. Today, we see a campus filled with the Holy Spirit and hungry for
-            the Word.
-          </p>
-        </div>
-      </section>
-
       {/* 4. PASTORS / LEADERSHIP */}
       <section className="zig-zag-section">
         <div className="container grid-layout">
           <div className="text-content">
-            <h4 className="script-accent text-rust">Meet</h4>
+            <h2>Meet</h2>
             <h2>OUR LEADERSHIP</h2>
             <p className="lead-text">
               Led by the Holy Spirit, our leadership team is dedicated to serving the students
@@ -142,22 +143,46 @@ export default function About() {
       {/* 7. FOOTER CTA */}
       <section className="section-footer-cta">
         <div className="container">
-          <h2 className="script-accent">Stay Connected</h2>
+          <h3>Stay Connected</h3>
           <h3>AT AU-BSF</h3>
           <p>Even in a city of millions, it's easy to feel alone. With us, you don't have to.</p>
           <div className="footer-cols">
             <div className="col bg-olive">
-              <h3>MINISTRIES</h3>
+              <h3>DISCIPLESHIP</h3>
             </div>
             <div className="col bg-rust">
-              <h3>GROUPS &<br />SUPPORT</h3>
+              <h3>SALVATION</h3>
             </div>
             <div className="col bg-blue">
-              <h3>FAQS</h3>
+              <h3>ACADEMIC EXCELLENCE</h3>
             </div>
           </div>
         </div>
       </section>
+      <section className="bsf-core-philosophy">
+  <div className="container">
+    <div className="philosophy-header">
+      <h4 className="eyebrow-text">Our Philosophy</h4>
+      <h2>A Specialized Ministry for Campus Life</h2>
+    </div>
+    
+    <div className="philosophy-content">
+      <p>
+        The Baptist Student Fellowship (BSF) is an organization of Baptist students, 
+        a fellowship of Christian students, and a ministry to <strong>all students</strong>. 
+        We respond to the unique nature of campus life by providing a space for 
+        redemption, Christian nurture, and leadership development.
+      </p>
+      
+      <div className="motto-box">
+        <p className="motto-text">
+          "By this all men will know that you are my disciples, if you love one another."
+        </p>
+        <span className="motto-ref">— John 13:35</span>
+      </div>
+    </div>
+  </div>
+</section>
       <br />
       {/* --- BIG LANDSCAPE BREATHER --- */}
       <section className="landscape-image-wrap">
