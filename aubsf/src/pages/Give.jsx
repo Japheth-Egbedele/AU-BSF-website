@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "../styles/global.css";
 import "../styles/give.css";
-import SheepImg from "../Assets/Online/sample4.jpg";
+import SheepImg from "../Assets/Online/give.jpg";
 
 
 export default function Give() {

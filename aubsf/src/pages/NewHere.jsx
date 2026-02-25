@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "../styles/global.css";
 
 import "../styles/newhere.css";
-import SheepImg from "../Assets/Online/sample3.jpg";
+import SheepImg from "../Assets/Online/mountain-man.jpg";
 import Gallery8 from "../Assets/Gallery/gallery8.jpg";
 
 export default function NewHere() {
