@@ -19,7 +19,7 @@ import exco5 from "../Assets/Excos/exco5.jpeg"; // Obaleye Fadekemi
 import exco6 from "../Assets/Excos/exco6.jpeg"; // Oke Oluwamayokun
 import exco7 from "../Assets/Gallery/gallery12.jpeg"; // Ajeniyi Grace Aderonke
 import exco8 from "../Assets/Gallery/gallery11.jpeg"; // Ojo Kanyinsola Caroline
-import exco9 from "../Assets/Gallery/gallery9.jpg"; // Olakunle Goodluck
+import exco9 from "../Assets/Gallery/exco9.jpeg"; // Olakunle Goodluck
 import exco11 from "../Assets/Excos/exco11.jpeg"; // Duyilemi Praise
 import exco12 from "../Assets/Gallery/gallery16.jpeg"; // Alao Faith
 
