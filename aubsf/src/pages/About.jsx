@@ -19,7 +19,7 @@ import exco5 from "../Assets/Excos/exco5.jpeg"; // Obaleye Fadekemi
 import exco6 from "../Assets/Excos/exco6.jpeg"; // Oke Oluwamayokun
 import exco7 from "../Assets/Gallery/gallery12.jpeg"; // Ajeniyi Grace Aderonke
 import exco8 from "../Assets/Gallery/gallery11.jpeg"; // Ojo Kanyinsola Caroline
-import exco9 from "../Assets/Gallery/exco9.jpeg"; // Olakunle Goodluck
+import exco9 from "../Assets/Excos/exco9.jpeg"; // Olakunle Goodluck
 import exco11 from "../Assets/Excos/exco11.jpeg"; // Duyilemi Praise
 import exco12 from "../Assets/Gallery/gallery16.jpeg"; // Alao Faith
 
@@ -40,67 +40,67 @@ const leaders = [
   { 
     name: "OLANIYI ABIODUN", 
     role: "PRESIDENT", 
-    dept: "Nursing, 400L", 
+    dept: "Nursing Science, 400L", 
     img: exco1 
   },
   { 
     name: "LONGE ADEBIMPE", 
     role: "VICE PRESIDENT", 
-    dept: "MLS, 300L", 
+    dept: "Human Anatomy, 400L", 
     img: exco2 
   },
   { 
     name: "SARAH ADEROJU", 
     role: "SECRETARY", 
-    dept: "Department, Level", 
+    dept: "Physiotherapy, 200L", 
     img: exco3 
   },
   { 
     name: "OYEDIRAN SUSAN", 
     role: "TREASURER", 
-    dept: "Department, Level", 
+    dept: "Nursing Science, 200L", 
     img: exco4 
   },
   { 
     name: "OBALEYE FADEKEMI", 
     role: "WELFARE / SISTER COORDINATOR", 
-    dept: "Department, Level", 
+    dept: "Nursing Science, 500L", 
     img: exco5 
   },
   { 
     name: "OKE OLUWAMAYOKUN", 
     role: "BROTHERS & ACADEMIC COORDINATOR", 
-    dept: "Department, Level", 
+    dept: "Sociology, 400L", 
     img: exco6 
   },
   { 
     name: "AJENIYI GRACE ADERONKE", 
     role: "PRAYER COORDINATOR", 
-    dept: "Department, Level", 
+    dept: "Nursing Science, 300L", 
     img: exco7 
   },
   { 
     name: "OJO KANYINSOLA CAROLINE", 
     role: "BIBLE STUDY COORDINATOR", 
-    dept: "Department, Level", 
+    dept: "Nursing Science, 300L", 
     img: exco8 
   },
   { 
     name: "OLAKUNLE GOODLUCK", 
     role: "CHOIR COORDINATOR", 
-    dept: "Department, Level", 
+    dept: "Mechatronics Engineering, 400L", 
     img: exco9 
   },
   { 
     name: "DUYILEMI PRAISE", 
     role: "EVANGELISM & VISITATION COORDINATOR", 
-    dept: "Department, Level", 
+    dept: "Medical Laboratory Science, 200L", 
     img: exco11 
   },
   { 
     name: "ALAO FAITH", 
     role: "SUNDAY SCHOOL SUPERINTENDENT", 
-    dept: "Department, Level", 
+    dept: "Nursing Science, 300L", 
     img: exco12 
   }
 ];
