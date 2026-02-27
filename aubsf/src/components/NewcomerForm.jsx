@@ -38,7 +38,7 @@ const NewcomerForm = () => {
             `*Status:* ${formData.status}%0A` +
             `*Heard via:* ${formData.discovery}`;
 
-        const waLink = `https://wa.me/2348115690442?text=${message}`;
+        const waLink = `https://wa.me/2347057558080?text=${message}`;
 
         window.open(waLink, '_blank');
 
