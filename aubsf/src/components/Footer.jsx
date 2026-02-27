@@ -49,6 +49,17 @@ function Footer() {
             <p className="footer-text">Support the Ministry</p>
           </Link>
         </div>
+
+        {/* I'm New */}
+        <div className="footer-item">
+          <Link to="/connect" className="nav-connect-btn">
+            <div className="footer-icon-circle">
+              <i className="bx bx-user-plus"></i>
+            </div>
+            <h4 className="footer-title">I'm New</h4>
+            <p className="footer-text">Join Our Community</p>
+          </Link>
+        </div>
       </div>
 
       <div className="footer-social-wrap">

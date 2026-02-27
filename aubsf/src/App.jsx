@@ -9,11 +9,12 @@ import About from "./pages/About";
 import Gallery from "./pages/Gallery";
 import Give from "./pages/Give";
 import Events from "./pages/Events";
+import NewcomerForm from "./components/NewcomerForm";
 
 export default function App() {
   return (
     <BrowserRouter>
-    <ScrollToTop />
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -22,6 +23,7 @@ export default function App() {
         <Route path="/events" element={<Events />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/give" element={<Give />} />
+        <Route path="/connect" element={<NewcomerForm />} />
       </Routes>
       <Footer />
     </BrowserRouter>
