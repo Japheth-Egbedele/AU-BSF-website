@@ -35,7 +35,7 @@ const EventsSchedule = () => {
     // Data structured similarly to the example image
     const events = [
         { title: "Sunday School", day: "Sunday", time: "08:00 AM", location: "New Nursing building (Smart Class) 300l lecture hall" },
-        { title: "Worship Service", day: "Sunday", time: "08:00 AM", location: "New Nursing building (Smart Class) 300l lecture hall" },
+        { title: "Worship Service", day: "Sunday", time: "09:00 AM", location: "New Nursing building (Smart Class) 300l lecture hall" },
         { title: "Bible Study", day: "Tuesday", time: "6:00 PM", location: "New Nursing building (Smart Class) 300l lecture hall" },
         { title: "Brother's and Sister's Retreat", day: "Last Thursday's", time: "4:00 PM", location: "Tennis Court" },
         { title: "Prayer Meeting", day: "Thursday", time: "09:00 PM", location: "Tennis Court" },

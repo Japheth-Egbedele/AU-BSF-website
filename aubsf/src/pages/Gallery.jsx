@@ -20,7 +20,7 @@ import gallery12 from "../Assets/Gallery/gallery12.jpeg";
 import gallery13 from "../Assets/Gallery/gallery13.jpeg";
 import gallery14 from "../Assets/Gallery/gallery14.jpeg";
 import gallery15 from "../Assets/Gallery/gallery15.jpeg";
-import gallery16 from "../Assets/Gallery/gallery17.jpeg";
+import gallery16 from "../Assets/Excos/exco3.jpeg";
 import gallery17 from "../Assets/Gallery/gallery17.jpeg";
 import gallery18 from "../Assets/Gallery/gallery18.jpeg";
 import gallery19 from "../Assets/Gallery/gallery19.jpeg";

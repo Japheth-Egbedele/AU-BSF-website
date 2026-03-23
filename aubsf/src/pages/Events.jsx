@@ -19,38 +19,46 @@ export default function EventsPage() {
 const featuredEvents = [
   {
     id: 1,
-    title: "Hostel Visitation",
-    date: "MAR 21",
-    time: "Evening",
-    image: EvangelismImg, // Using your Team placeholder
-    desc: "Hostel publicity and visitation for second semester resumption."
+    title: "Resumption Day",
+    date: "MAR 15",
+    time: "9:00 AM",
+    image: TeamImg,
+    desc: "Welcome back to campus! Join us for our first service of the semester."
   },
   {
     id: 2,
+    title: "Hostel Visitation",
+    date: "MAR 21",
+    time: "Evening",
+    image: EvangelismImg,
+    desc: "Publicity and visitation across hostels for fellowship worship resumption."
+  },
+  {
+    id: 3,
     title: "Excos’ Retreat",
     date: "MAR 27-28",
     time: "8:00 PM",
     image: PastorImg,
-    desc: "A weekend of prayer and planning for the leadership team."
+    desc: "A dedicated weekend of prayer and vision-casting for the leadership team."
   },
   {
-    id: 3,
+    id: 4,
     title: "Health Sunday",
     date: "APR 12",
     time: "9:00 AM - 11:30 AM",
     image: TeamImg,
-    desc: "Prioritizing our physical and spiritual well-being."
+    desc: "Prioritizing our physical and spiritual health as a body of Christ."
   },
   {
-    id: 4,
+    id: 5,
     title: "Workers’ Retreat",
     date: "APR 17-18",
     time: "Fri: 9PM | Sat: 9AM",
     image: PastorImg,
-    desc: "Equipping all workers for the semester's ministry tasks."
+    desc: "Equipping all workers for the spiritual tasks of the semester."
   },
   {
-    id: 5,
+    id: 6,
     title: "Cultural Sunday",
     date: "APR 26",
     time: "9:00 AM - 11:30 AM",
@@ -58,20 +66,13 @@ const featuredEvents = [
     desc: "Celebrating our diverse heritage. Dress Code: Native Attire."
   },
   {
-    id: 6,
+    id: 7,
     title: "Bible Study Sunday",
-    date: "MAY 03",
+    date: "MAY 10",
     time: "9:00 AM - 11:30 AM",
     image: BibleImg,
-    desc: "Deep study into the Word as a fellowship family."
-  },
-  {
-    id: 7,
-    title: "Welfare Sunday",
-    date: "MAY 17",
-    time: "9:00 AM - 11:30 AM",
-    image: TeamImg,
-    desc: "A day of sharing and community support. Dress Code: Casual."
+    isFeatured: true, // <--- MANUALLY SET
+    desc: "An intensive time of diving deep into the Word together."
   },
   {
     id: 8,
@@ -79,7 +80,8 @@ const featuredEvents = [
     date: "MAY 25-31",
     time: "See Schedule",
     image: EvangelismImg,
-    desc: "A full week of bonding and special activities for all members."
+    isFeatured: true, // <--- MANUALLY SET
+    desc: "A full week of bonding, special sessions, and fellowship activities."
   },
   {
     id: 9,
@@ -87,15 +89,8 @@ const featuredEvents = [
     date: "JUN 07",
     time: "9:00 AM - 11:30 AM",
     image: ThanksgivingImg,
-    desc: "Celebrating our Final Year Brethren and the transition of leadership."
-  },
-  {
-    id: 10,
-    title: "Evangelism Sunday",
-    date: "JUN 14", // Added tentative date following the sequence
-    time: "9:00 AM - 11:30 AM",
-    image: EvangelismImg,
-    desc: "Spreading the Gospel across the university campus."
+    isFeatured: true, // <--- MANUALLY SET
+    desc: "Celebrating our graduating brethren and the transition of leadership."
   }
 ];
 
@@ -164,41 +159,43 @@ const featuredEvents = [
             </h1>       <h2 style={{ fontSize: '2rem', marginBottom: '40px', opacity: 0.7 }}>PROPOSED PROGRAMMES 2026</h2>
     </div>
 
-    {/* --- PART A: THE BIG 3 (Visual Cards) --- */}
-    <div className="featured-grid">
-      {featuredEvents.slice(0, 3).map((event) => (
-        <div key={event.id} className="event-card featured">
-          <div className="card-image-wrap">
-            <img src={event.image} alt={event.title} />
-            <div className="date-badge">
-              <span className="date-month">{event.date.split(' ')[0]}</span>
-              <span className="date-day">{event.date.split(' ')[1]}</span>
-            </div>
-          </div>
-          <div className="card-details">
-            <h3>{event.title}</h3>
-            <p>{event.desc}</p>
+{/* --- PART A: THE MANUALLY FEATURED 3 --- */}
+<div className="featured-grid">
+  {featuredEvents
+    .filter(event => event.isFeatured) // Only shows the 3 you marked
+    .map((event) => (
+      <div key={event.id} className="event-card featured">
+        <div className="card-image-wrap">
+          <img src={event.image} alt={event.title} />
+          <div className="date-badge">
+            <span className="date-month">{event.date.split(' ')[0]}</span>
+            <span className="date-day">{event.date.split(' ')[1]}</span>
           </div>
         </div>
-      ))}
-    </div>
+        <div className="card-details">
+          <h3>{event.title}</h3>
+          <p>{event.desc}</p>
+        </div>
+      </div>
+    ))}
+</div>
 
-    {/* --- PART B: THE FULL SCHEDULE (Minimalist List) --- */}
-    <div className="timeline-list">
-      <h3 className="list-label">Full Semester Itinerary</h3>
-      {featuredEvents.slice(3).map((event) => (
-        <div key={event.id} className="timeline-row">
-          <div className="timeline-date">
-            <strong>{event.date}</strong>
-          </div>
-          <div className="timeline-content">
-            <h4>{event.title}</h4>
-            <span className="timeline-time">{event.time}</span>
-          </div>
-          <div className="timeline-desc">{event.desc}</div>
-        </div>
-      ))}
+{/* --- PART B: THE FULL CHRONOLOGICAL SCHEDULE --- */}
+<div className="timeline-list">
+  <h3 className="list-label">Full Semester Itinerary</h3>
+  {featuredEvents.map((event) => ( // Shows everything in order
+    <div key={event.id} className="timeline-row">
+      <div className="timeline-date">
+        <strong>{event.date}</strong>
+      </div>
+      <div className="timeline-content">
+        <h4>{event.title}</h4>
+        <span className="timeline-time">{event.time}</span>
+      </div>
+      <div className="timeline-desc">{event.desc}</div>
     </div>
+  ))}
+</div>
   </div>
 </section>
     </div>

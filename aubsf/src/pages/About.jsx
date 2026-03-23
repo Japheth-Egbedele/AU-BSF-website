@@ -135,7 +135,7 @@ const leaders = [
           <div className="text-content">
             <div className="accent-line"></div>
             <span className="eyebrow-text text-green">Our Story</span>
-            <h2>"You're not alone."</h2>
+            <h2>"You're not alone"</h2>
             <div className="text-body">
               <p>
                 That might sound obvious when you live in a city of millions or attend a crowded university.
