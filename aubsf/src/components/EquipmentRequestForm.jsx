@@ -55,7 +55,7 @@ const EquipmentRequestForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const scriptURL      = 'https://script.google.com/macros/s/AKfycbzBqdTLfaBDVH8cW5Xc4DbNYCFNBswJyVinlvKSWcAy3M0h8U8qBsBGdf0Gik5nr342/exec';
-  const whatsappNumber = '2347057558080';
+  const whatsappNumber = '2348115690442';
 
   const [formData, setFormData] = useState({
     name:       '',
