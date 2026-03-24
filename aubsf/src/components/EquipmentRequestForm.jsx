@@ -14,6 +14,8 @@ const EQUIPMENT_LIST = [
   { label: 'Speaker Stand',               custodian: 'Sis. Sarah'   },
   { label: 'Lectern',                      custodian: 'Sis. Praise'  },
   { label: 'Banner',                       custodian: 'Sis. Praise'  },
+  { label: 'PA System (New)',              custodian: 'Bro. Obaloluwa'  },
+
 ];
 
 const EquipmentRequestForm = () => {
@@ -116,7 +118,7 @@ const EquipmentRequestForm = () => {
             <input
               type="text"
               name="location"
-              placeholder="e.g. Aina Hostel, Chapel, Mini-auditorium"
+              placeholder="e.g. Atiku Hostel, Chapel, Auditorium"
               required
               className="form-input"
               value={formData.location}
