@@ -10,6 +10,7 @@ import Gallery from "./pages/Gallery";
 import Give from "./pages/Give";
 import Events from "./pages/Events";
 import NewcomerForm from "./components/NewcomerForm";
+import EquipmentRequestForm from "./components/EquipmentRequestForm";
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/give" element={<Give />} />
         <Route path="/connect" element={<NewcomerForm />} />
+        <Route path="/request" element={<EquipmentRequestForm />} />
       </Routes>
       <Footer />
     </BrowserRouter>
